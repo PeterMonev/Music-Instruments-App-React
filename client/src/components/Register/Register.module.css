@@ -1,0 +1,88 @@
+.container {
+    background-color: black;
+    height: 820px;
+    width: 100vw;
+    padding-top: 100px;
+
+}
+
+.register-section {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: relative;
+    padding-top: 25px;  
+    width: 550px;
+    height: 80vh;
+    border-radius: 60px;
+    box-sizing: border-box;
+    background-color: #3e4443;
+    box-shadow: 0px 0px 32px 0px #49535e, -14px -14px 20px #191c21;
+    margin-bottom: 50px;
+    color: black;
+   
+}
+
+.register-section h1 {
+    text-align: center;
+    font-size: 36px;   
+    color: floralwhite;
+    font-style: italic; 
+    margin-bottom: 20px;
+}
+
+label,
+input {
+    display: block;
+    width: 80%;
+    border: none;
+    box-sizing: border-box;
+}
+
+label {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: white;
+    margin-top: 13px;
+}
+
+input[type="email"],
+input[type="fullName"],
+input[type="password"],
+input[type="repass"] {
+    background: #ecf0f3;
+    padding: 30px;
+    padding-left: 20px;
+    height: 50px;
+    margin-top: 10px;
+    font-size: 24px;
+    border-radius: 50px;
+    box-shadow: inset 6px 6px 6px #c0c2c5, inset -6px -6px 6px white;
+    border: 2px solid goldenrod;
+}
+
+.submit {
+    margin-top: 40px;
+    background: darkcyan;
+    height: 60px;
+    border-radius: 60px;
+    color: white;
+    font-size: 26px;
+    cursor: pointer;
+    font-weight: 900;
+    transition: 2.0s;
+}
+
+.submit:hover {
+    color: white;
+    background-color: goldenrod;
+}
+
+.register-section p {
+    text-align: center;
+    color: whitesmoke;
+    margin-top: 20px;
+}
+
+.register-section p a {
+    color: red;
+}

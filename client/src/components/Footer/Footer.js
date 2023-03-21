@@ -1,14 +1,13 @@
 import { Link } from "react-router-dom";
 
 import styles from "./Footer.module.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const Footer = () => {
   return (
     <footer>
          <section className={styles['footer-container']}>
              <ul>
-                <li>Call us: <Link to={'/callus'}> 555-555-555 </Link></li>
+                <li>Call us: <Link to={'/callus'}> 555-666 </Link></li>
                 <li><Link to={'/contact'}>Contact</Link></li>
                 <li><Link to={"/about"}>About Us</Link></li>
                 <li><Link to={'/terms-and-condition'}>Terms and Conditions</Link></li>
