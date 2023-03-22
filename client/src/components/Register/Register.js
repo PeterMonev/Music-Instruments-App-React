@@ -3,8 +3,8 @@ import styles from "../Register/Register.module.css";
 export const Register = () => {
   return (
     
-    <div className={styles["container"]}>
-    <section className={styles["register-section"]}>
+    <section className={styles["section"]}>
+    <div className={styles["register-container"]}>
    
       <form className={styles["register-form"]}>
         <h1>Register</h1>
@@ -19,17 +19,15 @@ export const Register = () => {
         <input type="password" name="password" placeholder="*******" />
 
         <label htmlFor="repass">Confirm Password:</label>
-        <input type="repass" name="repass" placeholder="*******" />
+        <input type="password" name="repass" placeholder="*******" />
 
         <input className={styles['submit']} type="submit" defaultValue="Register" />
 
-        <p className="field">
-          <span>
-            If you already have account? Click <a href="/login">here</a>
-          </span>
+        <p>    
+            If you already have account? Click <a href="/login">here!</a>
         </p>
       </form>
-    </section>
     </div>
+    </section>
   );
 };

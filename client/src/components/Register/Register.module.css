@@ -1,12 +1,20 @@
-.container {
-    background-color: black;
+.section {
     height: 820px;
     width: 100vw;
     padding-top: 100px;
+    background-image: url(../../../public/home.jpg);
+    background-color: rgba(0,0,0,.6);
+    width: 100%;
+    height: 100vh;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    position: relative;
+    z-index: 0;
 
 }
 
-.register-section {
+.register-container {
     font-family: Georgia, 'Times New Roman', Times, serif;
     position: relative;
     padding-top: 25px;  
@@ -14,11 +22,36 @@
     height: 80vh;
     border-radius: 60px;
     box-sizing: border-box;
-    background-color: #3e4443;
-    box-shadow: 0px 0px 32px 0px #49535e, -14px -14px 20px #191c21;
+    box-shadow: 2px 2px 21px 12px #2d2d2d;
     margin-bottom: 50px;
     color: black;
-   
+    background-image: linear-gradient(
+        320deg,
+        hsl(0deg 0% 89%) 0%,
+        hsl(49deg 10% 80%) 2%,
+        hsl(50deg 14% 70%) 4%,
+        hsl(51deg 15% 61%) 7%,
+        hsl(52deg 16% 52%) 10%,
+        hsl(53deg 21% 43%) 13%,
+        hsl(54deg 31% 34%) 16%,
+        hsl(56deg 47% 25%) 20%,
+        hsl(57deg 61% 20%) 24%,
+        hsl(57deg 43% 21%) 28%,
+        hsl(57deg 28% 21%) 33%,
+        hsl(62deg 15% 22%) 37%,
+        hsl(95deg 5% 23%) 42%,
+        hsl(207deg 12% 22%) 47%,
+        hsl(213deg 28% 21%) 53%,
+        hsl(212deg 51% 20%) 58%,
+        hsl(212deg 58% 18%) 63%,
+        hsl(213deg 52% 17%) 69%,
+        hsl(215deg 46% 16%) 74%,
+        hsl(217deg 41% 15%) 80%,
+        hsl(220deg 35% 13%) 85%,
+        hsl(224deg 29% 12%) 90%,
+        hsl(231deg 22% 11%) 95%,
+        hsl(248deg 17% 9%) 100%
+      );
 }
 
 .register-section h1 {
@@ -27,6 +60,7 @@
     color: floralwhite;
     font-style: italic; 
     margin-bottom: 20px;
+    font-weight: bold;
 }
 
 label,
@@ -56,8 +90,7 @@ input[type="repass"] {
     margin-top: 10px;
     font-size: 24px;
     border-radius: 50px;
-    box-shadow: inset 6px 6px 6px #c0c2c5, inset -6px -6px 6px white;
-    border: 2px solid goldenrod;
+    border: 3px solid goldenrod;
 }
 
 .submit {
