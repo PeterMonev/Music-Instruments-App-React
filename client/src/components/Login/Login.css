@@ -1,4 +1,4 @@
-.section {
+.login-section {
     height: 820px;
     width: 100vw;
     padding-top: 100px;
@@ -14,12 +14,12 @@
 
 }
 
-.register-container {
+.login-container {
     font-family: Georgia, 'Times New Roman', Times, serif;
     position: relative;
     padding-top: 25px;  
-    width: 550px;
-    height: 80vh;
+    width: 850px;
+    height: 65vh;
     border-radius: 60px;
     box-sizing: border-box;
     box-shadow: 2px 2px 21px 12px #2d2d2d;
@@ -54,19 +54,33 @@
       );
 }
 
-.register-container h1 {
+.login-container h1 {
     text-align: center;
     font-size: 36px;   
     color: floralwhite;
     font-style: italic; 
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     font-weight: bold;
 }
 
-input[type="email"],
-input[type="fullName"],
-input[type="password"],
-input[type="repass"] {
+.login-label,
+.login-input,
+.submit-login {
+    display: block;
+    width: 80%;
+    border: none;
+    box-sizing: border-box;
+}
+
+.login-label {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: white;
+    margin-top: 13px;
+}
+
+.login-input {
     background: #ecf0f3;
     padding: 30px;
     padding-left: 20px;
@@ -77,8 +91,8 @@ input[type="repass"] {
     border: 3px solid goldenrod;
 }
 
-.submit {
-    margin-top: 40px;
+.submit-login {
+    margin-top: 50px;
     background: darkcyan;
     height: 60px;
     border-radius: 60px;
@@ -89,17 +103,17 @@ input[type="repass"] {
     transition: 2.0s;
 }
 
-.submit:hover {
+.submit-login:hover {
     color: white;
     background-color: goldenrod;
 }
 
-.register-container p {
+.login-container-p {
     text-align: center;
     color: whitesmoke;
-    margin-top: 20px;
+    margin-top: 60px;
 }
 
-.register-container p a {
+.login-container-p a {
     color: red;
 }

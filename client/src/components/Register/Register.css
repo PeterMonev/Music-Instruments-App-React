@@ -1,4 +1,4 @@
-.section {
+.register-section {
     height: 820px;
     width: 100vw;
     padding-top: 100px;
@@ -14,11 +14,11 @@
 
 }
 
-.login-container {
+.register-container {
     font-family: Georgia, 'Times New Roman', Times, serif;
     position: relative;
     padding-top: 25px;  
-    width: 550px;
+    width: 850px;
     height: 80vh;
     border-radius: 60px;
     box-sizing: border-box;
@@ -54,24 +54,25 @@
       );
 }
 
-.login-container h1 {
+.register-container h1 {
     text-align: center;
     font-size: 36px;   
     color: floralwhite;
     font-style: italic; 
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     font-weight: bold;
 }
 
-label,
-input {
+.register-label,
+.input-field,
+.register-submit {
     display: block;
     width: 80%;
     border: none;
     box-sizing: border-box;
 }
 
-label {
+.register-label {
     text-align: center;
     margin-bottom: 10px;
     font-size: 22px;
@@ -79,22 +80,21 @@ label {
     margin-top: 13px;
 }
 
-input[type="email"],
-input[type="password"] {
+.input-field {
     background: #ecf0f3;
-    padding: 30px;
+    padding: 20px;
     padding-left: 20px;
-    height: 50px;
+    height: 5px;
     margin-top: 10px;
     font-size: 24px;
     border-radius: 50px;
     border: 3px solid goldenrod;
 }
 
-.submit-login {
-    margin-top: 50px;
+.register-submit {
+    margin-top: 35px;
     background: darkcyan;
-    height: 60px;
+    height: 50px;
     border-radius: 60px;
     color: white;
     font-size: 26px;
@@ -103,17 +103,17 @@ input[type="password"] {
     transition: 2.0s;
 }
 
-.submit-login:hover {
+.register-submit:hover {
     color: white;
     background-color: goldenrod;
 }
 
-.login-container-p {
+.register-container p {
     text-align: center;
     color: whitesmoke;
-    margin-top: 60px;
+    margin-top: 15px;
 }
 
-.login-container-p a {
+.register-container p a {
     color: red;
 }
