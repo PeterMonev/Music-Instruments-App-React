@@ -21,7 +21,7 @@ export const Register = () => {
         <label htmlFor="repass">Confirm Password:</label>
         <input type="password" name="repass" placeholder="*******" />
 
-        <input className={styles['submit']} type="submit" defaultValue="Register" />
+        <input className={styles['submit']} type="submit" value="Register" />
 
         <p>    
             If you already have account? Click <a href="/login">here!</a>
