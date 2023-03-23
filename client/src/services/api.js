@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:3000";
+const BASE_URL = "http://localhost:3030";
 
 async function request(method, url, data) {
   const options = {
@@ -24,7 +24,7 @@ async function request(method, url, data) {
     if (!response.ok) {
       const error = await response.json();
 
-      if (res.status === 403) {
+      if (response.status === 403) {
         sessionStorage.removeItem("userData");
       }
 
