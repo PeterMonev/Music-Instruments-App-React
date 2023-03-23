@@ -5,15 +5,23 @@ import '../Register/Register.css'
 
 export const Register = () => {
   const [userData, setuserData] = useState({
-  
+     email: '',
+     fullName: '',
+     phone: '',
+     password: '',
+     repeatPassword: '',
   });
 
   function onChange(event) {
-   
+    setuserData(state => ({...state, [event.target.name]: event.target.value}));
   }
    
   async function onSubmit(event) {
-   
+    event.preventDefault();
+
+    const {email ,fullName ,phone, password } = userData;
+    const user = await userServices.register(email, fullName, phone, password);
+    console.log(user);
   }
 
   return (

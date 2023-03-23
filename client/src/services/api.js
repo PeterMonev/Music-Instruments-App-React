@@ -39,7 +39,7 @@ async function request(method, url, data) {
     return result;
 
   } catch (error) {
-    alert(error.message);
+    console.error(error.message);
     throw error;
   }
 }
