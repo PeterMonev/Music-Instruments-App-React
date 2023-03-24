@@ -111,9 +111,15 @@
 .login-container-p {
     text-align: center;
     color: whitesmoke;
-    margin-top: 60px;
+    margin-top: 30px;
 }
 
 .login-container-p a {
+    color: red;
+}
+
+.p-error {
+    margin-top: 30px;
+    text-align: center;
     color: red;
 }
