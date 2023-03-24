@@ -35,9 +35,14 @@ export const Register = () => {
   async function onSubmit(event) {
     event.preventDefault();
 
+  try {
     const {email ,fullName ,phone, password } = userData;
     const user = await userServices.register(email, fullName, phone, password);
     console.log(user);
+
+      } catch(error) {
+   console.log(error);
+    }
   }
 
 

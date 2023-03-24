@@ -1,47 +1,32 @@
 const BASE_URL = "http://localhost:3030";
 
 async function request(method, url, data) {
-  const options = {
-    method,
-    headers: {
-      "Content-Type": "application/json",
-    },
-  };
 
-  if (data !== undefined) {
-    options.body = JSON.stringify(data);
-  }
+  let options = {method, headers: {}};
 
-  const user = JSON.parse(sessionStorage.getItem("userData"));
-
-  if (user) {
-    options.headers["X-Authorization"] = user.accesToken;
-  }
-
-  try {
-    const response = await fetch(BASE_URL + url, data);
-
-    if (!response.ok) {
-      const error = await response.json();
-
-      if (response.status === 403) {
-        sessionStorage.removeItem("userData");
+  if (method !== 'GET' && method !== 'DELETE') {
+      options = {
+          method,
+          headers: {
+              'content-type': 'application/json'
+          },
+          body: JSON.stringify(data)
       }
-
-      throw new Error(error.errors);
-    }
-
-    if (response.status === 204) {
-      return response;
-    }
-    
-    const result = await response.json();
-    return result;
-
-  } catch (error) {
-    console.error(error.message);
-    throw error;
   }
+
+  const user = JSON.parse(sessionStorage.getItem('user') || '{}');
+  if (user && user.accessToken) {
+      options.headers['X-Authorization'] = user.accessToken;
+  }
+
+  return fetch(`${BASE_URL}${url}`, options)
+      .then(res => res.json())
+      .then(res => {
+          if (res.message) {
+              throw res;
+          }
+          return res;
+      });
 }
 
 export const get = request.bind(null,'GET');
