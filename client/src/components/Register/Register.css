@@ -19,7 +19,7 @@
     position: relative;
     padding-top: 10px;  
     width: 850px;
-    height: 80vh;
+    height: 85vh;
     border-radius: 60px;
     box-sizing: border-box;
     box-shadow: 2px 2px 21px 12px #2d2d2d;
@@ -67,7 +67,7 @@
 .input-field,
 .register-submit {
     display: block;
-    width: 80%;
+    width: 60%;
     border: none;
     box-sizing: border-box;
 }
@@ -92,7 +92,7 @@
 }
 
 .register-submit {
-    margin-top: 35px;
+    margin-top: 45px;
     background: darkcyan;
     height: 50px;
     border-radius: 60px;

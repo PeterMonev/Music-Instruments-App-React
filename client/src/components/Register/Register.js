@@ -1,11 +1,14 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import * as userServices from '../../services/userServices';
 import { inputValidator, passwordMatch, emailValidator } from '../../utils/validations'
 import '../Register/Register.css'
 
 export const Register = () => {
+  const navigate = useNavigate();
   const [errors, setErrors] = useState({});
+  const [disableButton, setDisableButton] = useState(true)
   const [userData, setuserData] = useState({
      email: '',
      fullName: '',
@@ -14,7 +17,14 @@ export const Register = () => {
      repeatPassword: '',
   });
 
-  console.log(errors);
+  useEffect(() => {
+    if(Object.values(errors).some(error => error !== null)){
+        setDisableButton(true);
+    } else {
+         setDisableButton(false);
+    }
+  }, [errors])
+
   function onChange(event) {
     setuserData(state => ({...state, [event.target.name]: event.target.value}));
   }
@@ -42,12 +52,12 @@ export const Register = () => {
     const user = await userServices.register(email, fullName, phone, password);
     console.log(user);
 
+    navigate('/catalog')
       } catch(error) {
+       
    console.log(error);
     }
   }
-
-
 
   return (
 
@@ -86,7 +96,7 @@ export const Register = () => {
         <input onChange={onChange} value={userData.repeatPassword} onBlur={(e) => {lengthValidation(e); passwordMatchValidation()}} className="input-field" type="password" name="repeatPassword" placeholder="*******" />
         {errors.repeatPassword && <p className="p-error" style={{color: 'red'}}>{errors.repeatPassword}</p>}
 
-        <input className='register-submit' type="submit" value="Register" />
+        <input disabled={ disableButton} className='register-submit' type="submit" value="Register" />
 
         <p>    
             If you already have account? Click <a href="/login">here!</a>

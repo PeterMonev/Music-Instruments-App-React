@@ -1,10 +1,16 @@
 import '../Login/Login.css'
 
 export const Login = () => {
+  
+   
+  async function onSubmit(event){
+     
+  }
+
   return (
     <section className='login-section'>
       <div className="login-container">
-      <form>
+      <form onSubmit={onSubmit}>
         <h1>Login</h1>
 
         <label className="login-label" htmlFor="email">Email:</label>
