@@ -1,10 +1,25 @@
-import '../Login/Login.css'
+import { useNavigate } from 'react-router-dom';
+
+import '../Login/Login.css';
+import * as userService from '../../services/userServices';
+import { useState } from 'react';
 
 export const Login = () => {
-  
+  const navigate = useNavigate();
+  const [errors, setErrors] = useState({});
    
   async function onSubmit(event){
-     
+    event.preventDefault();
+
+    const {email, password} = Object.fromEntries(new FormData(event.target));
+
+    try {
+      const user = await userService.login(email, password);
+      navigate('/catalog');
+
+    } catch (error) {
+      setErrors('Email or Password are incorrect');
+    }
   }
 
   return (
@@ -15,6 +30,7 @@ export const Login = () => {
 
         <label className="login-label" htmlFor="email">Email:</label>
         <input className="login-input" type="email" name="email" placeholder="peter@gmail.com" />
+       
 
         <label className="login-label" htmlFor="login-pass">Password:</label>
         <input className="login-input" type="password" name="password" placeholder="******" />
