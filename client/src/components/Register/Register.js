@@ -14,6 +14,7 @@ export const Register = () => {
      repeatPassword: '',
   });
 
+  console.log(errors);
   function onChange(event) {
     setuserData(state => ({...state, [event.target.name]: event.target.value}));
   }
@@ -21,6 +22,7 @@ export const Register = () => {
   // Validations
   function emailValidation(){
     emailValidator(userData, setErrors);
+
   };
 
   function lengthValidation(event){
@@ -57,15 +59,15 @@ export const Register = () => {
 
         <label className="register-label" htmlFor="email">Email:</label>
         <input onChange={onChange} value={userData.email} onBlur={emailValidation} className="input-field" type="email"id="email" name="email" placeholder="peter@email.com"/>
-        
+        {errors.email && <p className="p-error" style={{color: 'red'}}>{errors.email}</p>}
 
         <label className="register-label" htmlFor="fullName">Full Name:</label>
         <input onChange={onChange} value={userData.fullName} onBlur={lengthValidation} className="input-field" type="fullName" name="fullName" placeholder="Peter Johnson" />
-
+        {errors.fullName && <p className="p-error" style={{color: 'red'}} >{errors.fullName}</p>}
 
         <label className="register-label" htmlFor="phone">Phone Number:</label>
         <input onChange={onChange} value={userData.phone} onBlur={lengthValidation} className="input-field" type="phone" name="phone" placeholder="0123456789" />
-
+        {errors.phone && <p className="p-error" style={{color: 'red'}} >{errors.phone}</p>}
 
         <label className="register-label" htmlFor="password">Password:</label>
         <input
@@ -78,11 +80,11 @@ export const Register = () => {
           type="password" 
           name="password" 
           placeholder="*******" />
-
+         {errors.password && <p className="p-error" style={{color: 'red'}}>{errors.password}</p>}
 
         <label className="register-label" htmlFor="repeatPassword">Confirm Password:</label>
         <input onChange={onChange} value={userData.repeatPassword} onBlur={(e) => {lengthValidation(e); passwordMatchValidation()}} className="input-field" type="password" name="repeatPassword" placeholder="*******" />
-
+        {errors.repeatPassword && <p className="p-error" style={{color: 'red'}}>{errors.repeatPassword}</p>}
 
         <input className='register-submit' type="submit" value="Register" />
 

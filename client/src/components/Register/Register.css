@@ -17,7 +17,7 @@
 .register-container {
     font-family: Georgia, 'Times New Roman', Times, serif;
     position: relative;
-    padding-top: 25px;  
+    padding-top: 10px;  
     width: 850px;
     height: 80vh;
     border-radius: 60px;
@@ -59,7 +59,7 @@
     font-size: 36px;   
     color: floralwhite;
     font-style: italic; 
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-weight: bold;
 }
 
