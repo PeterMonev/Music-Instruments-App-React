@@ -18,10 +18,10 @@ export const Register = () => {
   });
 
   useEffect(() => {
-    if(Object.values(errors).some(error => error !== null)){
-        setDisableButton(true);
+    if(Object.values(errors).some(error => error === null || errors === {})){
+        setDisableButton(false);
     } else {
-         setDisableButton(false);
+         setDisableButton(true);
     }
   }, [errors])
 
@@ -53,9 +53,12 @@ export const Register = () => {
     console.log(user);
 
     navigate('/catalog')
-      } catch(error) {
-       
-   console.log(error);
+  } catch(error) {
+
+    setErrors((errors) => ({
+        ...errors, email: `${error.message}`
+    }));
+ 
     }
   }
 
@@ -96,7 +99,7 @@ export const Register = () => {
         <input onChange={onChange} value={userData.repeatPassword} onBlur={(e) => {lengthValidation(e); passwordMatchValidation()}} className="input-field" type="password" name="repeatPassword" placeholder="*******" />
         {errors.repeatPassword && <p className="p-error" style={{color: 'red'}}>{errors.repeatPassword}</p>}
 
-        <input disabled={ disableButton} className='register-submit' type="submit" value="Register" />
+        <input disabled={ disableButton } className='register-submit' type="submit" value="Register" />
 
         <p>    
             If you already have account? Click <a href="/login">here!</a>
