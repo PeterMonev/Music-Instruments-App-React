@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import { AuthContext } from '../../hooks/authContext';
 import * as userServices from '../../services/userServices';
 import { inputValidator, passwordMatch, emailValidator } from '../../utils/validations'
 import '../Register/Register.css'
@@ -8,7 +9,8 @@ import '../Register/Register.css'
 export const Register = () => {
   const navigate = useNavigate();
   const [errors, setErrors] = useState({});
-  const [disableButton, setDisableButton] = useState(true)
+  const [disableButton, setDisableButton] = useState(true);
+  const { setAuth } = useContext(AuthContext);
   const [userData, setuserData] = useState({
      email: '',
      fullName: '',
@@ -50,7 +52,7 @@ export const Register = () => {
   try {
     const {email ,fullName ,phone, password } = userData;
     const user = await userServices.register(email, fullName, phone, password);
-    console.log(user);
+    setAuth(user);
 
     navigate('/catalog')
   } catch(error) {

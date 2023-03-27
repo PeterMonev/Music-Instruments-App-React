@@ -1,11 +1,13 @@
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 
+import { AuthContext } from '../../hooks/authContext';
 import '../Login/Login.css';
 import * as userService from '../../services/userServices';
 
 export const Login = () => {
   const navigate = useNavigate();
+  const { setAuth } = useContext(AuthContext);
   const [error, setError] = useState('');
    
   async function onSubmit(event){
@@ -13,9 +15,10 @@ export const Login = () => {
     const {email, password} = Object.fromEntries(new FormData(event.target));
 
     try {
-      await userService.login(email, password);
+      const user = await userService.login(email, password);
+      setAuth(user);
+
       navigate('/catalog');
- 
     } catch (error) {
       setError('Email or Password are incorrect!');
     }

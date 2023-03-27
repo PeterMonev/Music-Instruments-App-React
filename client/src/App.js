@@ -6,12 +6,15 @@ import { Login } from './components/Login/Login';
 import { Home } from './components/Home/Home';
 import { Register } from './components/Register/Register';
 import { AuthContext } from './hooks/authContext';
+import { useSessionStorage } from './hooks/useSessionStorage';
 
 function App() {
+  const [auth, setAuth] = useSessionStorage('session');
+
   return (
 
     <div className="App">
-    <AuthContext.Provider >
+    <AuthContext.Provider value={{auth, setAuth}} >
 
      <Header />
    

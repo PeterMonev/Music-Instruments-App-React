@@ -10,7 +10,7 @@ export async function login(email, password) {
     return response;
 };
 
-export async function logout(){
+export async function logout(token){
    const response = await api.get('/users/logout');
    return response;
 };
