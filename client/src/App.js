@@ -7,6 +7,7 @@ import { Home } from './components/Home/Home';
 import { Register } from './components/Register/Register';
 import { AuthContext } from './hooks/authContext';
 import { useSessionStorage } from './hooks/useSessionStorage';
+import { Create } from './components/Create/Create';
 
 function App() {
   const [auth, setAuth] = useSessionStorage('session');
@@ -22,6 +23,7 @@ function App() {
      <Route path="/" element={<Home />} />
      <Route path='/register' element={<Register/> }/>
      <Route path="/login" element={  <Login /> } />
+     <Route path='/create' element={ <Create />} />
 
      
      </Routes>

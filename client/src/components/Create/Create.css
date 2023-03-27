@@ -1,0 +1,126 @@
+.create-section {
+    height: 130vh;
+    width: 100vw;
+    padding-top: 100px;
+    background-image: url(../../../public/home.jpg);
+    background-color: rgba(0,0,0,.6);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+}
+
+.create-container {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: relative;
+    padding-top: 10px;  
+    width: 850px;
+    height: 105vh;
+    border-radius: 60px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 21px 12px #2d2d2d;
+    margin-bottom: 50px;
+    color: black;
+    background-image: linear-gradient(
+        320deg,
+        hsl(0deg 0% 89%) 0%,
+        hsl(49deg 10% 80%) 2%,
+        hsl(50deg 14% 70%) 4%,
+        hsl(51deg 15% 61%) 7%,
+        hsl(52deg 16% 52%) 10%,
+        hsl(53deg 21% 43%) 13%,
+        hsl(54deg 31% 34%) 16%,
+        hsl(56deg 47% 25%) 20%,
+        hsl(57deg 61% 20%) 24%,
+        hsl(57deg 43% 21%) 28%,
+        hsl(57deg 28% 21%) 33%,
+        hsl(62deg 15% 22%) 37%,
+        hsl(95deg 5% 23%) 42%,
+        hsl(207deg 12% 22%) 47%,
+        hsl(213deg 28% 21%) 53%,
+        hsl(212deg 51% 20%) 58%,
+        hsl(212deg 58% 18%) 63%,
+        hsl(213deg 52% 17%) 69%,
+        hsl(215deg 46% 16%) 74%,
+        hsl(217deg 41% 15%) 80%,
+        hsl(220deg 35% 13%) 85%,
+        hsl(224deg 29% 12%) 90%,
+        hsl(231deg 22% 11%) 95%,
+        hsl(248deg 17% 9%) 100%
+      );
+}
+
+.create-container h1 {
+    text-align: center;
+    font-size: 36px;   
+    color: floralwhite;
+    font-style: italic; 
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.create-label,
+.create-input-field,
+.create-submit {
+    display: block;
+    width: 60%;
+    border: none;
+    box-sizing: border-box;
+}
+
+.create-label {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: white;
+    margin-top: 13px;
+}
+
+.create-input-field {
+    background: #ecf0f3;
+    padding: 20px;
+    padding-left: 20px;
+    height: 5px;
+    margin-top: 10px;
+    font-size: 24px;
+    border-radius: 50px;
+    border: 3px solid goldenrod;
+}
+
+
+.create-submit {
+    margin-top: 45px;
+    background: darkcyan;
+    height: 50px;
+    border-radius: 60px;
+    color: white;
+    font-size: 26px;
+    cursor: pointer;
+    font-weight: 900;
+    transition: 2.0s;
+}
+
+.create-submit:hover {
+    color: white;
+    background-color: goldenrod;
+}
+
+
+
+
+textarea {
+    width: 60%;
+    min-width: 10px;
+    min-height: 20px;
+    border: 2px solid #86a480;
+    border-radius: 40px;
+    font-size: 18px;
+    border-bottom-color: #ecf0f3;
+    background-color: #ecf0f3;
+    border-right-color: #ecf0f3;
+    color: black;
+    box-shadow: inset 6px 6px 6px #c0c2c5, inset -6px -6px 6px white;
+    margin-left: 170px;
+    padding: 20px
+}
