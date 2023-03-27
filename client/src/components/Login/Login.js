@@ -13,11 +13,10 @@ export const Login = () => {
     const {email, password} = Object.fromEntries(new FormData(event.target));
 
     try {
-      const user = await userService.login(email, password);
+      await userService.login(email, password);
       navigate('/catalog');
  
     } catch (error) {
-      console.log(error);
       setError('Email or Password are incorrect!');
     }
   }
