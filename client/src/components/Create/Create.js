@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { createOffer } from '../../services/instrumentServices';
 
 import '../Create/Create.css';
 
@@ -22,13 +23,14 @@ export const Create = () => {
         }));
       };
 
-    function onSubmit(event){
+    async function onSubmit(event){
         event.preventDefault();
-
+   
         try {
-            
+             await createOffer(formData);
+         
         } catch (error) {
-            
+            console.log(error);
         }
 
     }  
