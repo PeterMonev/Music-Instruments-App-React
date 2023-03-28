@@ -13,12 +13,15 @@ export const Create = () => {
         description: '',
     });
 
-    function onChange(event){
-        const name = event.target.name;
-        setFormData(prevFormData => ({...prevFormData, [name]: event.target.value}));
+    function onChange (event)  {
+       
+        const { name, value } = event.target;
+        setFormData((prevFormData) => ({
+          ...prevFormData,
+          [name]: value,
+        }));
         console.log(formData);
-    };
-
+      };
 
 
     return (
@@ -32,13 +35,14 @@ export const Create = () => {
             <label className="create-label" htmlFor="title">Title:</label>
             <input onChange={onChange} value={formData.title} className="create-input-field" type="text" name="title" placeholder="Instrument title..." />
 
-            <label className="create-label" htmlFor="category">Category:</label>
-             <select onChange={onChange} value={formData.category} className="create-input-field"  >
-              <option value="guitars">Guitars</option>
-              <option value="drums">Drums</option>
-              <option value="keyboards">Keyboards</option>
-              <option value="brass">Brass</option>
-             </select>
+            <label className="create-label"  htmlFor="category" name="category">Category:
+            <select name="category" className="create-select-field" value={formData.category} onChange={onChange}>
+             <option value="guitars">Guitars</option>
+             <option value="drums">Drums</option>
+             <option value="keyboards">Keyboards</option>
+             <option value="brass">Brass</option>
+            </select>
+            </label>
 
             <label className="create-label" htmlFor="address">Address:</label>
             <input onChange={onChange} value={formData.address} className="create-input-field" type="text" name="address" placeholder="Sofia, ul.Vasil Levski 1" />
