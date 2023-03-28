@@ -10,10 +10,10 @@ export const emailValidator = (userData, setErrors) => {
 };
 
 
-export const inputValidator = (userData, tagName, setErrors) => {
+export const inputValidator = (userData, tagName,minlength, setErrors) => {
      
-    if(userData[tagName].length < 4){
-       setErrors(state => ({...state, [tagName]: `${tagName} should be 4 charaters long`}));
+    if(userData[tagName].length < minlength){
+       setErrors(state => ({...state, [tagName]: `${tagName} should be ${minlength} charaters long`}));
     } else {
        setErrors(state => ({...state, [tagName]: null}))
     }

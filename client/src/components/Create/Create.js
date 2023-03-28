@@ -1,9 +1,13 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { createOffer } from '../../services/instrumentServices';
+import { inputValidator } from '../../utils/validations';
 
 import '../Create/Create.css';
 
 export const Create = () => {
+    const navigate = useNavigate();
+    const [errors, setErrors] = useState({});
     const [formData , setFormData ] = useState({
         title: '',
         category: 'Guitars',
@@ -27,14 +31,26 @@ export const Create = () => {
         event.preventDefault();
    
         try {
-             await createOffer(formData);
-         
+            await createOffer(formData);
+            navigate('/catalog');
         } catch (error) {
             console.log(error);
-        }
+        };
+    }; 
+    
+    // Validations
+     function lengthValidation(event){
+        const tagName = event.target.name;
+        let minLength;
 
-    }  
+        if(tagName === 'title'){
+            minLength = 4;
+        } else if (tagName === 'address' || tagName === 'description'){
+            minLength = 10;
+        } 
 
+        inputValidator(formData, tagName, minLength, setErrors);
+     }
 
     return (
     <section className="create-section">
@@ -46,6 +62,7 @@ export const Create = () => {
             
             <label className="create-label" htmlFor="title">Title:</label>
             <input onChange={onChange} value={formData.title} className="create-input-field" type="text" name="title" placeholder="Instrument title..." />
+            {errors.title && <p className="p-error" style={{color: 'red'}}>{errors.title}</p>}
 
             <label className="create-label"  htmlFor="category" name="category">Category:
             <select name="category" className="create-select-field" value={formData.category} onChange={onChange}>
