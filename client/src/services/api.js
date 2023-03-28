@@ -14,7 +14,9 @@ async function request(method, url, data) {
       }
   }
 
-  const user = JSON.parse(sessionStorage.getItem('user') || '{}');
+  const user = JSON.parse(sessionStorage.getItem('session') || '{}');
+  console.log(user);
+  console.log(user.accessToken);
   if (user && user.accessToken) {
       options.headers['X-Authorization'] = user.accessToken;
   }
