@@ -20,15 +20,25 @@ export const Create = () => {
           ...prevFormData,
           [name]: value,
         }));
-        console.log(formData);
       };
+
+    function onSubmit(event){
+        event.preventDefault();
+
+        try {
+            
+        } catch (error) {
+            
+        }
+
+    }  
 
 
     return (
     <section className="create-section">
      <div className="create-container">
 
-        <form id="create" >
+        <form onSubmit={onSubmit}>
         
             <h1>Create Game</h1>
             
@@ -57,7 +67,7 @@ export const Create = () => {
             <input onChange={onChange} value={formData.year} className="create-input-field" type="number" name="year" placeholder="1992" />
 
             <label className="create-label" htmlFor="description" >Description:</label>
-            <textarea name="description" placeholder="Very good nice look and good codition..." onChange={onChange} value={formData.description} />
+            <textarea name="description" placeholder="Very nice look and good codition..." onChange={onChange} value={formData.description} />
 
             <input className="create-submit " type="submit" value="Create Offer"/>
         
