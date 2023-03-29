@@ -45,4 +45,14 @@ export const imageUrlValidator = (formData, setErrors) => {
         setErrors(state => ({...state, imageUrl: null}));
     };
 };
+
+export const positiveNumberValidator = (formData, setErrors) => {
+    if(!Number(formData.price) || formData.price <= 0 ){
+        setErrors(state => ({...state, price: 'Price must be positive number!'}));
+    } else {
+        setErrors(state => ({...state, price: null}));
+    };
+};
+
+
    
