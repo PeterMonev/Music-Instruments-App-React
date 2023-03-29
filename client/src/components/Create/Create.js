@@ -33,19 +33,8 @@ export const Create = () => {
         } else {
              setDisableButton(true);
         }
-      }, [errors])  
+      }, [errors]); 
 
-    async function onSubmit(event){
-        event.preventDefault();
-   
-        try {
-            await createOffer(formData);
-            navigate('/catalog');
-        } catch (error) {
-            console.log(error);
-        };
-    }; 
-    
     // Validations
      function lengthValidation(event){
         const tagName = event.target.name;
@@ -74,10 +63,19 @@ export const Create = () => {
      function yearValidation(){
           yearValidator(formData, setErrors);
      };
-  
-   
-     console.log(errors);
 
+     // OnSubmit
+    async function onSubmit(event){
+        event.preventDefault();
+   
+        try {
+            await createOffer(formData);
+            navigate('/catalog');
+        } catch (error) {
+            console.log(error);
+        };
+    }; 
+  
     return (
     <section className="create-section">
      <div className="create-container">
