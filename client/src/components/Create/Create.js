@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { createOffer } from '../../services/instrumentServices';
-import { imageUrlValidator, inputValidator, selectOptionValidator } from '../../utils/validations';
+import { imageUrlValidator, inputValidator, positiveNumberValidator, selectOptionValidator } from '../../utils/validations';
 
 import '../Create/Create.css';
 
@@ -68,8 +68,8 @@ export const Create = () => {
      };
 
      function positiveNumberValidation(){
-
-     }
+          positiveNumberValidator(formData, setErrors);
+     };
 
   
    
@@ -106,10 +106,12 @@ export const Create = () => {
             {errors.imageUrl && <p className="p-create-error">{errors.imageUrl}</p>}
 
             <label className="create-label" htmlFor="price">Price:</label>
-            <input onChange={onChange} value={formData.price} className="create-input-field" type="number" name="price" placeholder="0" />
+            <input onChange={onChange} value={Number(formData.price)} onBlur={positiveNumberValidation} className="create-input-field" type="number" name="price" placeholder="0" />
+            {errors.price && <p className="p-create-error">{errors.price}</p>}
 
             <label className="create-label" htmlFor="year">Year:</label>
             <input onChange={onChange} value={formData.year} className="create-input-field" type="number" name="year" placeholder="1992" />
+            {errors.year && <p className="p-create-error">{errors.year}</p>}
 
             <label className="create-label" htmlFor="description" >Description:</label>
             <textarea name="description" placeholder="Very nice look and good codition..." onChange={onChange} value={formData.description} onBlur={lengthValidation} />
