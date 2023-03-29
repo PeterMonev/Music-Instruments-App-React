@@ -9,11 +9,10 @@ export const emailValidator = (userData, setErrors) => {
     }
 };
 
-
 export const inputValidator = (userData, tagName,minlength, setErrors) => {
      
     if(userData[tagName].length < minlength){
-       setErrors(state => ({...state, [tagName]: `${tagName.charAt(0).toUpperCase() + tagName.slice(1)} should be ${minlength} charaters long!`}));
+       setErrors(state => ({...state, [tagName]: `${tagName.charAt(0).toUpperCase() + tagName.slice(1)} should be minimum ${minlength} charaters long!`}));
     } else {
        setErrors(state => ({...state, [tagName]: null}))
     }
@@ -26,5 +25,24 @@ export const passwordMatch = (userData, setErrors) => {
         setErrors(state => ({...state, repeatPassword: `Password don't match`}));
     } else {
         setErrors(state => ({...state, repeatPassword: null}));
-    }
+    };
 };
+
+export const selectOptionValidator = (formData, tagName, setErrors) =>{
+    const validOptions = ['guitars','drums', 'keyboards', 'brass'];
+
+    if(!validOptions.includes(formData[tagName])){
+        setErrors(state => ({...state, [tagName]: `Select rigth options category!`}));
+    } else {
+        setErrors(state => ({...state, [tagName]: null}));
+    }; 
+};
+
+export const imageUrlValidator = (formData, setErrors) => {
+    if(!formData.imageUrl.match(/https?:\/\//i)){
+        setErrors(state => ({...state, imageUrl: 'Invalid image Url! Try example like this: https://www.example.com.'}))
+    } else {
+        setErrors(state => ({...state, imageUrl: null}));
+    };
+};
+   

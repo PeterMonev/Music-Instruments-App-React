@@ -117,3 +117,9 @@
 .register-container p a {
     color: red;
 }
+
+.p-register-error{
+    text-align: center;
+    color: red;
+    margin: 10px;
+}

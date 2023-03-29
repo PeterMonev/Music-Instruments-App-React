@@ -1,13 +1,14 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { createOffer } from '../../services/instrumentServices';
-import { inputValidator } from '../../utils/validations';
+import { imageUrlValidator, inputValidator, selectOptionValidator } from '../../utils/validations';
 
 import '../Create/Create.css';
 
 export const Create = () => {
     const navigate = useNavigate();
     const [errors, setErrors] = useState({});
+    const [disableButton, setDisableButton] = useState(true);
     const [formData , setFormData ] = useState({
         title: '',
         category: 'Guitars',
@@ -19,13 +20,20 @@ export const Create = () => {
     });
 
     function onChange (event)  {
-       
         const { name, value } = event.target;
         setFormData((prevFormData) => ({
           ...prevFormData,
           [name]: value,
         }));
       };
+
+      useEffect(() => {
+        if(Object.values(errors).some(error => error === null || errors === {})){
+            setDisableButton(false);
+        } else {
+             setDisableButton(true);
+        }
+      }, [errors])  
 
     async function onSubmit(event){
         event.preventDefault();
@@ -48,10 +56,23 @@ export const Create = () => {
         } else if (tagName === 'address' || tagName === 'description'){
             minLength = 10;
         } 
-
         inputValidator(formData, tagName, minLength, setErrors);
      };
 
+     function selectOptionValidation(event){
+          selectOptionValidator(formData, event.target.name, setErrors);
+     };
+
+     function imageUrlValidation(){
+          imageUrlValidator(formData, setErrors);
+     };
+
+     function positiveNumberValidation(){
+
+     }
+
+  
+   
      console.log(errors);
 
     return (
@@ -63,23 +84,26 @@ export const Create = () => {
             <h1>Create Game</h1>
             
             <label className="create-label" htmlFor="title">Title:</label>
-            <input onChange={onChange} value={formData.title} className="create-input-field" type="text" name="title" placeholder="Instrument title..." />
-            {errors.title && <p className="p-error" style={{color: 'red'}}>{errors.title}</p>}
+            <input onChange={onChange} value={formData.title} onBlur={lengthValidation} className="create-input-field" type="text" name="title" placeholder="Instrument title..." />
+            {errors.title && <p className="p-create-error" >{errors.title}</p>}
 
             <label className="create-label"  htmlFor="category" name="category">Category:
-            <select name="category" className="create-select-field" value={formData.category} onChange={onChange}>
+            <select name="category" className="create-select-field" value={formData.category} onChange={onChange} onBlur={selectOptionValidation} >
              <option value="guitars">Guitars</option>
              <option value="drums">Drums</option>
              <option value="keyboards">Keyboards</option>
              <option value="brass">Brass</option>
             </select>
             </label>
+            {errors.category && <p className="p-create-error" >{errors.category}</p>}
 
             <label className="create-label" htmlFor="address">Address:</label>
-            <input onChange={onChange} value={formData.address} className="create-input-field" type="text" name="address" placeholder="Sofia, ul.Vasil Levski 1" />
+            <input onChange={onChange} value={formData.address} onBlur={lengthValidation} className="create-input-field" type="text" name="address" placeholder="Sofia, ul.Vasil Levski 1" />
+            {errors.address && <p className="p-create-error">{errors.address}</p>}
 
             <label className="create-label" htmlFor="imageUrl">ImageUrl:</label>
-            <input onChange={onChange} value={formData.imageUrl} className="create-input-field" type="text" name="imageUrl" placeholder="http://someUrl.com" />
+            <input onChange={onChange} value={formData.imageUrl} onBlur={imageUrlValidation} className="create-input-field" type="text" name="imageUrl" placeholder="http://someUrl.com" />
+            {errors.imageUrl && <p className="p-create-error">{errors.imageUrl}</p>}
 
             <label className="create-label" htmlFor="price">Price:</label>
             <input onChange={onChange} value={formData.price} className="create-input-field" type="number" name="price" placeholder="0" />
@@ -88,9 +112,10 @@ export const Create = () => {
             <input onChange={onChange} value={formData.year} className="create-input-field" type="number" name="year" placeholder="1992" />
 
             <label className="create-label" htmlFor="description" >Description:</label>
-            <textarea name="description" placeholder="Very nice look and good codition..." onChange={onChange} value={formData.description} />
-
-            <input className="create-submit " type="submit" value="Create Offer"/>
+            <textarea name="description" placeholder="Very nice look and good codition..." onChange={onChange} value={formData.description} onBlur={lengthValidation} />
+            {errors.description && <p className="p-create-error">{errors.description}</p>}
+ 
+            <input disabled={ disableButton } className="create-submit " type="submit" value="Create Offer"/>
         
         </form>
      </div>

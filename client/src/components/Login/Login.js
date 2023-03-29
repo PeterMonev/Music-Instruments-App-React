@@ -37,7 +37,7 @@ export const Login = () => {
         <label className="login-label" htmlFor="login-pass">Password:</label>
         <input className="login-input" type="password" name="password" placeholder="******" />
 
-        {error && <p className="p-error"  >{error}</p>}
+        {error && <p className="p-login-error" >{error}</p>}
         <input className='submit-login' type="submit" value="Login" />
 
         <p className='login-container-p'>
