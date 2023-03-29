@@ -3,7 +3,7 @@ export const emailValidator = (userData, setErrors) => {
     // /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
 
     if(!regex.test(String(userData.email).toLowerCase())){
-        setErrors(state => ({...state, email: 'Incorrect! Email should be like this example: peter@gmail.com'}));
+        setErrors(state => ({...state, email: 'Incorrect! Email should be like this example: peter@gmail.com!'}));
     } else {
         setErrors(state => ({...state, email: null}));
     }
@@ -13,7 +13,7 @@ export const emailValidator = (userData, setErrors) => {
 export const inputValidator = (userData, tagName,minlength, setErrors) => {
      
     if(userData[tagName].length < minlength){
-       setErrors(state => ({...state, [tagName]: `${tagName} should be ${minlength} charaters long`}));
+       setErrors(state => ({...state, [tagName]: `${tagName.charAt(0).toUpperCase() + tagName.slice(1)} should be ${minlength} charaters long!`}));
     } else {
        setErrors(state => ({...state, [tagName]: null}))
     }

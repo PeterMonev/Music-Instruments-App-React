@@ -50,7 +50,9 @@ export const Create = () => {
         } 
 
         inputValidator(formData, tagName, minLength, setErrors);
-     }
+     };
+
+     console.log(errors);
 
     return (
     <section className="create-section">

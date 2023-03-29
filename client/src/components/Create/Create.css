@@ -120,9 +120,6 @@
     background-color: goldenrod;
 }
 
-
-
-
 textarea {
     width: 60%;
     min-width: 10px;
@@ -137,4 +134,14 @@ textarea {
     box-shadow: inset 6px 6px 6px #c0c2c5, inset -6px -6px 6px white;
     margin-left: 170px;
     padding: 20px
+}
+
+.register-container p {
+    text-align: center;
+    color: whitesmoke;
+    margin-top: 15px;
+}
+
+.register-container p a {
+    color: red;
 }
