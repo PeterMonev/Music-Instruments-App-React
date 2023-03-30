@@ -1,10 +1,22 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { getAll } from '../../services/instrumentServices';
 
 import '../Catalog/Catalog.css'
-import { OfferList } from './OfferList/OfferList';
+import { OffersList } from './OffersList/OffersList';
 
 export const Catalog = () => {
-    const [offer, setOffer ] = useState([]);
+    const [offers, setOffers ] = useState([]);
+
+    useEffect(() => {
+       
+        (async () => {
+            const data = await getAll();
+            setOffers(data.instruments);
+        })();
+
+    }, []);
+
+console.log(offers);
 
     return (
         <>
@@ -16,7 +28,7 @@ export const Catalog = () => {
 
          <section className="catalog-section">
            
-         <OfferList />
+         <OffersList offers={offers}/>
 
          </section>
         </>

@@ -5,6 +5,7 @@ export async function createOffer(data) {
     return response;
 };
 
-export async function getAll(params){
-    const response = await api.get('/data/instrument',)
-}
+export async function getAll(){
+    const response = await api.get('/data/instrument',);
+    return response;
+};
