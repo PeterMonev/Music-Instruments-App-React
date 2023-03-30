@@ -7,7 +7,32 @@
 
 .catalog-section{
     padding-top: 100px;
-    background-color: grey;
+    background-image: linear-gradient(
+        300deg,
+        hsl(0deg 0% 0%) 0%,
+        hsl(45deg 36% 8%) 13%,
+        hsl(47deg 38% 13%) 23%,
+        hsl(48deg 43% 18%) 30%,
+        hsl(48deg 46% 23%) 37%,
+        hsl(49deg 49% 29%) 41%,
+        hsl(49deg 51% 34%) 45%,
+        hsl(49deg 53% 40%) 47%,
+        hsl(50deg 54% 46%) 49%,
+        hsl(50deg 59% 51%) 50%,
+        hsl(50deg 76% 57%) 50%,
+        hsl(50deg 100% 63%) 50%,
+        hsl(50deg 76% 57%) 50%,
+        hsl(50deg 59% 51%) 50%,
+        hsl(50deg 54% 46%) 49%,
+        hsl(49deg 53% 40%) 49%,
+        hsl(49deg 51% 34%) 50%,
+        hsl(49deg 49% 29%) 52%,
+        hsl(48deg 46% 23%) 54%,
+        hsl(48deg 43% 18%) 59%,
+        hsl(47deg 38% 13%) 66%,
+        hsl(45deg 36% 8%) 78%,
+        hsl(0deg 0% 0%) 100%
+      );
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover;
