@@ -55,7 +55,7 @@ export const positiveNumberValidator = (formData, setErrors) => {
 };
 
 export const yearValidator = (formData, setErrors) => {
-    if(formData.year <= 1901 || formData.year >= 2023){
+    if(formData.year <= 1900 || formData.year >= 2024){
         setErrors(state => ({...state, year: 'Year must be between 1901 and 2023!'}));
     } else {
         setErrors(state => ({...state, year: null}));

@@ -14,8 +14,8 @@ export const Create = () => {
         category: 'Guitars',
         address: '',
         imageUrl: '',
-        price: 0,
-        year: 0,
+        price: '',
+        year: '',
         description: '',
     });
 
@@ -76,6 +76,7 @@ export const Create = () => {
         };
     }; 
   
+
     return (
     <section className="create-section">
      <div className="create-container">
@@ -107,7 +108,7 @@ export const Create = () => {
             {errors.imageUrl && <p className="p-create-error">{errors.imageUrl}</p>}
 
             <label className="create-label" htmlFor="price">Price:</label>
-            <input onChange={onChange} value={Number(formData.price)} onBlur={positiveNumberValidation} className="create-input-field" type="number" name="price" placeholder="121.00" />
+            <input onChange={onChange} value={formData.price} onBlur={positiveNumberValidation} className="create-input-field" type="number" name="price" placeholder="121.00" />
             {errors.price && <p className="p-create-error">{errors.price}</p>}
 
             <label className="create-label" htmlFor="year">Year:</label>

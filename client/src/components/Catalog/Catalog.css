@@ -1,0 +1,19 @@
+.catalog-image-section {
+    width: 100vw;
+    height: 20vh;
+
+}
+
+
+.catalog-section{
+    height: 100vh;
+    width: 100vw;
+    padding-top: 100px;
+    background-color: grey;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+
+}
