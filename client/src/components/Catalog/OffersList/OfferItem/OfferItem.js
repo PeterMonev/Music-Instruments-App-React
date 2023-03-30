@@ -1,9 +1,16 @@
+import { Link } from 'react-router-dom';
 
+import '../OfferItem/OfferItem.css';
 
 export const OfferItem = ({ offer }) =>{
       return (
-        <article>
-            <h1>{offer.title}</h1>
-        </article>
+        <li className="offer-list">
+            <img src={offer.imageUrl}  alt="offer.jpg"className="offer-image"/>
+            <h1 className='offer-title'>{offer.title}</h1>
+            <p className='offer-category'>{offer.year}</p>
+            <span class='offer-price'>{offer.price}$</span>
+
+            <Link to={`/instrumets/${offer._id}`} className="read-more-btn" >Read More <i class="fa-sharp fa-solid fa-angles-right fa-beat-fade"></i>  </Link>
+        </li>
       )
 };

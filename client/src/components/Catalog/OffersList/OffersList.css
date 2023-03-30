@@ -1,0 +1,7 @@
+.offers {
+    font-size: 5rem; 
+    font-weight: 300;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 2px solid gold;
+}
