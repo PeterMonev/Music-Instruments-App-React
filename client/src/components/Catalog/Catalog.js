@@ -4,9 +4,17 @@ import { getAll } from '../../services/instrumentServices';
 import '../Catalog/Catalog.css'
 import { OffersList } from './OffersList/OffersList';
 
+const images = {
+    firstImg: '/images/GuitarsCatalogPic.jpg',
+    secondImg: '/images/DrumsCatalogPic.jpg',
+    thirdImg: '/images/KeyboardsCatalogaPic.jpg',
+    fourImg: '/images/BrassCatalogPic.jpg'
+}
+
+
 export const Catalog = () => {
     const [offers, setOffers ] = useState([]);
-
+  
     useEffect(() => {
        
         (async () => {
@@ -16,12 +24,13 @@ export const Catalog = () => {
 
     }, []);
 
-console.log(offers);
-
     return (
         <>
          <section className='catalog-image-section'>
-            <img src="" alt="" />
+            <img src={images.firstImg} alt="guitar" />
+            <img src={images.secondImg} alt="drums" />
+            <img src={images.thirdImg} alt="keyboards" />
+            <img src={images.fourImg} alt="brass" />
          </section>
 
             

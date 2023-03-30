@@ -1,37 +1,42 @@
 .catalog-image-section {
     width: 100vw;
-    height: 20vh;
-
+    height: 40vh;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
+.catalog-image-section img {
+    width: 25%;
+    height: 100%;
+}
 
 .catalog-section{
     padding-top: 100px;
     background-image: linear-gradient(
         300deg,
-        hsl(0deg 0% 0%) 0%,
-        hsl(45deg 36% 8%) 13%,
-        hsl(47deg 38% 13%) 23%,
-        hsl(48deg 43% 18%) 30%,
-        hsl(48deg 46% 23%) 37%,
-        hsl(49deg 49% 29%) 41%,
-        hsl(49deg 51% 34%) 45%,
-        hsl(49deg 53% 40%) 47%,
-        hsl(50deg 54% 46%) 49%,
-        hsl(50deg 59% 51%) 50%,
+        hsl(0deg 0% 0%) 1%,
+        hsl(45deg 36% 8%) 32%,
+        hsl(47deg 38% 13%) 40%,
+        hsl(48deg 43% 18%) 45%,
+        hsl(48deg 46% 23%) 48%,
+        hsl(49deg 49% 29%) 50%,
+        hsl(49deg 51% 34%) 51%,
+        hsl(49deg 53% 40%) 51%,
+        hsl(50deg 54% 46%) 51%,
+        hsl(50deg 59% 51%) 51%,
         hsl(50deg 76% 57%) 50%,
         hsl(50deg 100% 63%) 50%,
         hsl(50deg 76% 57%) 50%,
-        hsl(50deg 59% 51%) 50%,
+        hsl(50deg 59% 51%) 49%,
         hsl(50deg 54% 46%) 49%,
         hsl(49deg 53% 40%) 49%,
-        hsl(49deg 51% 34%) 50%,
-        hsl(49deg 49% 29%) 52%,
-        hsl(48deg 46% 23%) 54%,
-        hsl(48deg 43% 18%) 59%,
-        hsl(47deg 38% 13%) 66%,
-        hsl(45deg 36% 8%) 78%,
-        hsl(0deg 0% 0%) 100%
+        hsl(49deg 51% 34%) 49%,
+        hsl(49deg 49% 29%) 50%,
+        hsl(48deg 46% 23%) 52%,
+        hsl(48deg 43% 18%) 55%,
+        hsl(47deg 38% 13%) 60%,
+        hsl(45deg 36% 8%) 68%,
+        hsl(0deg 0% 0%) 99%
       );
     background-position: center; 
     background-repeat: no-repeat; 
