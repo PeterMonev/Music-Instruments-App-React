@@ -26,7 +26,7 @@ export const OfferDetails = () => {
            <img className="img-details" src={offer.imageUrl} alt="" />
         </div>
 
-        <div className="details-info">
+        <section className="details-section">
             <div className="instrument-info">
               <h2>Instrument Info:</h2>
               <h3 className="title-details">{offer.title}</h3>
@@ -44,10 +44,17 @@ export const OfferDetails = () => {
               </div>
 
             </div>
-            <div className="author-info">
+            <section className="author-container">
                <h2>Author Info:</h2>
-            </div>
-        </div>
+                 
+                <article className="author-info">
+                  <p>Full Name: <span>BARA BARA</span></p>
+                  <p>Email: <span>peter@abv.bg</span></p>
+                  <p>Phone Number: <span>09080808080</span></p>
+                </article> 
+
+            </section>
+        </section>
 
     </article>
     </section>

@@ -38,7 +38,7 @@
  
 }
 
-.details-info {
+.details-section {
     width: 60%;
     height: 100%;
     background-color: black;
@@ -47,7 +47,7 @@
     flex-direction: column;
 }
 
-.details-info h2{
+.details-section h2{
     color: white;
     font-style: italic;
     font-size: 28px;
@@ -67,7 +67,6 @@
 .info {
     display: flex;
     flex-wrap: wrap;
-    
 }
 
 .info p {
@@ -94,11 +93,6 @@
     margin-bottom: 30px;
 }
 
-.author-info {
-    height: 50%;
-    width: 100%;    
-}
-
 .about-instrument {
     color: white;
     text-align: center;
@@ -107,9 +101,40 @@
 .about-instrument h3 {
     margin: 20px;
     text-decoration: underline;
+    font-style: italic;
 }
 
 .about-instrument p {
     color: bisque;
 }
+
+/* Author Section */
+
+.author-container {
+    height: 50%;
+    width: 100%;    
+    
+
+}
+
+.author-container h2 {
+    text-align: center;
+    display: block;
+}
+
+.author-info {
+    flex-basis: 40%;
+    color: white;
+    width: 100%;
+    height: 90%;
+    font-size: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+
+.author-info span {
+     color: bisque;  
+}
+
 
