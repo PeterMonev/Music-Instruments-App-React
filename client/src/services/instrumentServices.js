@@ -9,3 +9,8 @@ export async function getAll(){
     const response = await api.get('/data/instrument',);
     return response;
 };
+
+export async function getById(id) {
+    const response = await api.get(`/data/instrument/${id}`);
+    return response;
+}

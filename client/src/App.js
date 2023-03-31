@@ -9,6 +9,7 @@ import { Home } from './components/Home/Home';
 import { Register } from './components/Register/Register';
 import { Create } from './components/Create/Create';
 import { Catalog } from './components/Catalog/Catalog';
+import { OfferDetails } from './components/Details/OfferDetails';
 
 function App() {
   const [auth, setAuth] = useSessionStorage('session');
@@ -26,6 +27,7 @@ function App() {
      <Route path="/login" element={  <Login /> } />
      <Route path='/create' element={ <Create />} />
      <Route path='/catalog' element={ <Catalog />} />
+     <Route path='/catalog/:id' element={ <OfferDetails />} />
      
      </Routes>
 
