@@ -1,7 +1,12 @@
 .section-details {
-    width: 100%;
     height: 100vh;
-    background-color: grey;
+    background-image: url(../../../public/home.jpg);
+    background-color: rgba(0,0,0,.6);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    position: relative;
+    z-index: 0;
 }
 
 .heading-details {
@@ -9,39 +14,102 @@
     font-size: 36px;
     font-style: italic;
     color: whitesmoke;
-    padding: 120px 0px 40px 0px;
+    padding: 90px 0px 20px 0px;
 }
 
 .article-details {
-    width: 80vw ;
-    height: 80vh;
+    width: 90vw ;
+    height: 75vh;
     display: flex;
     flex-direction: row;
-    padding: 1rem;
+    border-radius: 65px;
+    border: 4px goldenrod solid;
 }
 
 .div-img-details{
-  width: 40%;
-  height: 80%;
-  background-color: aqua;
- 
+  width: 50%;
+  height: 100%;
 }
 
 .img-details {
-    max-width: auto;
-    height: auto;
-    
+   width: 100%;
+   height: 100%;
+   border-radius: 60px 0 0 60px;
+ 
 }
 
 .details-info {
     width: 60%;
-    height: 80%;
-    background-color: blueviolet;
+    height: 100%;
+    background-color: black;
+    border-radius:  0  60px 60px 0 ;
+    display: flex;
+    flex-direction: column;
 }
 
-.title-details{
-    font-size: 32px;
-    width: 100%;
-    height: 100%;
-    color: red;
+.details-info h2{
+    color: white;
+    font-style: italic;
+    font-size: 28px;
+    text-decoration:underline 1px;
+    text-align: center;
+    margin-bottom: 20px;
 }
+
+.instrument-info{
+    border-bottom: 3px solid goldenrod;
+    height: 80%;
+    width: 100%;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.info p {
+    color: white;
+    margin: 10px;
+    flex-basis: 45%;
+    padding-left: 60px;
+}
+
+.info p span {
+    color: bisque;
+}
+
+.info .price span{
+    color: red;
+    margin: 15px;
+    flex-basis: 45%;
+}
+ .title-details{
+    font-size: 26px;
+    color: bisque;
+    text-align: center;
+    text-decoration:underline 4px goldenrod;
+    margin-bottom: 30px;
+}
+
+.author-info {
+    height: 50%;
+    width: 100%;    
+}
+
+.about-instrument {
+    color: white;
+    text-align: center;
+}
+
+.about-instrument h3 {
+    margin: 20px;
+    text-decoration: underline;
+}
+
+.about-instrument p {
+    color: bisque;
+}
+

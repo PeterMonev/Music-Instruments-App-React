@@ -20,14 +20,36 @@ export const OfferDetails = () => {
   return (
     <section className="section-details">
         <h1 className="heading-details">Offer Details:</h1>
-      <article className="article-details">
+        <article className="article-details">
+
         <div className="div-img-details">
-          
+           <img className="img-details" src={offer.imageUrl} alt="" />
         </div>
+
         <div className="details-info">
-        <h1 className="title-details">{offer.title}</h1>
+            <div className="instrument-info">
+              <h2>Instrument Info:</h2>
+              <h3 className="title-details">{offer.title}</h3>
+
+              <article className="info">
+              <p>Category: <span>{offer.category}</span> </p> 
+              <p>Year of production: <span>{offer.year}</span></p>
+              <p>Addres: <span>{offer.address}</span></p>
+              <p className="price">Price: <span>{offer.price}$</span></p>
+              </article>
+              
+              <div className="about-instrument">
+                <h3>About this Instrument:</h3>
+                <p>{offer.description}</p>
+              </div>
+
+            </div>
+            <div className="author-info">
+               <h2>Author Info:</h2>
+            </div>
         </div>
-      </article>
+
+    </article>
     </section>
   );
 };
