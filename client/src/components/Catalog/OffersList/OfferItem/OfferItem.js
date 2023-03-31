@@ -10,7 +10,7 @@ export const OfferItem = ({ offer }) =>{
             <p className='offer-category'>{offer.year}</p>
             <span class='offer-price'>{offer.price}$</span>
 
-            <Link to={`/instrumets/${offer._id}`} className="read-more-btn" >Read More <i class="fa-sharp fa-solid fa-angles-right fa-beat-fade"></i>  </Link>
+            <Link to={`/catalog/${offer._id}`} className="read-more-btn" >Read More <i class="fa-sharp fa-solid fa-angles-right fa-beat-fade"></i>  </Link>
         </li>
       )
 };
