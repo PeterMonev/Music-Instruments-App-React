@@ -7,19 +7,22 @@ import { AuthContext } from "../../hooks/authContext";
 
 export const OfferDetails = () => {
   const [offer, setOffer] = useState({});
+  const [isOwner, setIsOwner] = useState(false);
   const { id } = useParams();
   const { auth } = useContext(AuthContext);
 
- console.log(auth);
+  // console.log(auth);
+  // console.log(offer.owner);
 
   useEffect(() => {
     (async () => {
       const data = await getById(id);
       setOffer(data);
+      setIsOwner(auth._id === data.owner._id)
     })();
-  }, [id]);
+  }, [id, auth]);
 
-  // console.log(offer);
+  console.log(isOwner);
 
   return (
     <section className="section-details">
@@ -58,10 +61,13 @@ export const OfferDetails = () => {
                 </article> 
 
                 <div className="buttons">
-                   { auth._id === offer.owner?._id &&
+                   { isOwner ?
                      <>
                      <Link className="btn"to={`/instrument/edit/${offer._id}`}>Edit</Link>
                      <Link className="btn" to={`/instrument/delete/${offer._id}`}>Delete</Link>
+                     </>
+                     :
+                     <>
                      </>
                    }
                 </div>
