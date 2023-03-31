@@ -29,10 +29,10 @@ export const passwordMatch = (userData, setErrors) => {
 };
 
 export const selectOptionValidator = (formData, tagName, setErrors) =>{
-    const validOptions = ['guitars','drums', 'keyboards', 'brass'];
+    const validOptions = ['Guitars','Drums', 'Keyboards', 'Brass'];
 
     if(!validOptions.includes(formData[tagName])){
-        setErrors(state => ({...state, [tagName]: `Select rigth options category!`}));
+        setErrors(state => ({...state, [tagName]: `Select rigth category!`}));
     } else {
         setErrors(state => ({...state, [tagName]: null}));
     }; 

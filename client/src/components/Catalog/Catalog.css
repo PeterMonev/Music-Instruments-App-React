@@ -3,6 +3,7 @@
     height: 40vh;
     flex-direction: row;
     flex-wrap: wrap;
+    background-color: black;
 }
 
 .catalog-image-section img {

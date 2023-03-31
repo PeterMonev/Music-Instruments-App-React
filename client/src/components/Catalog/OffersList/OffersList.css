@@ -5,3 +5,13 @@
     flex-wrap: wrap;
     border-radius: 2px solid gold;
 }
+
+.offersList-noFound {
+    font-size: 62px;
+    color: goldenrod;
+    font-style: italic;
+    text-align: center;
+    width: 100vw;
+    height: 35vh;
+    font-weight: 50;
+}

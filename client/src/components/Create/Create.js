@@ -11,7 +11,7 @@ export const Create = () => {
     const [disableButton, setDisableButton] = useState(true);
     const [formData , setFormData ] = useState({
         title: '',
-        category: 'Guitars',
+        category: 'Select Category',
         address: '',
         imageUrl: '',
         price: '',
@@ -91,10 +91,11 @@ export const Create = () => {
 
             <label className="create-label"  htmlFor="category" name="category">Category:
             <select name="category" className="create-select-field" value={formData.category} onChange={onChange} onBlur={selectOptionValidation} >
-             <option value="guitars">Guitars</option>
-             <option value="drums">Drums</option>
-             <option value="keyboards">Keyboards</option>
-             <option value="brass">Brass</option>
+             <option value="Select category">Select category</option>
+             <option value="Guitars">Guitars</option>
+             <option value="Drums">Drums</option>
+             <option value="Keyboards">Keyboards</option>
+             <option value="Brass">Brass</option>
             </select>
             </label>
             {errors.category && <p className="p-create-error" >{errors.category}</p>}
