@@ -1,12 +1,16 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import { useParams, Link } from "react-router-dom";
 
-import { getById } from "../../services/instrumentServices";
 import "../Details/OfferDetails.css";
+import { getById } from "../../services/instrumentServices";
+import { AuthContext } from "../../hooks/authContext";
 
 export const OfferDetails = () => {
   const [offer, setOffer] = useState({});
   const { id } = useParams();
+  const { auth } = useContext(AuthContext);
+
+ console.log(auth);
 
   useEffect(() => {
     (async () => {
@@ -15,7 +19,7 @@ export const OfferDetails = () => {
     })();
   }, [id]);
 
-  console.log(offer);
+  // console.log(offer);
 
   return (
     <section className="section-details">
@@ -52,6 +56,15 @@ export const OfferDetails = () => {
                   <p>Email: <span>peter@abv.bg</span></p>
                   <p>Phone Number: <span>09080808080</span></p>
                 </article> 
+
+                <div className="buttons">
+                   { auth._id === offer.owner?._id &&
+                     <>
+                     <Link className="btn"to={`/instrument/edit/${offer._id}`}>Edit</Link>
+                     <Link className="btn" to={`/instrument/delete/${offer._id}`}>Delete</Link>
+                     </>
+                   }
+                </div>
 
             </section>
         </section>
