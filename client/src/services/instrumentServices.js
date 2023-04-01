@@ -19,3 +19,8 @@ export async function deleteOffer(id) {
     const response = await api.remove(`/data/instrument/${id}`);
     return response;
 };
+
+export async function editOffer(id, data) {
+    const response = await api.put(`/data/instrument/${id}`, data);
+    return response;
+};
