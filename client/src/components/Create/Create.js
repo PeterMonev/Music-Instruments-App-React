@@ -83,7 +83,7 @@ export const Create = () => {
 
         <form onSubmit={onSubmit}>
         
-            <h1>Create Game</h1>
+            <h1>Create Offer: </h1>
             
             <label className="create-label" htmlFor="title">Title:</label>
             <input onChange={onChange} value={formData.title} onBlur={lengthValidation} className="create-input-field" type="text" name="title" placeholder="Instrument title..." />

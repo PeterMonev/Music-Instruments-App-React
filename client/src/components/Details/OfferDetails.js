@@ -78,7 +78,7 @@ export const OfferDetails = () => {
                 <div className="buttons">
                    { isOwner ?
                      <>
-                     <Link className="btn"to={`/instrument/edit/${offer._id}`}>Edit</Link>
+                     <Link className="btn" to={`/instrument/edit/${offer._id}`}>Edit</Link>
                      <Link className="btn" onClick={onDelete}>Delete</Link>
                      </>
                      :

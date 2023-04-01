@@ -10,6 +10,7 @@ import { Register } from './components/Register/Register';
 import { Create } from './components/Create/Create';
 import { Catalog } from './components/Catalog/Catalog';
 import { OfferDetails } from './components/Details/OfferDetails';
+import { OfferEdit } from './components/Edit/OfferEdit';
 
 function App() {
   const [auth, setAuth] = useSessionStorage('session');
@@ -28,6 +29,7 @@ function App() {
      <Route path='/create' element={ <Create />} />
      <Route path='/catalog' element={ <Catalog />} />
      <Route path='/catalog/:id' element={ <OfferDetails />} />
+     <Route path='/instrument/edit/:id' element={ <OfferEdit />} />
      
      </Routes>
 
