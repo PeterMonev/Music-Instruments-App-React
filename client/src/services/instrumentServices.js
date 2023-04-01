@@ -13,4 +13,9 @@ export async function getAll(){
 export async function getById(id) {
     const response = await api.get(`/data/instrument/${id}`);
     return response;
-}
+};
+
+export async function deleteOffer(id) {
+    const response = await api.remove(`/data/instrument/${id}`);
+    return response;
+};
