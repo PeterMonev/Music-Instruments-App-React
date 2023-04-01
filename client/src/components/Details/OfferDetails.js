@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 
 import "../Details/OfferDetails.css";
-import { getById } from "../../services/instrumentServices";
+import { deleteOffer, getById } from "../../services/instrumentServices";
 import { AuthContext } from "../../hooks/authContext";
 import { parseDate } from "../../utils/parseDate";
 
@@ -11,6 +11,7 @@ export const OfferDetails = () => {
   const [isOwner, setIsOwner] = useState(false);
   const { id } = useParams();
   const { auth } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   useEffect(() => {
     (async () => {
@@ -20,7 +21,18 @@ export const OfferDetails = () => {
     })();
   }, [id, auth]);
 
-  console.log(offer);
+  async function onDelete(event){
+     event.preventDefault();
+
+     try {
+      await deleteOffer(id);
+      navigate('/catalog');
+
+     } catch (error) {
+       console.log(error);
+     }
+  };
+
 
   return (
     <section className="section-details">
@@ -62,7 +74,7 @@ export const OfferDetails = () => {
                    { isOwner ?
                      <>
                      <Link className="btn"to={`/instrument/edit/${offer._id}`}>Edit</Link>
-                     <Link className="btn" to={`/instrument/delete/${offer._id}`}>Delete</Link>
+                     <Link className="btn" onClick={onDelete}>Delete</Link>
                      </>
                      :
                      <>

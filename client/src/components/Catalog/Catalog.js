@@ -33,8 +33,6 @@ export const Catalog = () => {
             <img src={images.fourImg} alt="brass" />
          </section>
 
-            
-
          <section className="catalog-section">
            
          <OffersList offers={offers}/>
