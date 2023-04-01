@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { createOffer, editOffer, getById } from '../../services/instrumentServices';
+import { editOffer, getById } from '../../services/instrumentServices';
 import { imageUrlValidator, inputValidator, positiveNumberValidator, selectOptionValidator, yearValidator } from '../../utils/validations';
-
 
 import '../Edit/OfferEdit.css';
 
@@ -20,8 +19,6 @@ export const OfferEdit = () => {
           setFormData(data);
         })();
       }, [id]);
-
-      console.log(formData);
 
     function onChange (event)  {
         const { name, value } = event.target;
@@ -68,7 +65,7 @@ export const OfferEdit = () => {
           yearValidator(formData, setErrors);
      };
 
-     // OnSubmit
+     // OnSubmit Edit
     async function onSubmit(event){
         event.preventDefault();
    
