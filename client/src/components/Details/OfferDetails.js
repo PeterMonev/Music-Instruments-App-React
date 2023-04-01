@@ -23,14 +23,19 @@ export const OfferDetails = () => {
 
   async function onDelete(event){
      event.preventDefault();
+    
+    const confirm = window.confirm('Are you sure you want to delete this offer?');
 
-     try {
-      await deleteOffer(id);
-      navigate('/catalog');
-
-     } catch (error) {
-       console.log(error);
-     }
+    if(confirm){
+      try {
+        await deleteOffer(id);
+        navigate('/catalog');
+  
+       } catch (error) {
+         console.log(error);
+       };
+    };
+  
   };
 
 
@@ -40,7 +45,7 @@ export const OfferDetails = () => {
         <article className="article-details">
 
         <div className="div-img-details">
-           <img className="img-details" src={offer.imageUrl} alt="" />
+           <img className="img-details" src={offer.imageUrl} alt="offer.imageUrl" />
         </div>
 
         <section className="details-section">
