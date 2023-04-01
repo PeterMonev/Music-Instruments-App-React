@@ -4,6 +4,7 @@ import { useParams, Link } from "react-router-dom";
 import "../Details/OfferDetails.css";
 import { getById } from "../../services/instrumentServices";
 import { AuthContext } from "../../hooks/authContext";
+import { parseDate } from "../../utils/parseDate";
 
 export const OfferDetails = () => {
   const [offer, setOffer] = useState({});
@@ -11,18 +12,15 @@ export const OfferDetails = () => {
   const { id } = useParams();
   const { auth } = useContext(AuthContext);
 
-  // console.log(auth);
-  // console.log(offer.owner);
-
   useEffect(() => {
     (async () => {
       const data = await getById(id);
       setOffer(data);
-      setIsOwner(auth._id === data.owner._id)
+      setIsOwner(auth?._id === data.owner._id)
     })();
   }, [id, auth]);
 
-  console.log(isOwner);
+  console.log(offer);
 
   return (
     <section className="section-details">
@@ -49,7 +47,7 @@ export const OfferDetails = () => {
                 <h3>About this Instrument:</h3>
                 <p>{offer.description}</p>
               </div>
-
+               <p className="createdAt">Created: <span>{parseDate(offer.createdAt)}</span></p>
             </div>
             <section className="author-container">
                <h2>Author Info:</h2>

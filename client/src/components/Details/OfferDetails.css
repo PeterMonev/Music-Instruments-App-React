@@ -76,7 +76,8 @@
     padding-left: 60px;
 }
 
-.info p span {
+.info p span,
+.createdAt span {
     color: bisque;
 }
 
@@ -106,6 +107,13 @@
 
 .about-instrument p {
     color: bisque;
+}
+
+.createdAt {
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+    font-size: 16px;
 }
 
 /* Author Section */
