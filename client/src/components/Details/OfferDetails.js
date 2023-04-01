@@ -22,7 +22,7 @@ export const OfferDetails = () => {
   }, [id, auth]);
 
   async function onDelete(event){
-     event.preventDefault();
+    event.preventDefault();
     
     const confirm = window.confirm('Are you sure you want to delete this offer?');
 
