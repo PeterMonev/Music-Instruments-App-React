@@ -22,8 +22,6 @@ export const OfferDetails = () => {
     })();
   }, [id, auth]);
 
-  console.log(offer);
-
   async function onDelete(event){
     event.preventDefault();
     

@@ -1,0 +1,34 @@
+.comment-create-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center; 
+    align-items: center;
+
+}
+
+.comment-create-container h4 {
+    margin: 30px;
+}
+
+.comment-create-container textarea {
+    width: 60vw;
+    height: 20vh;
+    margin-right: 100px;
+}
+
+.comment-create-container input {
+   display: block;
+   padding: 15px 30px;
+   border-radius: 60px;
+   margin-top: 20px;
+   font-size: 24px;
+   background-color: transparent;
+   color: white;
+   border: 2px solid goldenrod;
+}
+
+.comment-create-container input:hover {
+    background-color: goldenrod;
+    color: black;
+    transition: 1.0s;
+}

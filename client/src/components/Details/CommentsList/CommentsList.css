@@ -15,4 +15,19 @@
     border-radius: 65px;
     border: 4px goldenrod solid;    
     background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.comments-container h4{
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.p-guest {
+    color: white;
+    text-align: center;
+    font-size: 18px;
 }
