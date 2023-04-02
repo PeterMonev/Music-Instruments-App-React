@@ -1,0 +1,18 @@
+
+.comments-title {
+    text-align: center;
+    font-size: 36px;
+    font-style: italic;
+    color: whitesmoke;
+    padding: 25px 25px;
+}
+
+.comments-container {
+    width: 90vw ;
+    height: 75vh;
+    display: flex;
+    flex-direction: row;
+    border-radius: 65px;
+    border: 4px goldenrod solid;    
+    background-color: black;
+}

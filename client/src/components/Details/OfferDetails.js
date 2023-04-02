@@ -5,6 +5,7 @@ import "../Details/OfferDetails.css";
 import { deleteOffer, getById } from "../../services/instrumentServices";
 import { AuthContext } from "../../hooks/authContext";
 import { parseDate } from "../../utils/parseDate";
+import { CommentsList } from "./CommentsList/CommentsList";
 
 export const OfferDetails = () => {
   const [offer, setOffer] = useState({});
@@ -20,6 +21,8 @@ export const OfferDetails = () => {
       setIsOwner(auth?._id === data.owner._id)
     })();
   }, [id, auth]);
+
+  console.log(offer);
 
   async function onDelete(event){
     event.preventDefault();
@@ -91,6 +94,9 @@ export const OfferDetails = () => {
         </section>
 
     </article>
+
+      <CommentsList offerId={id} />
+
     </section>
   );
 };
