@@ -4,22 +4,21 @@ import { Link } from 'react-router-dom';
 import '../CommentsList/CommentsList.css';
 import { AuthContext } from '../../../hooks/authContext';
 import { CommentsCreate } from './CommentsCreate/CommentsCreate';
+import { CommentsItem } from '../CommentsList/CommentsItem/CommentsItem';
 import { getCommnetsByOfferId } from '../../../services/commentsServices';
 
 export const CommentsList = ({ offerId }) => {
     const [comments, setComments] = useState([]);
     const { auth } = useContext(AuthContext);
 
-    const requstComments = useCallback(() => {
+    const requestComments = useCallback(() => {
       getCommnetsByOfferId(offerId)
-          .then(res => setComments(res))
-          .catch(err => console.log(err));
+          .then(response => setComments(response))
+          .catch(error => console.log(error));
   }, [offerId]);
 
-  useEffect(() => requstComments(), [requstComments]);
-
-  
-    const commentHandler = () => requstComments();
+    useEffect(() => requestComments(), [requestComments]);
+    const commentHandler = () => requestComments();
 
     return (
         <>
@@ -29,7 +28,9 @@ export const CommentsList = ({ offerId }) => {
             
             <article className='comments-list'>
                   
-              
+             <ul>
+              {comments.map(comments => (<CommentsItem comments={comments} commentHandler={commentHandler} />))}
+             </ul>
 
             </article>
 

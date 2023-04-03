@@ -1,0 +1,30 @@
+.comments-li{
+    margin: 10px;
+    border: 2px solid goldenrod;
+    padding: 15px;
+    border-radius: 60px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.comments-email {
+    color: white;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.comments-text {
+    color: bisque;
+    font-size: 18px;
+}
+
+.commnets-created{
+    margin-top: 5px;
+    color: white;
+}
+
+.comments-div {
+    display: flex;
+    flex-direction: row;
+}
