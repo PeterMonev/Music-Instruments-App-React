@@ -1,21 +1,26 @@
 import { useState } from "react";
 import "../CommentsCreate/CommentsCreate.css";
+import { createComment } from "../../../../services/commentsServices";
 
-export const CommentsCreate = ({ offerId }) => {
-  const [comment, setCommnet] = useState("");
+export const CommentsCreate = ({ offerId, commentHandler }) => {
+  const [text, setComment] = useState("");
 
   function onChange(event) {
-    setCommnet(event.target.value);
+    setComment(event.target.value);
   };
 
   async function onSubmit(event){
     event.preventDefault();
 
-    
+    try {
+        await createComment(offerId, {text});
+        setComment('');
+        commentHandler();
+    } catch (error) {
+        console.log(error);
+    }
   }
 
-  console.log(comment);
- 
   return (
     <section className="comment-create-container">
       <h4>Leave a comment:</h4>

@@ -1,14 +1,26 @@
-import { useContext, useState } from 'react';
+import { useCallback, useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import '../CommentsList/CommentsList.css';
 import { AuthContext } from '../../../hooks/authContext';
 import { CommentsCreate } from './CommentsCreate/CommentsCreate';
+import { getCommnetsByOfferId } from '../../../services/commentsServices';
 
 export const CommentsList = ({ offerId }) => {
-    const [comments, setCommnets] = useState([]);
+    const [comments, setComments] = useState([]);
     const { auth } = useContext(AuthContext);
-  console.log(auth);
+
+    const requstComments = useCallback(() => {
+      getCommnetsByOfferId(offerId)
+          .then(res => setComments(res))
+          .catch(err => console.log(err));
+  }, [offerId]);
+
+  useEffect(() => requstComments(), [requstComments]);
+
+  
+    const commentHandler = () => requstComments();
+
     return (
         <>
         <h1 className="comments-title"> Commnets: </h1>
@@ -22,7 +34,7 @@ export const CommentsList = ({ offerId }) => {
             </article>
 
             {auth?.accessToken ? 
-              <CommentsCreate offerId={offerId} /> 
+              <CommentsCreate offerId={offerId} commentHandler={commentHandler} /> 
               :
               <>
               <p className='p-guest'>
