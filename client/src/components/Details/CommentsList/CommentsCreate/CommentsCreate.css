@@ -14,6 +14,7 @@
     width: 60vw;
     height: 20vh;
     margin-right: 100px;
+    padding: 30px;
 }
 
 .comment-create-container input {
