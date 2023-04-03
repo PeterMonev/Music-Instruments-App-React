@@ -1,7 +1,7 @@
 .comments-li{
     margin: 10px;
     border: 2px solid goldenrod;
-    padding: 15px;
+    padding: 20px;
     border-radius: 60px;
     display: flex;
     flex-direction: column;
@@ -11,12 +11,33 @@
 .comments-email {
     color: white;
     margin-right: 10px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .comments-text {
     color: bisque;
-    font-size: 18px;
+    font-size: 16px;
+
+}
+
+.comments-buttons {
+    display: inline-block;      
+}
+
+.comments-buttons button {
+    margin-top: 10px;
+    margin-left: 20px;
+    padding: 10px 10px;
+    border-radius: 30px;
+    border: 2px solid goldenrod;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+}
+
+.comments-buttons button:hover {
+    background-color: goldenrod;
+    color: black;
 }
 
 .commnets-created{
@@ -27,4 +48,5 @@
 .comments-div {
     display: flex;
     flex-direction: row;
+    margin-bottom: 5px;
 }
