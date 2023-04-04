@@ -14,3 +14,8 @@ export async function deleteComment(commentId) {
     const response = await api.remove(`/data/instrument/comments/${commentId}`);
     return response;
 };
+
+export async function editComment(commentId, data) {
+    const response = api.put(`/data/instrument/comments/${commentId}`, data);
+    return response;
+};
