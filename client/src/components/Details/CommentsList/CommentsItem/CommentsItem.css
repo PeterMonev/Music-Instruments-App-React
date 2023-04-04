@@ -52,7 +52,17 @@
     flex-direction: column;
     margin-bottom: 10px;
     flex-wrap: wrap;
-    width: 90%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.comment-edit-form{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    width: 100%;
     justify-content: center;
     align-items: center;
 }
@@ -67,7 +77,7 @@
     font-size: 16px;
     display: block;
     margin-top: 10px;
-    margin-left: 580px;
+    margin-left: 690px;
 }
 
 .comment-edit-form-submit:hover {
@@ -76,8 +86,8 @@
 }
 
 .comment-edit-form-text{
-   padding: 10px;
+   padding: 15px;
    font-size: 20px;
-   width: 1000px;
-   margin-right: 60px;
+   width: 80%;
+   justify-self: center;
 }
