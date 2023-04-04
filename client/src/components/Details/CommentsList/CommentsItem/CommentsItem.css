@@ -10,14 +10,16 @@
 
 .comments-email {
     color: white;
-    margin-right: 10px;
+    margin-bottom: 10px;
     font-size: 16px;
+    text-align: center;
 }
 
 .comments-text {
     color: bisque;
-    font-size: 16px;
-
+    font-size: 18px;
+    margin: 5px;
+    text-align: center;
 }
 
 .comments-buttons {
@@ -47,9 +49,35 @@
 
 .comments-div {
     display: flex;
-    flex-direction: row;
-    margin-bottom: 5px;
+    flex-direction: column;
+    margin-bottom: 10px;
     flex-wrap: wrap;
-   
-    
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+}
+
+.comment-edit-form-submit {
+    margin-left: 15px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 2px solid goldenrod;
+    color: white;
+    background-color: black;
+    font-size: 16px;
+    display: block;
+    margin-top: 10px;
+    margin-left: 580px;
+}
+
+.comment-edit-form-submit:hover {
+    color: black;
+    background-color: goldenrod;
+}
+
+.comment-edit-form-text{
+   padding: 10px;
+   font-size: 20px;
+   width: 1000px;
+   margin-right: 60px;
 }

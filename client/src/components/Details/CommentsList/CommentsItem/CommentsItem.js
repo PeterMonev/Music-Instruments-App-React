@@ -43,9 +43,9 @@ export const CommentsItem = ({comments, commentHandler}) => {
         <p className="comments-email">{comments.owner.email}: </p>
       
         {isEdit ? 
-        <form onSubmit={onEditComment} >
-         <input value={dataComment.text} type="text" name='text' onChange={onChangeComment} />
-         <input type="submit" name="submit" />
+        <form className='comment-edit-form' onSubmit={onEditComment} >
+         <textarea className='comment-edit-form-text' value={dataComment.text} type="text" name='text' onChange={onChangeComment} />
+         <input className='comment-edit-form-submit' type="submit" name="submit" />
         </form>
         :
         <p className='comments-text'>{comments.text}</p>
