@@ -12,6 +12,7 @@ import { Catalog } from './components/Catalog/Catalog';
 import { OfferDetails } from './components/Details/OfferDetails';
 import { OfferEdit } from './components/Edit/OfferEdit';
 import { PrivateGuard } from './components/Guards/PrivateGuad';
+import { PublicGuard } from './components/Guards/PublicGuard';
 
 function App() {
   const [auth, setAuth] = useSessionStorage('session');
@@ -24,18 +25,21 @@ function App() {
      <Header />
    
      <Routes >
+
       <Route  element={<PrivateGuard />}> 
-       <Route path='/create' element={ <Create />} />   
-       <Route path='/instrument/edit/:id' element={ <OfferEdit />} />
+        <Route path='/create' element={ <Create />} />   
+        <Route path='/instrument/edit/:id' element={ <OfferEdit />} />
       </Route>
 
+      <Route element={<PublicGuard />}>
+        <Route path='/register' element={<Register/> }/>
+        <Route path="/login" element={  <Login /> } />
+      </Route>
 
-     <Route path="/" element={<Home />} />
-     <Route path='/register' element={<Register/> }/>
-     <Route path="/login" element={  <Login /> } />
-     <Route path='/catalog' element={ <Catalog />} />
-     <Route path='/catalog/:id' element={ <OfferDetails />} />
-
+        <Route path="/" element={<Home />} />
+        <Route path='/catalog' element={ <Catalog />} />
+        <Route path='/catalog/:id' element={ <OfferDetails />} />
+  
      </Routes>
 
     </AuthContext.Provider>  
