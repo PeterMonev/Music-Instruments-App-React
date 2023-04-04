@@ -11,10 +11,11 @@ import { Create } from './components/Create/Create';
 import { Catalog } from './components/Catalog/Catalog';
 import { OfferDetails } from './components/Details/OfferDetails';
 import { OfferEdit } from './components/Edit/OfferEdit';
+import { PrivateGuard } from './components/Guards/PrivateGuad';
 
 function App() {
   const [auth, setAuth] = useSessionStorage('session');
-
+  
   return (
 
     <div className="App">
@@ -23,14 +24,18 @@ function App() {
      <Header />
    
      <Routes >
+      <Route  element={<PrivateGuard />}> 
+       <Route path='/create' element={ <Create />} />   
+       <Route path='/instrument/edit/:id' element={ <OfferEdit />} />
+      </Route>
+
+
      <Route path="/" element={<Home />} />
      <Route path='/register' element={<Register/> }/>
      <Route path="/login" element={  <Login /> } />
-     <Route path='/create' element={ <Create />} />
      <Route path='/catalog' element={ <Catalog />} />
      <Route path='/catalog/:id' element={ <OfferDetails />} />
-     <Route path='/instrument/edit/:id' element={ <OfferEdit />} />
-     
+
      </Routes>
 
     </AuthContext.Provider>  

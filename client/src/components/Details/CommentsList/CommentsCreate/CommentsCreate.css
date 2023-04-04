@@ -26,10 +26,17 @@
    background-color: transparent;
    color: white;
    border: 2px solid goldenrod;
+   margin-bottom: 20px;
 }
 
 .comment-create-container input:hover {
     background-color: goldenrod;
     color: black;
     transition: 1.0s;
+}
+
+.comment-error {
+    color: red;
+    text-align: center;
+    margin-top: 20px;
 }
