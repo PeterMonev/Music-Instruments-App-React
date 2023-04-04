@@ -5,7 +5,7 @@
     border-radius: 60px;
     display: flex;
     flex-direction: column;
-
+    flex-wrap: wrap;
 }
 
 .comments-email {
@@ -49,4 +49,7 @@
     display: flex;
     flex-direction: row;
     margin-bottom: 5px;
+    flex-wrap: wrap;
+   
+    
 }

@@ -29,7 +29,7 @@ export const CommentsList = ({ offerId }) => {
             <article className='comments-list'>
                   
              <ul>
-              {comments.map(comments => (<CommentsItem comments={comments} commentHandler={commentHandler} />))}
+              {comments.map(comments => (<CommentsItem key={comments._id} comments={comments} commentHandler={commentHandler} />))}
              </ul>
 
             </article>

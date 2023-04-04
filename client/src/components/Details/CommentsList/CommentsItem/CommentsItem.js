@@ -1,7 +1,10 @@
 import '../CommentsItem/CommentsItem.css'
 import { parseDate } from "../../../../utils/parseDate";
+import { useContext } from 'react';
+import { AuthContext } from '../../../../hooks/authContext';
 
 export const CommentsItem = ({comments, commentHandler}) => {
+   const { auth } = useContext(AuthContext);
    console.log(comments);
     return (
      <li className='comments-li'>
@@ -11,8 +14,16 @@ export const CommentsItem = ({comments, commentHandler}) => {
       </div>
        <p className='commnets-created'>{parseDate(comments.createdAt)}</p>
        <div className='comments-buttons'>
-       <button >Edit</button>
-       <button>Delete</button>
+        { auth?._id === comments.owner._id ?
+           <>
+                  <button>Edit</button>
+                  <button>Delete</button>
+           </> 
+           : 
+           <>
+           </>
+      
+        }
        </div>
      </li>
     );

@@ -8,4 +8,9 @@ export async function getCommnetsByOfferId(offerId){
 export async function createComment(offerId, data){
     const response = await api.post(`/data/instrument/${offerId}/comments`, data);
     return response;
-}
+};
+
+export async function deleteComment(commentId) {
+    const response = await api.remove(`/data/instrument/comments/${commentId}`);
+    return response;
+};

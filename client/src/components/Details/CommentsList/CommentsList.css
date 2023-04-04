@@ -8,14 +8,11 @@
 }
 
 .comments-container {
-    width: 90vw ;
-    display: flex;
-    flex-direction: row;
+    width: 90vw ;   
     border-radius: 65px;
     border: 4px goldenrod solid;    
     background-color: black;
-    display: flex;
-    flex-direction: column;
+
 }
 
 .comments-container h4{
