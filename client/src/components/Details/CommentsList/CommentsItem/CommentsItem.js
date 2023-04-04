@@ -46,7 +46,7 @@ export const CommentsItem = ({comments, commentHandler}) => {
   function lengthValidation(event){
     const tagName = event.target.name;
     console.log(tagName); 
-    inputValidator(dataComment, tagName, 3, setErrors, 300);
+    inputValidator(dataComment, tagName, 10, setErrors, 300);
   }
 
     return (

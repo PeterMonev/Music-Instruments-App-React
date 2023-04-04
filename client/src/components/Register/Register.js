@@ -39,7 +39,7 @@ export const Register = () => {
 
   function lengthValidation(event){
     const tagName = event.target.name;
-    inputValidator(userData, tagName, 4, setErrors);    
+    inputValidator(userData, tagName, 4, setErrors, 20);    
   };
 
   function passwordMatchValidation(){
