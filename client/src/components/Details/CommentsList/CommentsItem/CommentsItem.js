@@ -3,11 +3,13 @@ import { parseDate } from "../../../../utils/parseDate";
 import { useContext, useState } from 'react';
 import { AuthContext } from '../../../../hooks/authContext';
 import { deleteComment, editComment } from '../../../../services/commentsServices';
+import { inputValidator } from '../../../../utils/validations';
 
 export const CommentsItem = ({comments, commentHandler}) => {
    const { auth } = useContext(AuthContext);
    const [isEdit, setIsEdit ] = useState(false);
    const [dataComment, setDataComment] = useState({ text: comments.text});
+   const [errors, setErrors ] = useState({});
 
    function onChangeComment(event){
     setDataComment({text: event.target.value});
@@ -27,16 +29,26 @@ export const CommentsItem = ({comments, commentHandler}) => {
 
    async function onDeleteComment(event){
      event.preventDefault();
+     const confirm = window.confirm('Are you sure you want to delete this offer?');
+
+     if(confirm){
      try {
        await deleteComment(comments._id);
        commentHandler();
-
      } catch (error) {
        console.log(error);
-     }
+     };
+    };
    };
 
-  //  console.log(comments);
+  // Validation
+
+  function lengthValidation(event){
+    const tagName = event.target.name;
+    console.log(tagName); 
+    inputValidator(dataComment, tagName, 3, setErrors, 300);
+  }
+
     return (
      <li className='comments-li'>
       <div className='comments-div'>
@@ -44,8 +56,9 @@ export const CommentsItem = ({comments, commentHandler}) => {
       
         {isEdit ? 
         <form className='comment-edit-form' onSubmit={onEditComment} >
-         <textarea className='comment-edit-form-text' value={dataComment.text} type="text" name='text' onChange={onChangeComment} />
+         <textarea className='comment-edit-form-text' onBlur={lengthValidation} value={dataComment.text} type="text" name='text' onChange={onChangeComment} />
          <input className='comment-edit-form-submit' type="submit" name="submit" />
+         {errors && <p className='comment-error'>{errors.text}</p>}
         </form>
         :
         <p className='comments-text'>{comments.text}</p>

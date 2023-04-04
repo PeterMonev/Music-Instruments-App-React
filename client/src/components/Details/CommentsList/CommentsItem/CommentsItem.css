@@ -20,6 +20,8 @@
     font-size: 18px;
     margin: 5px;
     text-align: center;
+    flex-wrap: wrap;
+ 
 }
 
 .comments-buttons {
@@ -76,7 +78,7 @@
     background-color: black;
     font-size: 16px;
     display: block;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-left: 690px;
 }
 
@@ -90,4 +92,10 @@
    font-size: 20px;
    width: 80%;
    justify-self: center;
+}
+
+.comment-error {
+    color: red;
+    text-align: center;
+    margin-top: 20px;
 }

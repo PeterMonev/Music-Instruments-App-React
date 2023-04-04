@@ -9,10 +9,10 @@ export const emailValidator = (userData, setErrors) => {
     }
 };
 
-export const inputValidator = (userData, tagName,minlength, setErrors) => {
+export const inputValidator = (userData, tagName,minLength, setErrors, maxLength) => {
      
-    if(userData[tagName].length < minlength){
-       setErrors(state => ({...state, [tagName]: `${tagName.charAt(0).toUpperCase() + tagName.slice(1)} should be minimum ${minlength} charaters long!`}));
+    if(userData[tagName].length < minLength){
+       setErrors(state => ({...state, [tagName]: `${tagName.charAt(0).toUpperCase() + tagName.slice(1)} should be between ${minLength} and ${maxLength} charaters long!`}));
     } else {
        setErrors(state => ({...state, [tagName]: null}))
     }
