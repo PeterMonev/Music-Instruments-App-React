@@ -18,7 +18,7 @@
 
 .article-details {
     width: 90vw ;
-    height: 75vh;
+
     display: flex;
     flex-direction: row;
     border-radius: 65px;
@@ -27,7 +27,7 @@
 
 .div-img-details{
   width: 50%;
-  height: 100%;
+
 }
 
 .img-details {
@@ -39,7 +39,6 @@
 
 .details-section {
     width: 60%;
-    height: 100%;
     background-color: black;
     border-radius:  0  60px 60px 0 ;
     display: flex;
@@ -57,7 +56,6 @@
 
 .instrument-info{
     border-bottom: 3px solid goldenrod;
-    height: 80%;
     width: 100%;
     padding: 20px;
     font-size: 20px;
@@ -118,7 +116,7 @@
 /* Author Section */
 
 .author-container {
-    height: 50%;
+
     width: 100%;    
     
 
@@ -133,7 +131,7 @@
 .author-info {
     color: white;
     width: 100%;
-    height: 20%;
+
     font-size: 18px;
     display: flex;
     flex-direction: row;
@@ -156,6 +154,9 @@
     border-radius: 60px;
     text-decoration: none;
     font-size: 24px;
+   text-align: center;
+   margin-top: 60px;
+   margin-bottom: 20px;
 }
 
 .btn:hover {

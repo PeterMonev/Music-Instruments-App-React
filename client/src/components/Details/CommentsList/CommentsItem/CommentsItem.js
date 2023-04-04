@@ -1,13 +1,31 @@
 import '../CommentsItem/CommentsItem.css'
 import { parseDate } from "../../../../utils/parseDate";
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { AuthContext } from '../../../../hooks/authContext';
-import { deleteComment } from '../../../../services/commentsServices';
+import { deleteComment, editComment } from '../../../../services/commentsServices';
 
 export const CommentsItem = ({comments, commentHandler}) => {
    const { auth } = useContext(AuthContext);
+   const [isEdit, setIsEdit ] = useState(false);
+   const [dataComment, setDataComment] = useState({ text: comments.text});
 
-   async function onDelete(event){
+   function onChangeComment(event){
+    setDataComment({text: event.target.value});
+   };
+
+   async function onEditComment(event){
+    event.preventDefault();
+    
+    try {
+      await editComment(comments._id, dataComment);
+      commentHandler();
+      setIsEdit(false);
+    } catch (error) {
+      console.log(error);
+    }
+   };
+
+   async function onDeleteComment(event){
      event.preventDefault();
      try {
        await deleteComment(comments._id);
@@ -23,19 +41,26 @@ export const CommentsItem = ({comments, commentHandler}) => {
      <li className='comments-li'>
       <div className='comments-div'>
         <p className="comments-email">{comments.owner.email}: </p>
+      
+        {isEdit ? 
+        <form onSubmit={onEditComment} >
+         <input value={dataComment.text} type="text" name='text' onChange={onChangeComment} />
+         <input type="submit" name="submit" />
+        </form>
+        :
         <p className='comments-text'>{comments.text}</p>
+        }
       </div>
        <p className='commnets-created'>{parseDate(comments.createdAt)}</p>
        <div className='comments-buttons'>
-        { auth?._id === comments.owner._id ?
+        { auth?._id === comments.owner._id && !isEdit ?
            <>
-                  <button>Edit</button>
-                  <button onClick={onDelete}>Delete</button>
+                  <button onClick={() => setIsEdit(true)}>Edit</button>
+                  <button onClick={onDeleteComment}>Delete</button>
            </> 
            : 
            <>
            </>
-      
         }
        </div>
      </li>

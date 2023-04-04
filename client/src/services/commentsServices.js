@@ -18,4 +18,5 @@ export async function deleteComment(commentId) {
 export async function editComment(commentId, data) {
     const response = api.put(`/data/instrument/comments/${commentId}`, data);
     return response;
+  
 };
