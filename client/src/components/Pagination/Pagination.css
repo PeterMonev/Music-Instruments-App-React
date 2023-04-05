@@ -1,0 +1,44 @@
+.pagination-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+
+}
+
+.pagination-wrap ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; 
+       
+}
+
+.pagination-wrap li {
+    display: inline-block;
+}
+
+.pagination-wrap button {
+    color: goldenrod;
+    font-size: 24px;
+    background-color: black;
+    display: inline-block;
+    padding: 8px 14px;
+    margin: 5px;
+    font-weight: 600;
+    border-radius: 50px;
+    border: 1px solid goldenrod;
+}
+
+.pagination-wrap button:hover {
+    background-color: goldenrod;
+    color: black;
+} 
+
+.pagination-wrap .unclickable {
+    pointer-events: none;
+    border: 0px;
+}
+
+.pagination-wrap .active {
+    background-color: rgb(186, 0, 0);
+    color: white;
+}
