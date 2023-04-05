@@ -3,6 +3,7 @@ import { getAll } from '../../services/instrumentServices';
 
 import '../Catalog/Catalog.css'
 import { OffersList } from './OffersList/OffersList';
+import { Search } from '../Search/Search';
 
 const images = {
     firstImg: '/images/GuitarsCatalogPic.jpg',
@@ -35,6 +36,8 @@ export const Catalog = () => {
 
          <section className="catalog-section">
            
+        <Search />
+
          <OffersList offers={offers}/>
 
          </section>

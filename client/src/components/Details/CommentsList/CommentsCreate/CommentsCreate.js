@@ -28,7 +28,7 @@ export const CommentsCreate = ({ offerId, commentHandler }) => {
         await createComment(offerId, {text});
         event.target.children[0].value = '';
         setComment('')
-        commentHandler();
+        commentHandler({comment: ''});
       
     } catch (error) {
         console.log(error);
