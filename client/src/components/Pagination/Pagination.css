@@ -39,6 +39,6 @@
 }
 
 .pagination-wrap .active {
-    background-color: rgb(186, 0, 0);
-    color: white;
+    background-color: goldenrod;
+    color: black;
 }
