@@ -5,8 +5,10 @@ export async function createOffer(data) {
     return response;
 };
 
-export async function getAll(){
-    const response = await api.get('/data/instrument',);
+export async function getAll(query){
+   const { page, limit, sort, order, search, category, except, owner } = query;
+    const endpoint = `/data/instrument?page=${page || ''}&limit=${limit || ''}&sort=${sort || 'createdAt'}&order=${order || 'desc'}&search=${search || ''}&category=${category || ''}&except=${except || ''}&owner=${owner || ''}`;
+    const response = await api.get(endpoint);
     return response;
 };
 
