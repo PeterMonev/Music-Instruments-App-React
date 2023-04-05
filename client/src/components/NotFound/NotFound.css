@@ -1,0 +1,34 @@
+
+.not-found {
+    padding-top: 100px;
+    background-image: url(../../..//public//images/404-fon-error-404-not-found-wallpaper-preview.jpg);
+    background-color: rgba(0,0,0,.6);
+    width: 100%;
+    height: 87vh;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+   
+}
+
+.not-found-home {
+    position: absolute;
+    top: 85%;
+    left: 37%;
+
+}
+
+.not-found-home p {
+    font-size: 32px;
+    color: rgb(202, 0, 0);
+}
+
+.not-found-home a {
+    margin-left: 140px;
+    text-align: center;
+    font-size: 42px;
+    text-decoration: none;
+    color: rgb(202, 0, 0);
+}

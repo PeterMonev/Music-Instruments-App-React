@@ -13,17 +13,19 @@ import { OfferDetails } from './components/Details/OfferDetails';
 import { OfferEdit } from './components/Edit/OfferEdit';
 import { PrivateGuard } from './components/Guards/PrivateGuad';
 import { PublicGuard } from './components/Guards/PublicGuard';
+import { NotFound } from './components/NotFound/NotFound';
+
 
 function App() {
   const [auth, setAuth] = useSessionStorage('session');
-  
+
   return (
 
     <div className="App">
     <AuthContext.Provider value={{auth, setAuth}} >
 
      <Header />
-   
+
      <Routes >
 
       <Route  element={<PrivateGuard />}> 
@@ -39,7 +41,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path='/catalog' element={ <Catalog />} />
         <Route path='/catalog/:id' element={ <OfferDetails />} />
-  
+        <Route path="*" element={<NotFound />} />
+
      </Routes>
 
     </AuthContext.Provider>  
