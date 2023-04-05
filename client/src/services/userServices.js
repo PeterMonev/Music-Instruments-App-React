@@ -10,7 +10,11 @@ export async function login(email, password) {
     return response;
 };
 
-export async function logout(token){
-   const response = await api.get('/users/logout');
-   return response;
-};
+export function logout(token) {
+    return fetch('http://localhost:3030/users/logout', {
+        method: 'GET',
+        headers: {
+            'X-Authorization': token
+        },
+    });
+}

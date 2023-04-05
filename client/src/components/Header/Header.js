@@ -11,7 +11,7 @@ export const Header = () => {
 
    async function logoutHandler (event) {
       event.preventDefault();
-      console.log(auth.accessToken);
+    
       try {
          await userService.logout(auth.accessToken);
          setAuth(null);

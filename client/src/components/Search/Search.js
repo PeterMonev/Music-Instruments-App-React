@@ -45,7 +45,7 @@ export const Search = ({ searchHandler }) => {
             </select>
 
             <button className='search-button' type="submit">
-            <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+            <i className="fa-solid fa-magnifying-glass fa-lg"></i>
             </button>
         </form>
         </section>

@@ -16,7 +16,7 @@ export const Pagination = ({
    return(
     <section className="pagination-wrap">
     <ul>
-        <li><button onClick={paginateHandler} value={1}>{'<<<'}</button></li>
+        <li><button onClick={paginateHandler} value={1}>{'<<'}</button></li>
         <li><button onClick={paginateHandler} value={currentPage !== 1 ? currentPage - 1 : 1}>{'<'}</button></li>
         {currentPage !== 1 &&
             <>
@@ -32,7 +32,7 @@ export const Pagination = ({
             </>
         }
         <li><button onClick={paginateHandler} value={currentPage !== pagesCount ? currentPage + 1 : currentPage}> {'>'} </button></li>
-        <li><button onClick={paginateHandler} value={pagesCount}> {'>>>'}</button></li>
+        <li><button onClick={paginateHandler} value={pagesCount}> {'>>'}</button></li>
     </ul>
 </section>
    );
