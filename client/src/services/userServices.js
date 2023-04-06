@@ -19,13 +19,14 @@ export function logout(token) {
     });
 }
 
-export async function getUserById(userId){
-    // return fetch(`http://localhost:3030/users/${userId}`, {
-    //     method: 'GET',
-    //     headers: {
-    //         'X-Authorization': token
-    //     },
-    // });
-    const response = await api.get(`/users/${userId}`);
-    return response;
+export async function getUserById(userId,token){
+
+    return fetch(`http://localhost:3030/users/${userId}`, {
+        method: 'GET',
+        headers: {
+            'X-Authorization': token
+        },
+    });
+    // const response = await api.get(`/users/${userId}`,null ,token);
+    // return response;
 }

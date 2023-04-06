@@ -2,32 +2,47 @@ const BASE_URL = "http://localhost:3030";
 
 async function request(method, url, data) {
 
-  let options = {method, headers: {}};
+    const options = {};
 
-  if (method !== 'GET' && method !== 'DELETE') {
-      options = {
-          method,
-          headers: {
-              'content-type': 'application/json'
-          },
-          body: JSON.stringify(data)
-      }
+  if (method !== "GET") {
+    options.method = method;
+
+    if (data) {
+      options.headers = {
+        "content-type": "application/json",
+      };
+
+      options.body = JSON.stringify(data);
+  
+    }
+ 
   }
 
-  const user = JSON.parse(sessionStorage.getItem('session') || '{}');
+  const serializedAuth = sessionStorage.getItem("session");
+  if (serializedAuth) {
+    const auth = JSON.parse(serializedAuth);
 
-  if (user && user.accessToken) {
-      options.headers['X-Authorization'] = user.accessToken;
+    if (auth.accessToken) {
+      options.headers = {
+        ...options.headers,
+        "X-Authorization": auth.accessToken,
+      };
+    }
   }
 
-  return fetch(`${BASE_URL}${url}`, options)
-      .then(res => res.json())
-      .then(res => {
-          if (res.message) {
-              throw res;
-          }
-          return res;
-      });
+  const response = await fetch(`${BASE_URL}${url}`, options);
+
+  if (response.status === 204) {
+    return {};
+  }
+
+  const result = await response.json();
+
+  if (!response.ok) {
+    throw result;
+  }
+
+  return result;
 }
 
 export const get = request.bind(null,'GET');

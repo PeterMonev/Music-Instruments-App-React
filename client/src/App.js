@@ -14,6 +14,7 @@ import { OfferEdit } from './components/Edit/OfferEdit';
 import { PrivateGuard } from './components/Guards/PrivateGuad';
 import { PublicGuard } from './components/Guards/PublicGuard';
 import { NotFound } from './components/NotFound/NotFound';
+import { Profile } from './components/Profile/Profile';
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
       <Route  element={<PrivateGuard />}> 
         <Route path='/create' element={ <Create />} />   
         <Route path='/instrument/edit/:id' element={ <OfferEdit />} />
+        <Route path='/profile' element={<Profile />} />
       </Route>
 
       <Route element={<PublicGuard />}>

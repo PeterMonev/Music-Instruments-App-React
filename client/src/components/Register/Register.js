@@ -57,10 +57,12 @@ export const Register = () => {
     navigate('/catalog')
   } catch(error) {
 
+   if(error.message.includes('Email')){
     setErrors((errors) => ({
-        ...errors, email: `${error.message}`
+      ...errors, email: `${error.message}`
     }));
- 
+   }
+   
     }
   }
 
