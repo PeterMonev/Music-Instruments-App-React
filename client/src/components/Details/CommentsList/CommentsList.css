@@ -22,9 +22,14 @@
     font-size: 18px;
 }
 
-.p-guest {
+ .p-guest {
     color: white;
     text-align: center;
-    font-size: 18px;
+    margin: 15px;
+}
+
+.p-guest a{
+    color: goldenrod;
+    text-decoration: none;
 }
 

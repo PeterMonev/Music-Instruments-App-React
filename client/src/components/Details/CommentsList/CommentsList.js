@@ -39,10 +39,10 @@ export const CommentsList = ({ offerId }) => {
               :
               <>
               <p className='p-guest'>
-                    If you want to leave a comment you need to <Link to="/login">log in</Link> your account.
+                    If you want to leave a comment you need to <Link to="/login">Log in</Link> your account.
               </p> 
               <p className='p-guest'>   
-                    If you dont have an account you can go <Link to="/register">register</Link> one.
+                    If you dont have an account you can go <Link to="/register">Register</Link> one.
               </p> 
               </>              
             }
