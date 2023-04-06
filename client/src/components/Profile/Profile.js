@@ -27,7 +27,7 @@ export const Profile = () => {
                      <p>Phone Number:</p>
                  </div>
 
-                <ProfileList auth={auth._id}/>
+                <ProfileList owner={auth._id}/>
 
             </article>
         </section>
