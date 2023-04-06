@@ -37,7 +37,9 @@ export const CommentsCreate = ({ offerId, commentHandler }) => {
 
   // Validation
   function lengthValidation(event){
+    console.log(event);
     const tagName = event.target.name;
+    console.log(comment);
     inputValidator(comment, tagName, 10, setErrors, 300);
   }
 
