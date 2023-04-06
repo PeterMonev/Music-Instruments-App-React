@@ -18,12 +18,12 @@
     margin-top: 120px;
     text-align: center;
     height: 30%;
-    width: 40%;
+    width: 50%;
     background-color: black;
     margin-bottom: 40px;
     border-radius: 60px;
     border: 2px solid goldenrod ;
-    padding: 20px;
+    padding: 30px;
 }
 
 .contact-info p {
@@ -32,7 +32,7 @@
 }
 
 .contact-info .phoneNumber {
-    padding-top: 40px;
+    padding-top: 30px;
 }
 
 .container-google-maps {
