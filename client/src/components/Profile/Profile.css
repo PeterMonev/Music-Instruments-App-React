@@ -1,11 +1,12 @@
 .profile-section {
-    height: 820px;
-    width: 100vw;
+    
+  
     padding-top: 100px;
     background-image: url(../../../public/home.jpg);
     background-color: rgba(0,0,0,.6);
     width: 100%;
-    height: 100vh;
+    height: auto;
+    min-height: 900px;
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover;

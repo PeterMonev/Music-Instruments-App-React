@@ -15,6 +15,7 @@ import { PrivateGuard } from './components/Guards/PrivateGuad';
 import { PublicGuard } from './components/Guards/PublicGuard';
 import { NotFound } from './components/NotFound/NotFound';
 import { Profile } from './components/Profile/Profile';
+import { Contact } from './components/AboutUs/Contacts';
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path='/catalog' element={ <Catalog />} />
         <Route path='/catalog/:id' element={ <OfferDetails />} />
+        <Route path='/contact' element={<Contact/>} />
         <Route path="*" element={<NotFound />} />
 
      </Routes>
