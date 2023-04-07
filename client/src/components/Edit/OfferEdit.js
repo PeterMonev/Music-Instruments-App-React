@@ -9,9 +9,10 @@ export const OfferEdit = () => {
 
     const navigate = useNavigate();
     const [errors, setErrors] = useState({});
-    const [disableButton, setDisableButton] = useState(true);
+    const [disableButton, setDisableButton] = useState(false);
     const [formData , setFormData ] = useState({});
-    const { id } = useParams()
+    const { id } = useParams();
+    const [ disableButtonStyle, setDisableButtonStlye] = useState('.edit-submit-disable');
 
     useEffect(() => {
         (async () => {
@@ -29,10 +30,13 @@ export const OfferEdit = () => {
       };
 
       useEffect(() => {
-        if(Object.values(errors).some(error => error === null || errors === {})){
+        if(Object.values(errors).some(error => error !== null)){
             setDisableButton(false);
+            setDisableButtonStlye('edit-submit-disable')
+
         } else {
              setDisableButton(true);
+             setDisableButtonStlye('edit-submit-enable')
         }
       }, [errors]); 
 
@@ -120,7 +124,7 @@ export const OfferEdit = () => {
                 <textarea name="description" placeholder="Very nice look and good codition..." onChange={onChange} value={formData.description} onBlur={lengthValidation} />
                 {errors.description && <p className="p-create-error">{errors.description}</p>}
      
-                <input disabled={ disableButton } className="create-submit " type="submit" value="Edit Offer"/>
+                <input disabled={ disableButton } className={disableButtonStyle} type="submit" value="Edit Offer"/>
             
             </form>
          </div>
