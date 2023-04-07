@@ -15,6 +15,7 @@ https://github.com/PeterMonev/Music-Instruments-App-React.git
 
 # * To run client app
    <br/>
+
  ```
     cd client 
     npm install
@@ -22,6 +23,7 @@ https://github.com/PeterMonev/Music-Instruments-App-React.git
  ```
  * To run server app
     <br/>
+    
  ```
     cd server
     npm install
