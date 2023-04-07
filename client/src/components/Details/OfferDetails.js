@@ -6,7 +6,6 @@ import { getById } from "../../services/instrumentServices";
 import { AuthContext } from "../../hooks/authContext";
 import { parseDate } from "../../utils/parseDate";
 import { CommentsList } from "./CommentsList/CommentsList";
-import { getUserById } from "../../services/userServices";
 import { AuthorInfo } from "./AuthorInfo/AuthorInfo";
 
 export const OfferDetails = () => {
@@ -15,44 +14,14 @@ export const OfferDetails = () => {
   const { id } = useParams();
   const { auth } = useContext(AuthContext);
  
-  const [user, setUser] = useState({
-    email: '',
-    fullName: '',
-    phoneNumber: '',
-  });
-
-  let userObj = {};
-
   useEffect(() => {
     (async () => {
-      let data = await getById(id)
-      .then(response=>{setOffer(response)
-        
-        setIsOwner(auth?._id === response.owner._id)
-        userObj = currUser(response.owner._id)})
-      
-      
-      // setOffer(data);
+      let data = await getById(id);
+      setIsOwner(auth?._id === data.owner._id);
+      setOffer(data);
   
-
-     
     })();
-  }, [id, auth,]);
-
-
-  async function currUser(userId){
-  
-    try {
-   
-      let userData = await getUserById(userId, auth.accessToken);
-   
-      setUser(userData);
-    } catch (error) {
-      
-    }
-  }
- 
-
+  }, [id, auth]);
 
 
   return (
@@ -82,9 +51,10 @@ export const OfferDetails = () => {
               </div>
                <p className="createdAt">Created: <span>{parseDate(offer.createdAt)}</span></p>
             </div>
+            <h2>Author Info:</h2>
             {
               auth ?
-              <AuthorInfo isOwner={isOwner} offer={offer} />
+              <AuthorInfo isOwner={isOwner} offer={offer} auth={auth}/>
               : 
               <h1 className="author-sorry-h1">
                Sorry, but if you want to see the author information you need to <Link to="/login">Log in</Link>.

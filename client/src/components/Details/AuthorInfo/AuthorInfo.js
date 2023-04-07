@@ -1,13 +1,29 @@
 import { Link, useNavigate } from "react-router-dom"
 import { deleteOffer } from "../../../services/instrumentServices";
+import { useEffect, useState } from "react";
+import { getUserById } from "../../../services/userServices";
 
-
-export const AuthorInfo = ({isOwner, offer}) => {
+export const AuthorInfo = ({isOwner, offer, auth}) => {
     const navigate = useNavigate();
+    const [author, setAuthor] = useState({
+        email: '',
+        fullName: '',
+        phoneNumber: '',
+      });
 
+    useEffect(()=> {
 
+        if (offer && offer.owner && offer.owner._id) {
+       (async () => {
+        let data = await getUserById(offer.owner._id, auth.accessToken);
+        setAuthor(data);
+       })();
 
+    }
 
+    },[offer,auth.accessToken]);
+
+//Delete Offer
     async function onDelete(event){
         event.preventDefault();
         const confirm = window.confirm('Are you sure you want to delete this offer?');
@@ -28,9 +44,9 @@ export const AuthorInfo = ({isOwner, offer}) => {
         <section className="author-container">
        
          <article className="author-info">
-           <p>Full Name: <span>BARA BARA</span></p>
-           <p>Email: <span>peter@abv.bg</span></p>
-           <p>Phone Number: <span>09080808080</span></p>
+           <p>Full Name: <span>{author.fullName}</span></p>
+           <p>Email: <span>{author.email}</span></p>
+           <p>Phone Number: <span>{author.phoneNumber}</span></p>
          </article> 
 
          <div className="buttons">

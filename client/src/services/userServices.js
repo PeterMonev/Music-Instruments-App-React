@@ -19,12 +19,12 @@ export function logout(token) {
     });
 }
 
-export async function getUserById(userId,token){
+export async function getUserById(userId, token){
     const response = await fetch(`http://localhost:3030/users/${userId}`, {
         method: 'GET',
         headers: {
             'X-Authorization': token,
-            "content-type": "application/json",
+            // "content-type": "application/json",
         },
     });
     
