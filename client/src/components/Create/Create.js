@@ -7,8 +7,16 @@ import '../Create/Create.css';
 
 export const Create = () => {
     const navigate = useNavigate();
-    const [errors, setErrors] = useState({});
-    const [disableButton, setDisableButton] = useState(true);
+    const [errors, setErrors] = useState({
+        title: 'Please, enter your title.',
+        address: 'Please, enter your address.',
+        imageUrl: 'Please, put you image Url.',
+        price: 'Please, enter your price.',
+        year: 'Please, select year of made.',
+        description: 'Please, enter your instrument condition.'
+    });
+    const [disableButton, setDisableButton] = useState(false);
+    const [ disableButtonStyle, setDisableButtonStlye] = useState('create-submit-disalbe');
     const [formData , setFormData ] = useState({
         title: '',
         category: 'Select Category',
@@ -28,10 +36,13 @@ export const Create = () => {
       };
 
       useEffect(() => {
-        if(Object.values(errors).some(error => error === null || errors === {})){
-            setDisableButton(false);
+        if(Object.values(errors).some(error => error !== null )){
+            setDisableButton(true); 
+            setDisableButtonStlye('create-submit-enable');;
         } else {
-             setDisableButton(true); 
+            setDisableButton(false);
+            setDisableButtonStlye('create-submit-disable');
+          
         }
       }, [errors]); 
 
@@ -120,7 +131,7 @@ export const Create = () => {
             <textarea name="description" placeholder="Very nice look and good codition..." onChange={onChange} value={formData.description} onBlur={lengthValidation} />
             {errors.description && <p className="p-create-error">{errors.description}</p>}
  
-            <input disabled={ disableButton } className="create-submit " type="submit" value="Create Offer"/>
+            <input disabled={ disableButton } className={disableButtonStyle} type="submit" value="Create Offer"/>
         
         </form>
      </div>
