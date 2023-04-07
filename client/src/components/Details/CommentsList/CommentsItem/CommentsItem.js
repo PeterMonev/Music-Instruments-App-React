@@ -29,7 +29,7 @@ export const CommentsItem = ({comments, commentHandler}) => {
 
    async function onDeleteComment(event){
      event.preventDefault();
-     const confirm = window.confirm('Are you sure you want to delete this offer?');
+     const confirm = window.confirm('Are you sure you want to delete this comment?');
 
      if(confirm){
      try {
