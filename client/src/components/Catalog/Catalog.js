@@ -46,7 +46,8 @@ export const Catalog = () => {
       </section>
 
       <section className="catalog-section">
-
+          <h1 className="title-catalog">Catalog</h1>
+          
         <Search searchHandler={searchHandler}/>
 
         <OffersList offers={offers} />

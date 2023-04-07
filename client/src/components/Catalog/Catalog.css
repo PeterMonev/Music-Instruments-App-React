@@ -11,8 +11,17 @@
     height: 100%;
 }
 
+.title-catalog {
+   color: white;
+   font-size: 42px;
+   text-align: center;
+   font-style: italic;
+   padding: 40px 0 60px 0;
+   text-decoration: underline goldenrod;
+}
+
 .catalog-section{
-    padding-top: 100px;
+   
     background-image: linear-gradient(
         300deg,
         hsl(0deg 0% 0%) 1%,
