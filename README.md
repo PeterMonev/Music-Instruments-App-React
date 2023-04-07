@@ -4,7 +4,7 @@
 
 This is a web application for a Music Instruments Shop that specializes in selling and buying second-hand instruments. The web application is built using the JavaScript, the React framework for the frontend, and Node, Express and Mongoose for the backend. The application provides a user-friendly interface for customers to browse through the inventory, sell their instruments, buy instruments online, and manage their account information.
 
-![APP](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/client/public/ScreenShot/HomeGit.PNG)
+![APP](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/HomeGit.PNG)
 
 ## Installation and usage
 
@@ -77,6 +77,9 @@ https://github.com/PeterMonev/Music-Instruments-App-React.git
 
 ### Header 
 Signed Header
-![User Header]()
+![User Header](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/Header-User.PNG)
 Guest Header
-![User Header]()
+![User Header](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/Header-Guest.PNG)
+
+### Home
+![Home](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/HomeGit.PNG)
