@@ -6,6 +6,7 @@ import { deleteOffer, getById } from "../../services/instrumentServices";
 import { AuthContext } from "../../hooks/authContext";
 import { parseDate } from "../../utils/parseDate";
 import { CommentsList } from "./CommentsList/CommentsList";
+import { getUserById } from "../../services/userServices";
 
 export const OfferDetails = () => {
   const [offer, setOffer] = useState({});
@@ -13,15 +14,44 @@ export const OfferDetails = () => {
   const { id } = useParams();
   const { auth } = useContext(AuthContext);
   const navigate = useNavigate();
+  const [user, setUser] = useState({
+    email: '',
+    fullName: '',
+    phoneNumber: '',
+  });
+
+  let userObj = {};
 
   useEffect(() => {
     (async () => {
-      const data = await getById(id);
-      setOffer(data);
-      setIsOwner(auth?._id === data.owner._id)
-    })();
-  }, [id, auth]);
+      let data = await getById(id)
+      .then(response=>{setOffer(response)
+        
+        setIsOwner(auth?._id === response.owner._id)
+        userObj = currUser(response.owner._id)})
+      
+      
+      // setOffer(data);
+  
 
+     
+    })();
+  }, [id, auth,]);
+
+
+
+  async function currUser(userId){
+  
+    try {
+   
+      let userData = await getUserById(userId, auth.accessToken);
+   
+      setUser(userData);
+    } catch (error) {
+      
+    }
+  }
+ 
   async function onDelete(event){
     event.preventDefault();
     const confirm = window.confirm('Are you sure you want to delete this offer?');

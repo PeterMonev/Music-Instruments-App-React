@@ -29,7 +29,7 @@ async function request(method, url, data) {
       };
     }
   }
-
+  
   const response = await fetch(`${BASE_URL}${url}`, options);
 
   if (response.status === 204) {

@@ -1,4 +1,4 @@
-import * as api from './api';
+import * as api from "./api";
 
 export async function register(email, fullName, phoneNumber, password) {
     const response = await api.post('/users/register', {email, fullName, phoneNumber, password});
@@ -20,13 +20,16 @@ export function logout(token) {
 }
 
 export async function getUserById(userId,token){
-
-    return fetch(`http://localhost:3030/users/${userId}`, {
+    const response = await fetch(`http://localhost:3030/users/${userId}`, {
         method: 'GET',
         headers: {
-            'X-Authorization': token
+            'X-Authorization': token,
+            "content-type": "application/json",
         },
     });
-    // const response = await api.get(`/users/${userId}`,null ,token);
-    // return response;
+    
+    const data = await response.json();
+    return data;
+
+    
 }

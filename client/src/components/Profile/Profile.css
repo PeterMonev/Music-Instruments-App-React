@@ -75,14 +75,15 @@
     flex-direction: row;
     flex-wrap: wrap;
     border-bottom: 1px solid goldenrod;
+    padding-bottom: 20px;
 }
 
 .profile-info p {
     color: white;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .profile-info span {
     color: bisque;
-    font-size: 22px;
+    font-size: 20px;
 }
