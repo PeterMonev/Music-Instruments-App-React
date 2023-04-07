@@ -166,4 +166,18 @@
     transition: 0.8s;
 }
 
+.author-sorry-h1 {
+    color: white;
+    text-align: center;
+    height: 40px;
+    margin: 40px;
+    font-size: 18px;
+}
+
+.author-sorry-h1 a {
+   color: goldenrod;
+   text-decoration: none;
+   
+}
+
 

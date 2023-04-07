@@ -1,19 +1,20 @@
 import { useContext, useEffect, useState } from "react";
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import "../Details/OfferDetails.css";
-import { deleteOffer, getById } from "../../services/instrumentServices";
+import { getById } from "../../services/instrumentServices";
 import { AuthContext } from "../../hooks/authContext";
 import { parseDate } from "../../utils/parseDate";
 import { CommentsList } from "./CommentsList/CommentsList";
 import { getUserById } from "../../services/userServices";
+import { AuthorInfo } from "./AuthorInfo/AuthorInfo";
 
 export const OfferDetails = () => {
   const [offer, setOffer] = useState({});
   const [isOwner, setIsOwner] = useState(false);
   const { id } = useParams();
   const { auth } = useContext(AuthContext);
-  const navigate = useNavigate();
+ 
   const [user, setUser] = useState({
     email: '',
     fullName: '',
@@ -39,7 +40,6 @@ export const OfferDetails = () => {
   }, [id, auth,]);
 
 
-
   async function currUser(userId){
   
     try {
@@ -52,21 +52,7 @@ export const OfferDetails = () => {
     }
   }
  
-  async function onDelete(event){
-    event.preventDefault();
-    const confirm = window.confirm('Are you sure you want to delete this offer?');
 
-    if(confirm){
-      try {
-        await deleteOffer(id);
-        navigate('/catalog');
-  
-       } catch (error) {
-         console.log(error);
-       };
-    };
-  
-  };
 
 
   return (
@@ -96,28 +82,14 @@ export const OfferDetails = () => {
               </div>
                <p className="createdAt">Created: <span>{parseDate(offer.createdAt)}</span></p>
             </div>
-            <section className="author-container">
-               <h2>Author Info:</h2>
-                 
-                <article className="author-info">
-                  <p>Full Name: <span>BARA BARA</span></p>
-                  <p>Email: <span>peter@abv.bg</span></p>
-                  <p>Phone Number: <span>09080808080</span></p>
-                </article> 
-
-                <div className="buttons">
-                   { isOwner ?
-                     <>
-                     <Link className="btn" to={`/instrument/edit/${offer._id}`}>Edit</Link>
-                     <Link className="btn" onClick={onDelete}>Delete</Link>
-                     </>
-                     :
-                     <>
-                     </>
-                   }
-                </div>
-
-            </section>
+            {
+              auth ?
+              <AuthorInfo isOwner={isOwner} offer={offer} />
+              : 
+              <h1 className="author-sorry-h1">
+               Sorry, but if you want to see the author information you need to <Link to="/login">Log in</Link>.
+              </h1>
+            }
         </section>
 
     </article>
