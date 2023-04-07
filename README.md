@@ -24,7 +24,7 @@ https://github.com/PeterMonev/Music-Instruments-App-React.git
     npm start
 
  ```
- * To run server app
+# * To run server app
     <br/>
 
  ```
@@ -43,6 +43,7 @@ https://github.com/PeterMonev/Music-Instruments-App-React.git
 - [HTML5](https://developer.mozilla.org/en-US/docs/Glossary/HTML5)
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [React](https://reactjs.org/)
+- [React Router](https://reactrouter.com/en/main)
 - [Font Awesome](https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react)
 
 ## Back-end
@@ -54,7 +55,6 @@ https://github.com/PeterMonev/Music-Instruments-App-React.git
 - [Cookie Parser](https://github.com/expressjs/cookie-parser)
 - [Cors](https://github.com/expressjs/cors)
 - [Nodemon](https://github.com/remy/nodemon)
-
 
  | **Permissions for shop**    | User | Guest | 
 | :--------------------------    | :---: | :---: |
@@ -72,3 +72,11 @@ https://github.com/PeterMonev/Music-Instruments-App-React.git
 | Register                       | ❌   | ✅   |
 | Logout                         | ✅   | ❌   |
 | Profile                        | ✅   | ❌   |
+
+## Application Pages    
+
+### Header 
+Signed Header
+![User Header]()
+Guest Header
+![User Header]()
