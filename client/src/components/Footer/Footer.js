@@ -9,7 +9,7 @@ export const Footer = () => {
              <ul>
                 <li>Call us: <Link to={'/callus'}> 555-666 </Link></li>
                 <li><Link to={'/contact'}>Contact</Link></li>
-                <li><Link to={"/about"}>About Us</Link></li>
+                <li><Link to={"/aboutus"}>About Us</Link></li>
                 <li><Link to={'/terms-and-condition'}>Terms and Conditions</Link></li>
              </ul>
              <ul className='follow'>

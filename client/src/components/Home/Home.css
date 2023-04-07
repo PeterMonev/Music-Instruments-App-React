@@ -49,6 +49,7 @@
     text-align: center;  
     background-color: black;
     color: white;
+    height: 34vh;
   }
   
   .main__info h1 {
@@ -69,9 +70,11 @@
     line-height: 1.2;
     font-size: 17px;
     margin-top: 20px;
+    height: 11vh;
   }
   
-  .main__info button {
+
+  .aboutUs-button{
     text-align: center;
     font-size: 20px;
     color: black;
@@ -79,5 +82,5 @@
     padding: 14px 30px;
     border-radius: 30px;
     margin: 40px;
-
+    text-decoration: none ;
   }
