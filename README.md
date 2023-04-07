@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# Music-Instruments-Shop
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## :pencil2: About The Project 
 
-## Available Scripts
+This is a web application for a Music Instruments Shop that specializes in selling and buying second-hand instruments. The web application is built using the JavaScript, the React framework for the frontend, and Node, Express and Mongoose for the backend. The application provides a user-friendly interface for customers to browse through the inventory, sell their instruments, buy instruments online, and manage their account information.
 
-In the project directory, you can run:
+## Installation and usage
 
-### `npm start`
+**Clone respository:**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+ ```
+https://github.com/PeterMonev/Music-Instruments-App-React.git
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+ ```
 
-### `npm test`
+# * To run client app
+   <br/>
+ ```
+    cd client 
+    npm install
+    npm start
+ ```
+ * To run server app
+    <br/>
+ ```
+    cd server
+    npm install
+    npm run dev
+ ```
+ 
+ <br/>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ # :computer:  Built With
 
-### `npm run build`
+## Front-end
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [HTML5](https://developer.mozilla.org/en-US/docs/Glossary/HTML5)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [React](https://reactjs.org/)
+- [Font Awesome](https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Back-end
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [Express](https://expressjs.com/)
+- [Mongoose](https://mongoosejs.com/)
+- [JsonWebToken](https://github.com/auth0/node-jsonwebtoken)
+- [Bcrypt](https://github.com/kelektiv/node.bcrypt.js)
+- [Cookie Parser](https://github.com/expressjs/cookie-parser)
+- [Cors](https://github.com/expressjs/cors)
+- [Nodemon](https://github.com/remy/nodemon)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ | **Permissions for shop**    | User | Guest | 
+| :--------------------------    | :---: | :---: |
+| View Home page                 | ✅   | ✅   |
+| View About page                | ✅   | ✅   |
+| See All Offers                 | ✅   | ✅   |
+| See Offer Details Page         | ✅   | ✅   |
+| Search for Offer               | ✅   | ✅   |
+| Create new Offer               | ✅   | ❌   |
+| Edit Offer * owner             | ✅   | ❌   |
+| Delete Offer * owner           | ✅   | ❌   |
+| See all Comments               | ✅   | ✅   |
+| Create a Comment               | ✅   | ❌   |
+| Login                          | ❌   | ✅   |
+| Register                       | ❌   | ✅   |
+| Logout                         | ✅   | ❌   |
+| Profile                        | ✅   | ❌   |
