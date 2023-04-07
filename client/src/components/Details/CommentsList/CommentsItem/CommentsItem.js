@@ -4,6 +4,7 @@ import { useContext, useState } from 'react';
 import { AuthContext } from '../../../../hooks/authContext';
 import { deleteComment, editComment } from '../../../../services/commentsServices';
 import { inputValidator } from '../../../../utils/validations';
+import { text } from '@fortawesome/fontawesome-svg-core';
 
 export const CommentsItem = ({comments, commentHandler}) => {
    const { auth } = useContext(AuthContext);
@@ -12,18 +13,23 @@ export const CommentsItem = ({comments, commentHandler}) => {
    const [errors, setErrors ] = useState({});
 
    function onChangeComment(event){
+    
     setDataComment({text: event.target.value});
    };
 
    async function onEditComment(event){
     event.preventDefault();
-    
-    try {
+  
+    if(errors.text !== null){
+      return
+    }
+
+    try {      
       await editComment(comments._id, dataComment);
       commentHandler();
       setIsEdit(false);
     } catch (error) {
-      console.log(error);
+   
     }
    };
 
@@ -42,10 +48,9 @@ export const CommentsItem = ({comments, commentHandler}) => {
    };
 
   // Validation
-
   function lengthValidation(event){
     const tagName = event.target.name;
-    console.log(tagName); 
+    dataComment[tagName] = dataComment[tagName].trim();
     inputValidator(dataComment, tagName, 10, setErrors, 300);
   }
 

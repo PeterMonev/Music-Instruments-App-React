@@ -11,7 +11,7 @@ export const emailValidator = (userData, setErrors) => {
 
 export const inputValidator = (userData, tagName,minLength, setErrors, maxLength) => {
      
-    if( userData[tagName] === undefined || userData[tagName].length < minLength || userData[tagName].length > maxLength ){
+    if( userData[tagName] === undefined || userData[tagName].trim().length < minLength || userData[tagName].length > maxLength ){
        setErrors(state => ({...state, [tagName]: `${tagName.charAt(0).toUpperCase() + tagName.slice(1)} should be between ${minLength} and ${maxLength} charaters long!`}));
     } else {
        setErrors(state => ({...state, [tagName]: null}))

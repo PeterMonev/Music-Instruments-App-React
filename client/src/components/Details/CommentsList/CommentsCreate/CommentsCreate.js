@@ -14,13 +14,13 @@ export const CommentsCreate = ({ offerId, commentHandler }) => {
   async function onSubmit(event){
     event.preventDefault();
 
-    if(comment.comment === ''){
+    if(errors.comment !== null){
       return 
     }
-
+ console.log(comment);
     try {
         const text = comment.comment;
-      
+      console.log(text);
         await createComment(offerId, {text});  
         setComment({comment: ''})
         commentHandler();
@@ -32,9 +32,10 @@ export const CommentsCreate = ({ offerId, commentHandler }) => {
 
   // Validation
   function lengthValidation(event){
+  
     const tagName = event.target.name;
     inputValidator(comment, tagName, 10, setErrors, 300);
-  };
+  }
 
   return (
     <section className="comment-create-container">

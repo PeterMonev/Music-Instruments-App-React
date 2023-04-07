@@ -41,17 +41,17 @@ export const OfferEdit = () => {
       }, [errors]); 
 
     // Validations
-     function lengthValidation(event){
-        const tagName = event.target.name;
-        let minLength;
+    function lengthValidation(event){
+      const tagName = event.target.name;
 
-        if(tagName === 'title'){
-            minLength = 4;
-        } else if (tagName === 'address' || tagName === 'description'){
-            minLength = 10;
-        } 
-        inputValidator(formData, tagName, minLength, setErrors);
-     };
+      if(tagName === 'title'){
+          inputValidator(formData, tagName, 3, setErrors, 30);
+      } else if (tagName === 'description'){
+          inputValidator(formData, tagName, 10, setErrors, 300);
+      } else if ( tagName === 'address' ){
+          inputValidator(formData, tagName, 10, setErrors, 40);
+      }
+   };
 
      function selectOptionValidation(event){
           selectOptionValidator(formData, event.target.name, setErrors);
