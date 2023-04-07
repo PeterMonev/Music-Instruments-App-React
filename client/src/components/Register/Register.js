@@ -8,8 +8,14 @@ import '../Register/Register.css'
 
 export const Register = () => {
   const navigate = useNavigate();
-  const [errors, setErrors] = useState({});
-  const [disableButton, setDisableButton] = useState(true);
+  const [errors, setErrors] = useState({
+      email: 'Please, enter you Email.',
+      fullName: 'Please, enter you Full Name.',
+      phone: 'Please, enter your Phone Number.',
+      password: 'Please, enter your Password.'
+  });
+  const [disableButton, setDisableButton] = useState(false);
+  const [ disableButtonStyle, setDisableButtonStlye] = useState('register-submit-disable');
   const { setAuth } = useContext(AuthContext);
   const [userData, setuserData] = useState({
      email: '',
@@ -20,10 +26,13 @@ export const Register = () => {
   });
 
   useEffect(() => {
-    if(Object.values(errors).some(error => error === null || errors === {})){
-        setDisableButton(false);
+    if(Object.values(errors).some(error => error !== null )){
+        setDisableButton(true);
+        setDisableButtonStlye('register-submit-disable');
+     
     } else {
-         setDisableButton(true);
+         setDisableButton(false);
+         setDisableButtonStlye('register-submit-enable');
     }
   }, [errors])
 
@@ -103,7 +112,7 @@ export const Register = () => {
         <input onChange={onChange} value={userData.repeatPassword} onBlur={(e) => {lengthValidation(e); passwordMatchValidation()}} className="input-field" type="password" name="repeatPassword" placeholder="*******" />
         {errors.repeatPassword && <p className="p-error" style={{color: 'red'}}>{errors.repeatPassword}</p>}
 
-        <input disabled={ disableButton } className='register-submit' type="submit" value="Register" />
+        <input disabled={ disableButton } className={disableButtonStyle} type="submit" value="Register" />
 
         <p>    
             If you already have account? Click <a href="/login">here!</a>
