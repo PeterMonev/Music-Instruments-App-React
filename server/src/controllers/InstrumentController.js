@@ -8,6 +8,7 @@ const { errorHandler } = require('../utils/errorHandler');
 
 
 router.get('/', async (req, res) => {
+    
     try {
         res.status(200).json(await instrumentServices.getAll(req.query));
     } catch (err) {
