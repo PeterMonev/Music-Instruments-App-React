@@ -79,9 +79,9 @@ https://github.com/PeterMonev/Music-Instruments-App-React.git
 | Logout                         | ✅   | ❌   |
 | Profile                        | ✅   | ❌   |
 
-## Application Pages    
+# Application Pages    
 
-### Header 
+## Header 
 
 Signed Header
 ![User Header](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/Header-User.PNG)
@@ -89,11 +89,11 @@ Signed Header
 Guest Header
 ![User Header](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/Header-Guest.PNG)
 
-### Home
+## Home
 ![Home](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/HomeGit.PNG)
 
 
-### REGISTER
+## REGISTER
 ![Register](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/Register.PNG)
 
 Register a user inside the database with email, full name, phone number, and password. Password inside the database is hashed (with bcrypt) and both passwords must match!
@@ -101,7 +101,7 @@ Register a user inside the database with email, full name, phone number, and pas
 After successful registration redirects to the Catalog page, with an already logged-in user.
 
 
-### LOGIN
+## LOGIN
 
 ![Login](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/Login.PNG)
 
@@ -111,11 +111,11 @@ Logging an already registered user with the correct email and password.
 After successful login redirects to the Catalog page, with an already logged-in user.
 
 
-### Logout Page (logged in user)
+## Logout Page (logged in user)
 The logout action is available to logged-in users. Upon success, clear any session information and redirect the user to the Home page
 
 
-### CATALOG (guest and user)
+## CATALOG (guest and user)
 
 ![Catalog](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/Catalog.PNG)
 
@@ -128,7 +128,7 @@ On bottom of Catalog Page has Paginition.
 ![Catalog](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/Catalog%202.PNG)
 
 
-### DETAILS PAGE
+## DETAILS PAGE
 
 ![Details](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/Details.PNG)
 
@@ -154,7 +154,7 @@ Information about the offer:
 - Offer Email
 
 
-### CREATE PAGE
+## CREATE PAGE
 ![Create](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/Create.PNG)
 
 The Create page is available to logged-in users. It contains a form for adding new offer.
@@ -166,12 +166,12 @@ Delete Offer (logged in user and creator of the current offer)
 Every author should be able to click over the [Delete] button - deleting the current offer from the database and the user should be redirected to the Catalog page.
 
 
-### Edit Movie (logged in user and creator of the current offer)
+## Edit Movie (logged in user and creator of the current offer)
 ![Edit](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/Edit.PNG)
 
 The Edit page is available to logged-in users and it allows authors to edit their offer. Clicking the [Edit] button of a particular offer on the Details page should display the Edit page, with all fields filled with the data for the offer. It contains a form with input fields for all relevant properties. The edit operation should be done after change on any field. Upon success, redirect the user to the Details page for the current offer.
 
-### Profile Page (logged in user)
+## Profile Page (logged in user)
 ![Profile](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/Profile.PNG)
 
 Logged-in users can see their profile page which shows information about their offers.
