@@ -82,8 +82,10 @@ https://github.com/PeterMonev/Music-Instruments-App-React.git
 ## Application Pages    
 
 ### Header 
+
 Signed Header
 ![User Header](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/Header-User.PNG)
+
 Guest Header
 ![User Header](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/Header-Guest.PNG)
 
@@ -177,7 +179,34 @@ Logged-in users can see their profile page which shows information about their o
 Future update: User can edin and delete they accounts.
 
 
-### 404
-![404]()
+## 404
+![404](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/404.PNG)
+
+If Guests (not logged in) trying to access а page that it should not be able to, you must redirect them to the Login page.
+
+If Users (logged in) trying to access а page that it should not be able to, you must redirect them to the Home page.
+
+Use the following view for invalid paths:
+
+## Validation and Error Handling
+The application should notify the users about the result of their actions.
+
+In case of error, you should display div with class "error-message" and button has gone disabled.
+
+## Login / Register
+The Email is required and should be valid: "peter@gmail.com"
+The Full Name  is required and should be at least 4 characters long.
+The Phone Number is required and should be at least 5 characters long.
+The password should be equal to the repeat password.
+
+## Offer
+
+- The **Offer tittle** is required and should be at least 3 characters long.
+- The **Offer Category** is required and should seleted rigth category.
+- The **Offer Addrees** is required and should be at least 10 characters long.
+- The **Image Url** is required and should be valid.
+- The **Price** is required and should be valid positive number.
+- The **Year** is required and should be valid 1901 to 2023(to this current year).
+- The **Description** is required and should be at least 10 characters long.
 
 
