@@ -155,6 +155,11 @@ Information about the offer:
 - Offer Email
 
 
+## COMMENTS PAGE 
+![Comments](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/Comments.PNG)
+
+Users can write comments, author on theirs commnets can edit and delete them,Guest Users can't write comments.
+
 ## CREATE PAGE
 ![Create](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/Create.PNG)
 
