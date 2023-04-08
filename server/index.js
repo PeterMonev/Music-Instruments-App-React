@@ -9,7 +9,7 @@ const usersController = require('./src/controllers/usersController');
 async function start() {
     try {
         mongoose.set('strictQuery', false);
-        const db = await mongoose.connect(process.env.DATABASE_CONNECTION_STRING ||
+        const db = await mongoose.connect("mongodb+srv://music-instruments-shop:FPE6iPlrtnIYv9wH@cluster0.vy764ls.mongodb.net/?retryWrites=true&w=majority" ||
             "mongodb://0.0.0.0:27017/music-instruments-shop", {
                 useNewUrlParser: true,
                 useUnifiedTopology: true,
