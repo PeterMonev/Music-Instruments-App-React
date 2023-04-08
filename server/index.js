@@ -8,8 +8,12 @@ const usersController = require('./src/controllers/usersController');
 
 async function start() {
     try {
+        mongoose.set('strictQuery', false);
         const db = await mongoose.connect(process.env.DATABASE_CONNECTION_STRING ||
-            "mongodb://0.0.0.0:27017/music-instruments-shop");
+            "mongodb://0.0.0.0:27017/music-instruments-shop", {
+                useNewUrlParser: true,
+                useUnifiedTopology: true,
+            });
 
         console.log('DataBase Ready');
     } catch (err) {
