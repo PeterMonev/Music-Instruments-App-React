@@ -5,6 +5,7 @@ import { AuthContext } from '../../hooks/authContext';
 import * as userServices from '../../services/userServices';
 import { inputValidator, passwordMatch, emailValidator } from '../../utils/validations'
 import '../Register/Register.css'
+import CircleLoader from 'react-spinners/CircleLoader';
 
 export const Register = () => {
   const navigate = useNavigate();
@@ -24,6 +25,7 @@ export const Register = () => {
      password: '',
      repeatPassword: '',
   });
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if(Object.values(errors).some(error => error !== null )){
@@ -59,10 +61,11 @@ export const Register = () => {
     event.preventDefault();
 
   try {
+    setLoading(true);
     const {email ,fullName ,phone, password } = userData;
     const user = await userServices.register(email, fullName, phone, password);
     setAuth(user);
-
+    setLoading(false);
     navigate('/catalog')
   } catch(error) {
 
@@ -80,7 +83,8 @@ export const Register = () => {
     <section className="register-section">
     <div className="register-container">  
    
-      <form onSubmit={onSubmit} className="register-form">
+      
+        <form onSubmit={onSubmit} className="register-form">
         <h1>Register</h1>
 
         <label className="register-label" htmlFor="email">Email:</label>
@@ -112,12 +116,15 @@ export const Register = () => {
         <input onChange={onChange} value={userData.repeatPassword} onBlur={(e) => {lengthValidation(e); passwordMatchValidation()}} className="input-field" type="password" name="repeatPassword" placeholder="*******" />
         {errors.repeatPassword && <p className="p-error" style={{color: 'red'}}>{errors.repeatPassword}</p>}
 
-        <input disabled={ disableButton } className={disableButtonStyle} type="submit" value="Register" />
-
-        <p>    
+        {loading ?
+        <CircleLoader color="#DAA520" size={100} bold/>
+        : <input disabled={ disableButton } className={disableButtonStyle} type="submit" value="Register" />
+        } 
+         <p>    
             If you already have account? Click <a href="/login">here!</a>
         </p>
       </form>
+     
     </div>
     </section>
   );

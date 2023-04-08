@@ -5,7 +5,8 @@ import "../Catalog/Catalog.css";
 import { OffersList } from "./OffersList/OffersList";
 import { Search } from "../Search/Search";
 import { Pagination } from "../Pagination/Pagination";
-import CircleLoader from 'react-spinners/CircleLoader'
+import CircleLoader from 'react-spinners/CircleLoader';
+
 
 const images = {
   firstImg: "/images/GuitarsCatalogPic.jpg",
@@ -55,7 +56,7 @@ export const Catalog = () => {
         <Search searchHandler={searchHandler}/>
           
        {loading ?
-        <CircleLoader color="#DAA520" size={350}/>
+        <CircleLoader className="spinner" color="#DAA520" size={350}/>
         :
         <OffersList offers={offers} />
       }
