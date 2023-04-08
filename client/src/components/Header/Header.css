@@ -17,7 +17,7 @@ header {
 
 header h1 {
     display: inline-block;
-    margin: 10px 0px 20px 50px;
+    margin: 10px 250px 20px 50px;
     font-size: 36px;
     font-weight: bold;
     color: goldenrod;
@@ -38,7 +38,6 @@ header nav ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-left: 300px;
     flex-wrap: wrap;
     text-align: center;
 }

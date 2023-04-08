@@ -2,7 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center; 
-    padding-bottom: 30px;
+    padding-bottom: 40px;
+    padding-top: 60px;
 }
 
 .pagination-wrap ul {
