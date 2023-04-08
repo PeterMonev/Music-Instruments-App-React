@@ -31,11 +31,11 @@ export const OfferEdit = () => {
 
       useEffect(() => {
         if(Object.values(errors).some(error => error !== null)){
-            setDisableButton(false);
+            setDisableButton(true);
             setDisableButtonStlye('edit-submit-disable')
 
         } else {
-             setDisableButton(true);
+             setDisableButton(false);
              setDisableButtonStlye('edit-submit-enable')
         }
       }, [errors]); 
@@ -72,7 +72,7 @@ export const OfferEdit = () => {
      // OnSubmit Edit
     async function onSubmit(event){
         event.preventDefault();
-   
+
         try {
             await editOffer(formData._id, formData);
             navigate(`/catalog/${formData._id}`);
