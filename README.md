@@ -93,6 +93,8 @@ Guest Header
 ## Home
 ![Home](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/HomeGit.PNG)
 
+![Home](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/About1.PNG)
+
 
 ## REGISTER
 ![Register](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/Register.PNG)
@@ -160,7 +162,7 @@ Information about the offer:
 
 Users can write comments, author on theirs commnets can edit and delete them,Guest Users can't write comments.
 
-## CREATE PAGE
+## CREATE PAGE (logged in user)
 ![Create](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/Create.PNG)
 
 The Create page is available to logged-in users. It contains a form for adding new offer.
@@ -183,6 +185,9 @@ The Edit page is available to logged-in users and it allows authors to edit thei
 Logged-in users can see their profile page which shows information about their offers.
 
 Future update: User can edin and delete they accounts.
+
+## About Page 
+![About](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/About.PNG)
 
 
 ## 404
