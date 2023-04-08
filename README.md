@@ -169,4 +169,15 @@ Every author should be able to click over the [Delete] button - deleting the cur
 
 The Edit page is available to logged-in users and it allows authors to edit their offer. Clicking the [Edit] button of a particular offer on the Details page should display the Edit page, with all fields filled with the data for the offer. It contains a form with input fields for all relevant properties. The edit operation should be done after change on any field. Upon success, redirect the user to the Details page for the current offer.
 
+### Profile Page (logged in user)
+![Profile](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/Profile.PNG)
+
+Logged-in users can see their profile page which shows information about their offers.
+
+Future update: User can edin and delete they accounts.
+
+
+### 404
+![404]()
+
 
