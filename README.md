@@ -9,6 +9,7 @@ This is a web application for a Music Instruments Shop that specializes in selli
 
 **[Music-Instrument-Shop](https://music-intruments-shop-client.onrender.com/)**
 
+##
 
 ![APP](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/HomeGit.PNG)
 
@@ -166,7 +167,7 @@ Delete Offer (logged in user and creator of the current offer)
 Every author should be able to click over the [Delete] button - deleting the current offer from the database and the user should be redirected to the Catalog page.
 
 
-## Edit Movie (logged in user and creator of the current offer)
+## Edit Movie (creator of the current offer)
 ![Edit](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/Edit.PNG)
 
 The Edit page is available to logged-in users and it allows authors to edit their offer. Clicking the [Edit] button of a particular offer on the Details page should display the Edit page, with all fields filled with the data for the offer. It contains a form with input fields for all relevant properties. The edit operation should be done after change on any field. Upon success, redirect the user to the Details page for the current offer.
