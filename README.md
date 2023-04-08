@@ -89,3 +89,19 @@ Guest Header
 
 ### Home
 ![Home](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/HomeGit.PNG)
+
+Register a user inside the database with email, full name, phone number, and password. Password inside the database is hashed (with bcrypt) and both passwords must match!
+
+After successful registration redirects to the Catalog page, with an already logged-in user.
+
+### REGISTER
+![Register](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/Register.PNG)
+
+Login Page (logged out user)
+Logging an already registered user with the correct email and password.
+
+After successful login redirects to the Catalog page, with an already logged-in user.
+
+### LOGIN
+
+![Login](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/Login.PNG)
