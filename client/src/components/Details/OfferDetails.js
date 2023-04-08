@@ -7,19 +7,22 @@ import { AuthContext } from "../../hooks/authContext";
 import { parseDate } from "../../utils/parseDate";
 import { CommentsList } from "./CommentsList/CommentsList";
 import { AuthorInfo } from "./AuthorInfo/AuthorInfo";
+import CircleLoader from 'react-spinners/CircleLoader';
 
 export const OfferDetails = () => {
   const [offer, setOffer] = useState({});
   const [isOwner, setIsOwner] = useState(false);
   const { id } = useParams();
   const { auth } = useContext(AuthContext);
+  const [loading, setLoading] = useState(false);
  
   useEffect(() => {
     (async () => {
+      setLoading(true);
       let data = await getById(id);
       setIsOwner(auth?._id === data.owner._id);
       setOffer(data);
-  
+      setLoading(false)
     })();
   }, [id, auth]);
 
@@ -63,9 +66,12 @@ export const OfferDetails = () => {
         </section>
 
     </article>
-
+      
+    {loading ?
+        <CircleLoader color="#DAA520" size={100} bold/>
+        :
       <CommentsList offerId={id} />
-
+} 
     </section>
   );
 };

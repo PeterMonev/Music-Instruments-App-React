@@ -2,10 +2,12 @@ import { useState } from "react";
 import "../CommentsCreate/CommentsCreate.css";
 import { createComment } from "../../../../services/commentsServices";
 import { inputValidator } from "../../../../utils/validations";
+import CircleLoader from 'react-spinners/CircleLoader';
 
 export const CommentsCreate = ({ offerId, commentHandler }) => {
   const [comment, setComment] = useState({comment: ''});
   const [errors, setErrors] = useState({comment: ''});
+  const [loading, setLoading] = useState(false);
 
   function onChange(event) {
     setComment({comment: event.target.value});
@@ -19,12 +21,13 @@ export const CommentsCreate = ({ offerId, commentHandler }) => {
     }
  console.log(comment);
     try {
+        setLoading(true);
         const text = comment.comment;
-      console.log(text);
+        
         await createComment(offerId, {text});  
         setComment({comment: ''})
         commentHandler();
-      
+        setLoading(false);
     } catch (error) {
         console.log(error);
     }
@@ -43,7 +46,11 @@ export const CommentsCreate = ({ offerId, commentHandler }) => {
       <form onSubmit={onSubmit}>
         <textarea name="comment" placeholder="Write youre comment..." onChange={onChange} value={comment.comment} onBlur={lengthValidation}/>
         {errors && <p className='comment-error'>{errors.comment}</p>}  
+        {loading ?
+             <CircleLoader color="#DAA520" size={100} bold/>
+              :   
         <input type="submit" value="Submit" /> 
+        }
       </form>
     </section>
   );

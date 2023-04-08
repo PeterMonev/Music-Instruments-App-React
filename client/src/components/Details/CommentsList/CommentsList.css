@@ -6,6 +6,7 @@
     color: whitesmoke;
     padding: 25px 25px;
     text-decoration: underline goldenrod;
+
 }
 
 .comments-container {
@@ -21,6 +22,7 @@
     color: white;
     margin-top: 20px;
     font-size: 18px;
+    padding-bottom: 20px;
 }
 
  .p-guest {

@@ -6,32 +6,40 @@ import { AuthContext } from '../../../hooks/authContext';
 import { CommentsCreate } from './CommentsCreate/CommentsCreate';
 import { CommentsItem } from '../CommentsList/CommentsItem/CommentsItem';
 import { getCommnetsByOfferId } from '../../../services/commentsServices';
+import CircleLoader from 'react-spinners/CircleLoader';
 
 export const CommentsList = ({ offerId }) => {
     const [comments, setComments] = useState([]);
     const { auth } = useContext(AuthContext);
+    const [loading, setLoading] = useState(false);
 
     const requestComments = useCallback(() => {
+      setLoading(true)
       getCommnetsByOfferId(offerId)
           .then(response => setComments(response))
           .catch(error => console.log(error));
+      setLoading(false)
   }, [offerId]);
 
     useEffect(() => requestComments(), [requestComments]);
     const commentHandler = () => requestComments();
 
     return (
+      
         <>
         <h1 className="comments-title"> Commnets: </h1>
         <section className='comments-container'>
             <h4>{comments.length} Comments</h4>
             
             <article className='comments-list'>
-                  
+
+            {loading ?
+             <CircleLoader color="#DAA520" size={100} bold/>
+              :      
              <ul>
               {comments.map(comments => (<CommentsItem key={comments._id} comments={comments} commentHandler={commentHandler} />))}
              </ul>
-
+            }
             </article>
 
             {auth?.accessToken ? 

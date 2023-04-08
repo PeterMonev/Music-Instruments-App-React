@@ -6,6 +6,8 @@
     background-size: cover;
     position: relative;
     z-index: 0;
+    height: auto;
+    padding-bottom: 40px;
 }
 
 .heading-details {

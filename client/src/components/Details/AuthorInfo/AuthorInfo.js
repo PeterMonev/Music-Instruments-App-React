@@ -2,9 +2,11 @@ import { Link, useNavigate } from "react-router-dom"
 import { deleteOffer } from "../../../services/instrumentServices";
 import { useEffect, useState } from "react";
 import { getUserById } from "../../../services/userServices";
+import CircleLoader from 'react-spinners/CircleLoader';
 
 export const AuthorInfo = ({isOwner, offer, auth}) => {
     const navigate = useNavigate();
+    const [loading, setLoading] = useState(false);
     const [author, setAuthor] = useState({
         email: '',
         fullName: '',
@@ -14,7 +16,7 @@ export const AuthorInfo = ({isOwner, offer, auth}) => {
     useEffect(()=> {
 
         if (offer && offer.owner && offer.owner._id) {
-       (async () => {
+        (async () => {
         let data = await getUserById(offer.owner._id, auth.accessToken);
         setAuthor(data);
        })();
@@ -30,9 +32,10 @@ export const AuthorInfo = ({isOwner, offer, auth}) => {
     
         if(confirm){
           try {
+            setLoading(true)
             await deleteOffer(offer._id);
             navigate('/catalog');
-      
+            setLoading(false)
            } catch (error) {
              console.log(error);
            };
@@ -53,7 +56,11 @@ export const AuthorInfo = ({isOwner, offer, auth}) => {
             { isOwner ?
               <>
               <Link className="btn" to={`/instrument/edit/${offer._id}`}>Edit</Link>
+              {loading ?
+              <CircleLoader color="#DAA520" size={100} bold/>
+              : 
               <Link className="btn" onClick={onDelete}>Delete</Link>
+              }
               </>
               :
               <>
