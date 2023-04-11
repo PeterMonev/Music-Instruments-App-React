@@ -6,10 +6,9 @@ export const Footer = () => {
   return (
     <footer>
          <section className="footer-container">
-             <ul>
+             <ul className="information">
                 <li>Call us: <Link to={'/callus'}> 555-666 </Link></li>
-                <li><Link to={'/contact'}>Contact</Link></li>
-                <li><Link to={"/aboutus"}>About Us</Link></li>
+                <li><Link to={"/aboutus"}>Contacts</Link></li>
                 <li><Link to={'/terms-and-condition'}>Terms and Conditions</Link></li>
              </ul>
              <ul className='follow'>
@@ -20,7 +19,7 @@ export const Footer = () => {
              </ul>
         </section>
       <p className='copy-rigth'>
-        Copyright © 2023 Peter Monev. All Rights Reserved. <span>Music Instruments Shop</span>
+        Copyright © 2023 Peter Monev. Educational purpose. <span>Music Instruments Shop</span>
       </p>
     </footer>
   );

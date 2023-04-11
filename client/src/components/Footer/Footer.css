@@ -1,11 +1,15 @@
 .footer-container {
     background-color: rgb(40, 40, 40);
     display: flex;
-    height: 11vh;
     color: white;
     padding-top: 15px;
     text-decoration: none;
 
+}
+
+.information li {
+    padding-top: 8px;
+    margin-bottom: 5px;
 }
 
 .follow p {
@@ -16,20 +20,23 @@
 .follow li {
     text-align: center;
     display: inline;
-    font-size: 22px;
-    margin-right: 15px;
+    font-size: 24px;
+    margin-right: 20px;
+    padding-bottom: 20px;
 }
 
 .footer-container ul li a {
     text-decoration: none;
     color: goldenrod;
+    padding-bottom: 8px;
 }
 
 .copy-rigth {
     text-align: center;
     margin: 0 auto;
     color: #fff;
-    background-color: rgb(40, 40, 40)
+    background-color: rgb(40, 40, 40);
+    padding: 10px;
 }
 
 .copy-rigth span{
