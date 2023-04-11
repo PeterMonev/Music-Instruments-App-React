@@ -8,8 +8,8 @@
 }
 
 .information li {
-    padding-top: 8px;
-    margin-bottom: 5px;
+    padding-top: 4px;
+    margin-bottom:  1px;
 }
 
 .follow p {
@@ -42,3 +42,4 @@
 .copy-rigth span{
     color: goldenrod;
 }
+

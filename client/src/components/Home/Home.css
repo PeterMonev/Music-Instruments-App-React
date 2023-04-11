@@ -46,6 +46,10 @@
     text-decoration: none;
   }
   
+  .main__pic article a:hover {
+     text-decoration: underline 2px;
+  }
+  
   .main__info {
     text-align: center;  
     background-color: black;

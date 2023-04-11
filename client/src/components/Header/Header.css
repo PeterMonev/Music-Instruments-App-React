@@ -7,7 +7,7 @@
 }
 
 header {
-    margin-bottom: 40px;
+    margin: 0 auto;
     position: fixed;
     z-index: 1;
     background-color: black;
@@ -16,6 +16,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
 }
 
 header h1 {
@@ -63,3 +64,60 @@ a:hover {
    border-bottom: 3px solid;
 }
 
+
+/* RESPONSIVE */
+@media all and (max-width: 1500px) {
+    header h1 {
+        font-size: 32px;
+    }
+    header nav ul li {
+        margin-right: 60px;
+    }
+
+    header nav ul li a {
+        font-size: 22px;
+    }
+}
+
+@media all and (max-width: 1030px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    header nav ul li {
+        margin-right: 20px;
+    }
+
+    header nav ul li a {
+        font-size: 18px;
+    }
+}
+
+@media all and (max-width: 860px) {
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header h1 {
+        font-size: 24px;
+        margin: 0 auto;
+        padding: 10px 0 10px 0;
+    }
+
+    header nav ul li {
+        margin: 0 auto;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+
+    header nav ul li a {
+        font-size: 22px;
+    }
+
+ 
+}
