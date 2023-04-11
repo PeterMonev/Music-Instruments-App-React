@@ -30,7 +30,7 @@ export const Header = () => {
               <li><Link className='a:hover' to={'/catalog'}>Catalog</Link></li>
               {auth ? 
               <>
-                <li><Link to={'/create'}>Create</Link></li>
+                <li><Link to={'/create'}> Create</Link></li>
                 <li><Link to={'/profile'}>Profile</Link></li>
                 <li  onClick={logoutHandler} ><Link>Logout</Link></li>
               </>

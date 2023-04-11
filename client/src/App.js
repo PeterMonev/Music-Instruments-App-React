@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { AuthContext } from './hooks/authContext';
 import { useSessionStorage } from './hooks/useSessionStorage';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 import { Footer } from './components/Footer/Footer';
 import { Header } from './components/Header/Header';
