@@ -43,3 +43,15 @@
     color: goldenrod;
 }
 
+/* RESPONSIVE */
+
+@media all and (max-width: 860px) {
+    .footer-container {
+        padding-bottom: 15px;
+    }
+
+    .follow li {   
+        font-size: 20px;
+    
+    }
+}
