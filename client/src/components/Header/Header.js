@@ -23,7 +23,7 @@ export const Header = () => {
 
     return (
         <header >
-     <h1 ><Link className="title" eto={'/'}>Music Instruments Shop</Link></h1>
+           <h1 ><Link className="title" eto={'/'}>Music Instruments Shop</Link></h1>
         <nav>
            <ul>
               <li className="home"><Link to={'/'}>Home</Link></li>
