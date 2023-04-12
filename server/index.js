@@ -11,8 +11,7 @@ async function start() {
 
     try {
         mongoose.set('strictQuery', false);
-        const db = await mongoose.connect("mongodb+srv://music-instruments-shop:FPE6iPlrtnIYv9wH@cluster0.vy764ls.mongodb.net/?retryWrites=true&w=majority"||
-            "mongodb://0.0.0.0:27017/music-instruments-shop", {
+        const db = await mongoose.connect("mongodb+srv://music-instruments-shop:FPE6iPlrtnIYv9wH@cluster0.vy764ls.mongodb.net/?retryWrites=true&w=majority", {
                 useNewUrlParser: true,
                 useUnifiedTopology: true,
             });
