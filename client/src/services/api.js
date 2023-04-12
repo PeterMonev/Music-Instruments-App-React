@@ -1,4 +1,4 @@
-const BASE_URL = process.env.REACT_APP_SERVER_API_URL;
+const BASE_URL = "https://music-intruments-shop-client.onrender.com/";
 
 async function request(method, url, data) {
 
