@@ -11,7 +11,7 @@ async function start() {
 
     try {
         mongoose.set('strictQuery', false);
-        const db = await mongoose.connect(
+        const db = await mongoose.connect(process.env.MONGODB_URI ||
             "mongodb://0.0.0.0:27017/music-instruments-shop", {
                 useNewUrlParser: true,
                 useUnifiedTopology: true,
