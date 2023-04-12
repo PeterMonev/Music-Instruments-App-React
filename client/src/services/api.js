@@ -1,4 +1,4 @@
-const BASE_URL = "https://music-intruments-shop.onrender.com" || "http://localhost:3030";
+const BASE_URL = process.env.REACT_APP_SERVER_API_URL;
 
 async function request(method, url, data) {
 

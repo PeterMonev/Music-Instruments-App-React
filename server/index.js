@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const express = require('express');
-require("dotenv").config(config.MONGODB_URI);
+require("dotenv").config();
 
 const cors = require('./src/middlewares/cors');
 const auth = require('./src/middlewares/auth');
@@ -12,7 +12,7 @@ async function start() {
     try {
         mongoose.set('strictQuery', false);
         const db = await mongoose.connect(process.env.MONGODB_URI ||
-            MONGO_URL_LOCAL, {
+           MONGO_URL_LOCAL, {
                 useNewUrlParser: true,
                 useUnifiedTopology: true,
             });
