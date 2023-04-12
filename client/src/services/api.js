@@ -1,4 +1,4 @@
-const BASE_URL = "https://music-intruments-shop.onrender.com";
+const BASE_URL = "https://music-intruments-shop.onrender.com" || "http://localhost:3030";
 
 async function request(method, url, data) {
 

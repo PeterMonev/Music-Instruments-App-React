@@ -11,7 +11,7 @@ export async function login(email, password) {
 };
 
 export function logout(token) {
-    return fetch('http://localhost:3030/users/logout', {
+    return fetch('https://music-intruments-shop.onrender.com/users/logout', {
         method: 'GET',
         headers: {
             'X-Authorization': token
@@ -20,7 +20,7 @@ export function logout(token) {
 }
 
 export async function getUserById(userId, token){
-    const response = await fetch(`http://localhost:3030/users/${userId}`, {
+    const response = await fetch(`https://music-intruments-shop.onrender.com/users/${userId}`, {
         method: 'GET',
         headers: {
             'X-Authorization': token,
