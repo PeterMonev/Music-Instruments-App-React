@@ -92,7 +92,8 @@ async function updateById(existing, item) {
     existing.price = item.price;
     existing.year = item.year;
     existing.description = item.description;
-
+    console.log(item);
+    console.log(existing);
     await existing.save();
 
     return existing;
