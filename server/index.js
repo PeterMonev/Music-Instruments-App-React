@@ -4,7 +4,7 @@ require("dotenv").config();
 
 const cors = require('./src/middlewares/cors');
 const auth = require('./src/middlewares/auth');
-const instrumentController = require('./src/controllers/instrumentController');
+const instrumentcontroller = require('./src/controllers/instrumentcontroller');
 const usersController = require('./src/controllers/usersController');
 
 async function start() {
@@ -30,7 +30,7 @@ async function start() {
     app.use(cors());
     app.use(auth());
 
-    app.use('/data/instrument', instrumentController);
+    app.use('/data/instrument', instrumentcontroller);
     app.use('/users', usersController);
     app.use('/users/:id', usersController);
 
