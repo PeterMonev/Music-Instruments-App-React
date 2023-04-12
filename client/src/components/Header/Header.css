@@ -93,7 +93,7 @@ a:hover {
     }
 }
 
-@media all and (max-width: 860px) {
+@media all and (max-width: 880px) {
     header {
         display: flex;
         flex-direction: column;

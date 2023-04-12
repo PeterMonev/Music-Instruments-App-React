@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const express = require('express');
+require("dotenv").config();
 
 const cors = require('./src/middlewares/cors');
 const auth = require('./src/middlewares/auth');
@@ -7,10 +8,11 @@ const instrumentController = require('./src/controllers/instrumentController');
 const usersController = require('./src/controllers/usersController');
 
 async function start() {
+  
     try {
         mongoose.set('strictQuery', false);
         const db = await mongoose.connect(
-            "mongodb://0.0.0.0:27017/music-instruments-shop", {
+            process.env.MONGO_URL_LOCAL || process.env.MONGO_URL_HOST, {
                 useNewUrlParser: true,
                 useUnifiedTopology: true,
             });

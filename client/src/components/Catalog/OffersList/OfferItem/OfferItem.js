@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import '../OfferItem/OfferItem.css';
+import './OfferItem.css';
 
 export const OfferItem = ({ offer }) =>{
       return (

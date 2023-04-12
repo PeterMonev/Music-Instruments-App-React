@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getAll } from "../../services/instrumentServices";
 
 import "../Catalog/Catalog.css";
-import { OffersList } from "./OffersList/OffersList";
+import { OffersList } from "../Catalog/OffersList/OffersList";
 import { Search } from "../Search/Search";
 import { Pagination } from "../Pagination/Pagination";
 import CircleLoader from 'react-spinners/CircleLoader';

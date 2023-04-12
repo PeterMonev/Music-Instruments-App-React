@@ -44,6 +44,17 @@
   .main__pic article a:hover {
      text-decoration: underline 2px;
   }
+
+  .lates-offers {
+    color: white;
+    width: 80%;
+    text-align: center;
+    margin: 60px auto;
+    background-color: rgba(0,0,0,.6);
+    font-size: 18px;
+    font-style: italic;
+    font-weight: normal;
+  }
   
   .main__info {
     text-align: center;  
@@ -92,7 +103,7 @@
 
   /* RESPONSIVE */
 
-  @media all and (max-width: 860px) {
+  @media all and (max-width: 880px) {
     .main__pic article {
       margin-top: 120px;
     }
