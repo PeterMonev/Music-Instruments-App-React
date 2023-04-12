@@ -2,11 +2,11 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const User = require('../models/User');
 const { ValidationError } = require('../utils/createValidationError');
-
+require("dotenv").config()
 
 const blacklist = new Set();
 
-const JWT_SECRET = 'dasidos';
+const JWT_SECRET = process.env.JWT_SECRET;
 
 async function register(email, fullName, phoneNumber, password) {
     const existing = await User.findOne({ email: new RegExp(`^${email}$`, 'i') });
