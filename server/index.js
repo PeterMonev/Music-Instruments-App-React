@@ -7,15 +7,15 @@ const auth = require('./src/middlewares/auth');
 const instrumentController = require('./src/controllers/instrumentcontroller');
 const usersController = require('./src/controllers/usersController');
 
-const DB_LOCAL = process.env.MONGO_URL_LOCAL;
-const MONGODB_URI= process.env.MONGODB_URI;
+// const DB_LOCAL = process.env.MONGO_URL_LOCAL;
+const MONGODB_URI = process.env.MONGODB_URI;
 
 async function start() {
 
     try {
-        console.log(  MONGODB_URI );
+    console.log(MONGODB_URI);
         mongoose.set('strictQuery', false);
-        const db = await mongoose.connect( MONGODB_URI || DB_LOCAL , {
+        const db = await mongoose.connect(  MONGODB_URI , {
                 useNewUrlParser: true,
                 useUnifiedTopology: true,
             });
