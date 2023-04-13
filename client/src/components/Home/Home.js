@@ -8,7 +8,7 @@ import { LatestOffersList } from './LatestOffersList/LatestOffersList';
 
 export const Home = () => {
     const [offers, setOffers]= useState([]);
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
    
     useEffect(() => {
         (async () => {
@@ -34,7 +34,12 @@ export const Home = () => {
            <div className='lates-offers'>
             <h2 className='lates-offers-h1'>THE LATEST OFFERS:</h2>
  
-             <LatestOffersList offers={offers} />
+           {loading ?
+            <CircleLoader color="#DAA520" size={200} />
+            :
+            <LatestOffersList offers={offers} />
+           }
+            
   
            </div>
         </section>
