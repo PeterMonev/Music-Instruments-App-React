@@ -10,7 +10,7 @@ const usersController = require('./src/controllers/usersController');
 async function start() {
 
     try {
-    console.log(process.env.MONGODB_URI);
+  
         mongoose.set('strictQuery', false);
         const db = await mongoose.connect(  process.env.MONGODB_URI , {
                 useNewUrlParser: true,
