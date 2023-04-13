@@ -1,0 +1,36 @@
+.latestOffers-container{
+    text-align: center;
+}
+
+.latestOffers-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border-radius: 2px solid gold;
+    padding-bottom: 30px;
+}
+
+.latestOffers-noFound {
+    font-size: 42px;
+    color: goldenrod;
+    font-style: italic;
+    text-align: center;
+    font-weight: 20;
+    padding: 20px 0px 50px 0px;
+    text-decoration: none;
+}
+
+/* RESPONSIVE */
+
+@media all and (max-width: 880px) {
+    .latestOffers-list {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        border-radius: 2px solid gold;
+        padding-bottom: 30px;
+        justify-content: space-between;
+        align-items: center;
+       
+    }
+}

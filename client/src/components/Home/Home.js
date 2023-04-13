@@ -4,6 +4,7 @@ import CircleLoader from 'react-spinners/CircleLoader';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { getAll } from '../../services/instrumentServices';
+import { LatestOffersList } from './LatestOffersList/LatestOffersList';
 
 export const Home = () => {
     const [offers, setOffers]= useState([]);
@@ -31,8 +32,10 @@ export const Home = () => {
            </article>
           
            <div className='lates-offers'>
-            <h2>THE LATEST OFFERS:</h2>
-
+            <h2 className='lates-offers-h1'>THE LATEST OFFERS:</h2>
+ 
+             <LatestOffersList offers={offers} />
+  
            </div>
         </section>
 
