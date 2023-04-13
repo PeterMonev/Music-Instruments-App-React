@@ -1,5 +1,5 @@
 
-const BASE_URL = "https://music-intruments-shop.onrender.com";
+const BASE_URL = process.env.REACT_APP_URL;
 
 async function request(method, url, data) {
  console.log(BASE_URL);
