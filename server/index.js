@@ -8,14 +8,14 @@ const instrumentController = require('./src/controllers/instrumentcontroller');
 const usersController = require('./src/controllers/usersController');
 
 const DB_LOCAL = process.env.MONGO_URL_LOCAL;
-const DB_URI = process.env.MONGODB_URI;
+const MONGODB_URI= process.env.MONGODB_URI;
 
 async function start() {
 
     try {
-        console.log( DB_LOCAL);
+        console.log(  MONGODB_URI );
         mongoose.set('strictQuery', false);
-        const db = await mongoose.connect( DB_URI || DB_LOCAL , {
+        const db = await mongoose.connect( MONGODB_URI || DB_LOCAL , {
                 useNewUrlParser: true,
                 useUnifiedTopology: true,
             });
@@ -23,6 +23,7 @@ async function start() {
 
         console.log('DataBase Ready');
     } catch (err) {
+        console.log(err);
         console.log('Error connecting to database');
         return process.exit(1);
     }
