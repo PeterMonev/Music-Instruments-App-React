@@ -35,7 +35,7 @@ export const Home = () => {
             <h2 className='lates-offers-h1'>THE LATEST OFFERS:</h2>
  
            {loading ?
-            <CircleLoader color="#DAA520" size={200} />
+            <CircleLoader color="#DAA520" size={100} />
             :
             <LatestOffersList offers={offers} />
            }
