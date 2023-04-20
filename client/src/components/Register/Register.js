@@ -68,7 +68,8 @@ export const Register = () => {
     setLoading(false);
     navigate('/catalog')
   } catch(error) {
-
+   setLoading(false);
+   
    if(error.message.includes('Email')){
     setErrors((errors) => ({
       ...errors, email: `${error.message}`
@@ -113,11 +114,11 @@ export const Register = () => {
          {errors.password && <p className="p-error" style={{color: 'red'}}>{errors.password}</p>}
 
         <label className="register-label" htmlFor="repeatPassword">Confirm Password:</label>
-        <input onChange={onChange} value={userData.repeatPassword} onBlur={(e) => {lengthValidation(e); passwordMatchValidation()}} className="input-field" type="password" name="repeatPassword" placeholder="*******" />
+        <input onChange={onChange} value={userData.repeatPassword} onBlur={(e) => {lengthValidation(e); passwordMatchValidation()}} className="input-field-repass" type="password" name="repeatPassword" placeholder="*******" />
         {errors.repeatPassword && <p className="p-error" style={{color: 'red'}}>{errors.repeatPassword}</p>}
 
         {loading ?
-        <CircleLoader color="#DAA520" size={100} bold/>
+        <CircleLoader color="#DAA520" size={100} />
         : <input disabled={ disableButton } className={disableButtonStyle} type="submit" value="Register" />
         } 
          <p>    

@@ -46,7 +46,7 @@ export const Login = () => {
 
         {error && <p className="p-login-error" >{error}</p>}
         {loading ?
-        <CircleLoader color="#DAA520" size={100} bold/>
+        <CircleLoader color="#DAA520" size={100} />
         :
         <input className='submit-login' type="submit" value="Login" />
         }

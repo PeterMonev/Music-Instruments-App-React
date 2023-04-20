@@ -1,10 +1,10 @@
 .register-section {
-    padding-top: 100px;
+    padding-top: 120px;
     background-image: url(../../../public/home.jpg);
     background-color: rgba(0,0,0,.6);
     width: 100%;
     height: auto;
-    min-height: 1050px;
+    min-height: 1250px;
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover;
@@ -19,7 +19,7 @@
     position: relative;
     padding-top: 30px;  
     padding-bottom: 40px;
-    width: 850px;
+    width: 50%;
     border-radius: 60px;
     box-sizing: border-box;
     box-shadow: 2px 2px 21px 12px #2d2d2d;
@@ -66,6 +66,7 @@
 
 .register-label,
 .input-field,
+.input-field-repass,
 .register-submit-enable,
 .register-submit-disable {
     display: block;
@@ -93,6 +94,18 @@
     border: 3px solid goldenrod;
 }
 
+.input-field-repass {
+    background: #ecf0f3;
+    padding: 20px;
+    padding-left: 20px;
+    height: 5px;
+    margin-top: 10px;
+    font-size: 24px;
+    border-radius: 50px;
+    border: 3px solid goldenrod;
+    margin-bottom: 20px;
+}
+
 .register-submit-enable {
     margin-top: 55px;
     background: darkcyan;
@@ -103,6 +116,8 @@
     cursor: pointer;
     font-weight: 900;
     transition: 2.0s;
+    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .register-submit-disable {
@@ -114,7 +129,7 @@
     font-size: 26px;
     cursor: pointer;
     font-weight: 900;
-
+    margin-bottom: 20px;
 }
 
 .register-submit:hover {
@@ -138,4 +153,49 @@
     margin: 10px;
 }
 
+/* RESPONSIVE */
+
+@media all and (max-width: 880px) {
+    .register-container {
+        margin-top: 25%;
+        width: 80%;
+    }
+
+    .register-container h1 {
+        font-size: 28px;
+    }
+
+    .register-label {
+        font-size: 18px;
+    }
+
+    .input-field,
+    .input-field-repass {
+        width: 80%;
+        height: 50%;
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+
+      .register-container p {
+       font-size: 14px;
+       }
+
+       .register-submit-disable {
+        margin-top: 60px;
+        font-size: 20px;
+        width: 80%;
+        margin-bottom: 40px;
+        height: 60px;
+       }
+
+       .register-submit-enable {
+        margin-top: 40px;
+        font-size: 20px;
+        width: 80%;
+        margin-bottom: 40px;
+        height: 60px;
+        
+       }
+}
 
