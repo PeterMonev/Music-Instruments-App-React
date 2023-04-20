@@ -1,5 +1,6 @@
 .login-section {
-    height: 820px;
+    height: 0 auto;
+    min-height: 790px;
     width: 100vw;
     padding-top: 100px;
     background-image: url(../../../public/home.jpg);
@@ -18,8 +19,8 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     position: relative;
     padding-top: 25px;  
-    width: 850px;
-    height: 65vh;
+    width: 50%;
+    height: 0 auto;
     border-radius: 60px;
     box-sizing: border-box;
     box-shadow: 2px 2px 21px 12px #2d2d2d;
@@ -90,6 +91,7 @@
     font-size: 24px;
     border-radius: 50px;
     border: 3px solid goldenrod;
+    margin-bottom: 20px;
 }
 
 .submit-login {
@@ -113,6 +115,7 @@
     text-align: center;
     color: whitesmoke;
     margin-top: 30px;
+    padding-bottom: 20px;
 }
 
 .login-container-p a {
@@ -124,4 +127,43 @@
     text-align: center;
     color: red;
     padding-bottom: 10px
+}
+
+@media all and (max-width: 880px) {
+    .login-container {
+       margin-top: 120px;
+       width: 80%;
+       height: 0 auto;
+    }
+
+    .login-container h1 {
+        font-size: 32px;
+    }
+
+    .login-label {
+        font-size: 18px;
+    }
+
+    .login-input{
+      height: 10px;
+      font-size: 18px;
+    }
+
+    .submit-login {
+        font-size: 20px;
+        margin-top: 35px;
+        margin-bottom: 10px;
+    }
+
+    .login-container-p  {
+        font-size: 14px;
+        padding-bottom: 30px;   
+    }
+
+    .p-login-error {
+        margin-top: 20px;
+        font-size: 16px;
+        padding-top: 20px;
+    }
+    
 }

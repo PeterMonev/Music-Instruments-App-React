@@ -25,6 +25,7 @@ export const Login = () => {
 
       navigate('/catalog');
     } catch (error) {
+      setLoading(false);
       setError('Email or Password are incorrect!');
     }
   }

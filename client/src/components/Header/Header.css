@@ -79,7 +79,7 @@ a:hover {
     }
 }
 
-@media all and (max-width: 1030px) {
+@media all and (max-width: 1250px) {
     header h1 {
         font-size: 28px;
     }
@@ -90,6 +90,7 @@ a:hover {
 
     header nav ul li a {
         font-size: 18px;
+       
     }
 }
 
