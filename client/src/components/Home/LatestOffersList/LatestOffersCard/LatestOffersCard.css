@@ -81,4 +81,22 @@
         flex-basis: 45%;
           margin-bottom: 20px;
     }
+
+    .latest-offer-card h1 {
+        font-size: 14px;
+    }
+
+    .latest-offer-price {
+        font-size: 14px;
+    }
+}
+
+@media all and (max-width: 1250px) {
+    .latest-offer-card h1 {
+        font-size: 14px;
+    }
+
+    .latest-offer-price {
+        font-size: 14px;
+    }
 }
