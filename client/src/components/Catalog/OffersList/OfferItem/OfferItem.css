@@ -34,7 +34,7 @@
 
 .offer-title {
     font-size: 24px;
-    letter-spacing: 0.2rem;
+
     text-align: center;
     text-decoration: underline goldenrod;
     padding-top: 10px;
@@ -80,9 +80,10 @@
 
 @media all and (max-width: 880px) {
     .offer-list {
-        width: 45%;
-        height: 50vh;
-        margin-bottom: 15px;
+        width: 47%;
+        height: 40vh;
+        margin-bottom: 10px;
+        border: 2px solid goldenrod;
     }
 
     .offer-image {
@@ -108,17 +109,18 @@
    .read-more-btn {
      font-size: 12px;
      padding: 2px 5px;
+     margin-top: 10px;
 
    }
 }
 
 @media all and (max-width: 400px) {
     .offer-title {
-        font-size: 18px;
+        font-size: 16px;
     }
 
-    .read-more-btn {
+    .read-more-btn {    
         font-size: 10px;
-        margin-top: 15px;
+        margin-top: 10px;
     }
 }
