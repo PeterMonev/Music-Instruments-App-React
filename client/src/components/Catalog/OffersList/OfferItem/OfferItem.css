@@ -1,68 +1,124 @@
 .offer-list {
-    height: 50vh;
-    width: 25vw;
+    height: 75vh;
+    width: 30%;
     color: #fff;
     position: relative;
     z-index: 0;
     margin-bottom: 10px;
-    flex: 0 0 calc(33.33% - 10px);
+   
     padding: 0px;
     border-radius: 120px solid gold;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 3px solid goldenrod;
+    border-radius: 60px;
+    background-color: black;
+    margin-bottom: 40px;
 }
 
 .offer-image { 
-    width: 90%;
-    height: 90%;
-    object-fit: cover;    
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -2;
-    border-radius: 2rem;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    filter: brightness(85%);
+    width: 100%;
+    height: 70%;
+    border-radius: 54px 54px 0 0;
+    border: 1px solid goldenrod;
+}
+
+.offer-image img {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    border-radius: 54px 54px 0 0;
+
 }
 
 .offer-title {
-    font-size: 26px;
+    font-size: 24px;
     letter-spacing: 0.2rem;
-    position: relative;
     text-align: center;
-    top: 10%;
     text-decoration: underline goldenrod;
+    padding-top: 10px;
 }
 
-.offer-category {
-    font-size: 22px;
-    position: relative;
-    top: 20%;
+.offer-year {
+    font-size: 18px;
     text-align: center;
+    padding-top: 10px;
+}
+
+.offer-year span {
+    color: bisque;
 }
 
 .offer-price {
-    left: 250px;
-    font-size: 28px;
+    font-size: 20px;
     font-weight: 500;
-    position: relative;
     text-align: center;
-    top: 20%;
     color: red;
+    padding-top: 10px
+}
+
+.offer-price span {
+    color: bisque;
 }
 
 .read-more-btn {
     color: goldenrod;
     text-decoration: none;
-    font-size: 24px;
-    position: absolute;
-    bottom: 15%;
-    left: 30%;
+    font-size: 18px;
     transition: 1.0s;
     background-color: black;
     border-radius: 60px;
-    border: 3px solid goldenrod;
-    padding: 5px 20px;
+    border: 2px solid goldenrod;
+    padding: 2px 10px;
+    margin-top: 15px
 }
 
 .read-more-btn:hover {
-    color: rgb(165, 0, 0);
+    color: red
+}
+
+@media all and (max-width: 880px) {
+    .offer-list {
+        width: 45%;
+        height: 50vh;
+        margin-bottom: 15px;
+    }
+
+    .offer-image {
+        width: 100%;
+        height: 60%;
+    }
+
+    .offer-title {
+        padding-top: 5px;
+        font-size: 18px;
+    }
+
+   .offer-year{
+    font-size: 14px;
+    padding-top: 5px;
+   }
+
+   .offer-price {
+    font-size: 14px;
+    padding-top: 5px;
+   }
+
+   .read-more-btn {
+     font-size: 12px;
+     padding: 2px 5px;
+
+   }
+}
+
+@media all and (max-width: 400px) {
+    .offer-title {
+        font-size: 18px;
+    }
+
+    .read-more-btn {
+        font-size: 10px;
+        margin-top: 15px;
+    }
 }

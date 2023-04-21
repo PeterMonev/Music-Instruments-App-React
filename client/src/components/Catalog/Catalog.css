@@ -1,6 +1,6 @@
 .catalog-image-section {
     width: 100vw;
-    height: 40vh;
+    height: 50vh;
     flex-direction: row;
     flex-wrap: wrap;
     background-color: black;
@@ -16,7 +16,7 @@
    font-size: 42px;
    text-align: center;
    font-style: italic;
-   padding: 40px 0 60px 0;
+   padding: 30px 0 30px 0;
    text-decoration: underline goldenrod;
 }
 
