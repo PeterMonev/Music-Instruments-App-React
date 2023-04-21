@@ -55,3 +55,11 @@
     z-index: 0;
 
 }
+
+@media all and (max-width: 880px) {
+    .catalog-image-section {
+        width: 100vw;
+        height: 40vh;
+        padding-top: 165px;
+    }
+}
