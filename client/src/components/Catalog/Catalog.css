@@ -62,4 +62,9 @@
         height: 40vh;
         padding-top: 165px;
     }
+
+    .title-catalog {
+        font-size: 32px;
+        padding: 20px;
+    }
 }

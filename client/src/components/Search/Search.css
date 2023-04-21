@@ -1,17 +1,18 @@
 .search-container {
-    height: 16vh;
+    height: 20vh;
 }
 
 .search-form {
     width: 80%;
+  
 }
 
 .search-form input,.search-select {
     outline: none;
     border: none;
-    width: 40%;
-    min-height: 64px;
-    padding: 16px;
+    width:  40%;
+    height: 10vh;
+    padding: 20px;
     font-weight: bold;
     letter-spacing: 3px;
     font-size: 22px;    
@@ -31,4 +32,31 @@
     border: none;
     min-height: 64px;
     padding: 16px;
+}
+
+/* RESPONSIVE */ 
+
+@media all and (max-width: 880px) {
+    .search-container {
+        height: 14vh;
+    }
+    .search-form {
+        margin: auto auto;
+        width: 95%;
+    }
+
+    .search-form input,.search-select {
+        width: 40%;
+        height: 9vh;
+        letter-spacing: 0px;
+        font-size: 14px;    
+        padding: 5px;
+        margin-right: 7px;
+    }
+
+    .search-button {
+        font-size: 14px;
+        width: 15%;
+       
+    }
 }
