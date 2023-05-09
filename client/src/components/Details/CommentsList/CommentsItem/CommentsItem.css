@@ -10,7 +10,7 @@
 
 .comments-email {
     color: white;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     font-size: 16px;
     text-align: center;
     text-decoration: underline goldenrod 2px;
@@ -30,7 +30,7 @@
 }
 
 .comments-buttons button {
-    margin-top: 10px;
+    margin-top: 20px;
     margin-left: 20px;
     padding: 10px 10px;
     border-radius: 30px;
@@ -51,36 +51,34 @@
 }
 
 .comments-div {
-    display: flex;
-    flex-direction: column;
+ 
     margin-bottom: 10px;
     flex-wrap: wrap;
     width: 100%;
-    justify-content: center;
-    align-items: center;
 }
 
 .comment-edit-form{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 10px;
     flex-wrap: wrap;
     width: 100%;
-    justify-content: center;
-    align-items: center;
+   
 }
 
 .comment-edit-form-submit {
-    margin-left: 15px;
-    padding: 5px 10px;
+    padding: 10px 20px;
     border-radius: 20px;
     border: 2px solid goldenrod;
     color: white;
     background-color: black;
     font-size: 16px;
-    display: block;
     margin-top: 20px;
-    margin-left: 690px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .comment-edit-form-submit:hover {
@@ -89,9 +87,10 @@
 }
 
 .comment-edit-form-text{
-   padding: 15px;
+   padding: 30px 10px 20px 20px;
    font-size: 20px;
    width: 80%;
+   height: 20vh;
    justify-self: center;
 }
 

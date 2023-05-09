@@ -44,7 +44,7 @@ export const OfferDetails = () => {
               <article className="info">
               <p>Category: <span>{offer.category}</span> </p> 
               <p>Year of production: <span>{offer.year}</span></p>
-              <p>Addres: <span>{offer.address}</span></p>
+              <p>Address: <span>{offer.address}</span></p>
               <p className="price">Price: <span>{offer.price}$</span></p>
               </article>
               
