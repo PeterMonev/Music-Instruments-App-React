@@ -1,10 +1,6 @@
 import '../Pagination/Pagination.css';
 
-export const Pagination = ({
-    changePageHandler,
-    page,
-    instrumentsCount}) => {
-
+export const Pagination = ({changePageHandler, page, instrumentsCount}) => {
     const currentPage = Number(page);
     const pagesCount = Math.ceil(instrumentsCount / Number(6)) || 1;
     
