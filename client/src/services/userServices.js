@@ -31,7 +31,7 @@ export async function getUserById(userId, token){
     });
     
     const data = await response.json();
+    
     return data;
 
-    
 }

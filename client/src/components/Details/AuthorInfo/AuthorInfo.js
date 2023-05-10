@@ -14,10 +14,12 @@ export const AuthorInfo = ({isOwner, offer, auth}) => {
       });
 
     useEffect(()=> {
-
+    
         if (offer && offer.owner && offer.owner._id) {
+        
         (async () => {
         let data = await getUserById(offer.owner._id, auth.accessToken);
+       
         setAuthor(data);
        })();
 
@@ -57,7 +59,7 @@ export const AuthorInfo = ({isOwner, offer, auth}) => {
               <>
               <Link className="btn" to={`/instrument/edit/${offer._id}`}>Edit</Link>
               {loading ?
-              <CircleLoader color="#DAA520" size={100} bold/>
+              <CircleLoader color="#DAA520" size={100} />
               : 
               <Link className="btn" onClick={onDelete}>Delete</Link>
               }

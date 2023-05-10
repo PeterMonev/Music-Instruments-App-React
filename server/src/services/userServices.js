@@ -75,9 +75,7 @@ function validateToken(token) {
 }
 
 async function getUserById(userId){
-    
-    return await User.findById(userId);
- 
+    return  await User.findById(userId)
 }
 
 module.exports = {

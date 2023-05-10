@@ -35,9 +35,8 @@ router.get('/logout', (req, res) => {
 router.get('/:id', async (req, res) =>{
  
     try {
-        res.status(200).json(await userServices.getUserById(req.user._id));
-        // res.json(res.locals.item).end();
-        // // res.end();
+        res.status(200).json(await userServices.getUserById(req.params.id));
+
     } catch (err) {
         errorHandler(err, res, req);
     }

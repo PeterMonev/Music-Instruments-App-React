@@ -2,7 +2,7 @@
 const BASE_URL = process.env.REACT_APP_URL;
 
 async function request(method, url, data) {
- console.log(BASE_URL);
+ 
     const options = {};
 
   if (method !== "GET") {

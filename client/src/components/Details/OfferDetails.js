@@ -68,7 +68,7 @@ export const OfferDetails = () => {
     </article>
       
     {loading ?
-        <CircleLoader color="#DAA520" size={100} bold/>
+        <CircleLoader color="#DAA520" size={100} />
         :
       <CommentsList offerId={id} />
 } 
