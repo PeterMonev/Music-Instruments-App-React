@@ -60,7 +60,6 @@
 .instrument-info{
     border-bottom: 3px solid goldenrod;
     width: 100%;
- 
     font-size: 20px;
 }
 
@@ -178,4 +177,106 @@
    
 }
 
+
+/* Responsive */
+
+@media all and (max-width: 520px){
+    .section-details{
+        padding-top: 150px; 
+    }
+
+    .heading-details{
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    .article-details {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .div-img-details {
+        width: 100%;
+        height: 50%;
+     
+    }
+
+    .img-details {
+        width: 100%;
+        height: 100%;
+        border-radius: 60px 60px 0 0;
+        border-bottom: 3px solid goldenrod;
+     }
+
+     .details-section {
+        width: 100%;
+        border-radius:  0  0 60px 60px;
+        display: flex;
+        flex-direction: column;
+     }
+
+     .details-section h2{
+        font-size: 22px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .info {
+       flex-direction: column;
+       font-size: 16px;
+    }
+
+    .info p {
+         padding: 5px;
+         margin: 0 auto;
+    }
+
+    .title-details{
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .about-instrument h3 {
+        font-size: 18px;
+        margin: 10px;
+        padding-bottom: 5px;
+    }
+
+    .about-instrument p {
+        font-size: 14px;
+    }
+
+    .createdAt {
+        font-size: 14px;
+    }
+
+    .author-sorry-h1 {
+        font-size: 16px;
+        margin: 5px 20px 30px 20px;
+    }
+
+    /* AUTHOR CONTAINER */
+
+    .author-container {
+        margin-bottom: 10px;
+    }
+
+    .author-info {
+        flex-direction: column;
+    }
+
+    .author-info p {
+        margin: 0 auto;
+        padding-bottom: 10px;
+    }
+
+    .btn {
+      
+        border: 2px goldenrod solid;
+        padding: 10px 30px;
+        font-size: 16px;
+        text-align: center;
+        margin-top: 10px;
+    }
+}
 
