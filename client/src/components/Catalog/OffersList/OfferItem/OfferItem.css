@@ -93,7 +93,7 @@
 @media all and (max-width: 880px) {
     .offer-list {
         width: 40%;
-        height: 60vh;
+        height: 55vh;
         margin-bottom: 30px;
         border: 2px solid goldenrod;
     }
@@ -136,7 +136,7 @@
 @media all and (max-width: 530px) {
     .offer-list {
         width: 47%;
-        height: 48vh;
+        height: 44vh;
         margin-bottom: 10px;
         border: 2px solid goldenrod;
     }
@@ -148,7 +148,7 @@
 
     .offer-title {
         padding-top: 5px;
-        font-size: 18px;
+        font-size: 16px;
     }
 
    .offer-year{
