@@ -38,11 +38,11 @@ export const Login = () => {
         <h1>Login</h1>
 
         <label className="login-label" htmlFor="email">Email:</label>
-        <input className="login-input" type="email" name="email" placeholder="peter@gmail.com" />
+        <input className="login-input" type="email" name="email" data-testid='email' placeholder="peter@gmail.com" />
     
 
         <label className="login-label" htmlFor="login-pass">Password:</label>
-        <input className="login-input" type="password" name="password" placeholder="******" />
+        <input className="login-input" type="password" name="password" data-testid='password' placeholder="******" />
 
         {error && <p className="p-login-error" >{error}</p>}
         {loading ?
