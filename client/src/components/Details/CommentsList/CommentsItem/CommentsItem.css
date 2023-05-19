@@ -99,3 +99,29 @@
     text-align: center;
     margin-top: 20px;
 }
+
+/* RESPONSIVE */
+
+@media all and (max-width: 520px) {
+    .comments-text {
+        font-size: 16px;
+    }
+
+    .commnets-created {
+        font-size: 12px;
+    }
+
+    .comment-edit-form {
+        margin: 0 auto;
+    }
+
+    .comment-edit-form-text {
+        margin: 0 auto;
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .comment-error {
+        font-size: 14px;
+    }
+}
