@@ -45,6 +45,7 @@
     border-radius:  0  60px 60px 0 ;
     display: flex;
     flex-direction: column;
+    height: auto    ;
 }
 
 .details-section h2{
@@ -122,6 +123,7 @@
 
 .author-container {
     width: 100%;    
+
 }
 
 .author-info {
@@ -180,7 +182,65 @@
 
 /* Responsive */
 
-@media all and (max-width: 520px){
+@media all and (max-width: 1240px){
+    .article-details {
+        height: auto;
+    }
+
+    .instrument-info h2 {
+        font-size: 24px;
+    }
+
+    .title-details {
+        margin-bottom: 10px;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    .info  {
+        display: inline;
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    .info p {
+        font-size: 18px;
+    }
+
+    .about-instrument h3{
+        font-size: 20px;
+    }
+
+    .about-instrument p {
+        font-size: 16px;
+    }
+
+    .price {
+        margin-bottom: 0px;
+    }
+
+    .details-section h2 {
+        font-size: 22px;
+        margin-bottom: 0px;
+    }
+
+    .author-info {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .buttons {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .author-container {
+        display: inline
+    }
+}
+
+
+@media all and (max-width: 880px){
     .section-details{
         padding-top: 150px; 
     }
