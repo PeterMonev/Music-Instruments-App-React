@@ -3,8 +3,8 @@
     background-image: url(../../../public/images/DrumsCatalogPic.jpg);
     background-color: rgba(0,0,0,.6);
     width: 100%;
-    height: auto;
-    min-height: 1250px;
+    height: 0 auto;
+    min-height: 1300px;
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover;
@@ -157,9 +157,11 @@
 /* RESPONSIVE */
 
 @media all and (max-width: 880px) {
+
     .register-container {
         margin-top: 25%;
         width: 80%;
+       
     }
 
     .register-container h1 {
