@@ -106,7 +106,7 @@ Guest Header
 ![Home](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/About1.PNG)
 
 
-## REGISTER
+## Register
 ![Register](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/Register.PNG)
 
 Register a user inside the database with email, full name, phone number, and password. Password inside the database is hashed (with bcrypt) and both passwords must match!
@@ -114,7 +114,7 @@ Register a user inside the database with email, full name, phone number, and pas
 After successful registration redirects to the Catalog page, with an already logged-in user.
 
 
-## LOGIN
+## Login
 
 ![Login](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/Login.PNG)
 
@@ -128,7 +128,7 @@ After successful login redirects to the Catalog page, with an already logged-in 
 The logout action is available to logged-in users. Upon success, clear any session information and redirect the user to the Home page
 
 
-## CATALOG (guest and user)
+## Catalog (guest and user)
 
 ![Catalog](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/Catalog.PNG)
 
@@ -141,7 +141,7 @@ On bottom of Catalog Page has Paginition.
 ![Catalog](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/Catalog%202.PNG)
 
 
-## DETAILS PAGE
+## Details Page
 
 ![Details](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/Details.PNG)
 
@@ -167,12 +167,12 @@ Information about the offer:
 - Offer Email
 
 
-## COMMENTS PAGE 
+## Comments Page
 ![Comments](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/Comments.PNG)
 
 Users can write comments, author on theirs commnets can edit and delete them,Guest Users can't write comments.
 
-## CREATE PAGE (logged in user)
+## Create Page (logged in user)
 ![Create](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/Create.PNG)
 
 The Create page is available to logged-in users. It contains a form for adding new offer.
@@ -230,4 +230,7 @@ The password should be equal to the repeat password.
 - The **Year** is required and should be valid 1901 to 2023(to this current year).
 - The **Description** is required and should be at least 10 characters long.
 
+# Responsive Design
+
+## Home
 
