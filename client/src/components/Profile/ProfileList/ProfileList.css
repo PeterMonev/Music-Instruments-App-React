@@ -26,6 +26,18 @@
 
 /* RESPOSIVE */
 
-.profileListOffers {
-    
+@media all and (max-width: 880px){
+    .profileList-noFound {
+       font-size: 42px;
+       padding-top: 60px;
+    }
+}
+
+
+
+@media all and (max-width: 520px){
+    .profileList-noFound {
+        font-size: 32px;
+        padding-top: 70px;
+     }
 }

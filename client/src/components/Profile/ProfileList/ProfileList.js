@@ -24,7 +24,7 @@ export const ProfileList = ({ owner }) => {
             <h1>My offers: {offers.length}</h1>
 
             {loading ?
-           <CircleLoader color="#DAA520" size={100} bold/>
+           <CircleLoader color="#DAA520" size={100} bold="true"/>
             :
             <>
             {offers.length > 0 
