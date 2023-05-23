@@ -9,9 +9,7 @@ This is a web application for a Music Instruments Shop that specializes in selli
 
 **[Music-Instrument-Shop](https://music-intruments-shop-client.onrender.com/)**
 
-##
-
-Demo Authentication :
+## Demo Authentication :
   > account: peter@abv.bg 
 
   > password: 1234
@@ -72,6 +70,8 @@ https://github.com/PeterMonev/Music-Instruments-App-React.git
 
 ## Deployment
 **[RENDER](https://render.com/)**
+
+##
 
  | **Permissions for shop**    | User | Guest | 
 | :--------------------------    | :---: | :---: |
