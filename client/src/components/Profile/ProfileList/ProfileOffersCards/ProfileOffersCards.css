@@ -85,3 +85,24 @@
         font-size: 16px;
     }
 }
+
+@media all and (max-width: 520px){
+    .profile-offer-card {
+        height: 25vh;
+        flex: 0 0 calc(49.33% - 15px);
+    }
+
+    .profile-offer-card h1 {
+        font-size: 20px;
+        letter-spacing: 0px;
+    }
+
+    .profile-offer-price {
+        font-size: 16px;
+    }
+
+    .profile-read-more-btn {
+        font-size: 14px;
+        padding: 5px 5px;
+    }
+}
