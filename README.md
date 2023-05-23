@@ -234,3 +234,6 @@ The password should be equal to the repeat password.
 
 ## Home
 
+![Home](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/ResponsiveHome1.PNG)![Home](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/ResponsiveHome2.PNG)(https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/ResponsiveHome3.PNG)
+
+##
