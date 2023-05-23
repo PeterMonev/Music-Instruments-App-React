@@ -1,13 +1,13 @@
 .profile-offer-card {
     height: 30vh;
-    width: 15vw;
+    width: 28vw;
     color: #fff;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     z-index: 0;
     margin-bottom: 30px;
-    flex: 0 0 calc(30.33% - 10px);
+   
     padding: 0px;
     border-radius: 120px solid gold;
     position: relative; 
@@ -67,7 +67,7 @@
 @media all and (max-width: 880px){
     .profile-offer-card {
         height: 25vh;
-        flex: 0 0 calc(40.33% - 10px);
+        width: 40vw;
     }
 
     .profile-offer-card h1 {
@@ -89,7 +89,7 @@
 @media all and (max-width: 520px){
     .profile-offer-card {
         height: 25vh;
-        flex: 0 0 calc(49.33% - 15px);
+        width: 40vw;
     }
 
     .profile-offer-card h1 {
