@@ -12,7 +12,6 @@
     border-radius: 120px solid gold;
     flex-wrap: wrap;
   
-  
 }
 
 .latest-offer-image { 
@@ -79,7 +78,7 @@
         border-radius: 120px solid gold;
         flex-wrap: wrap;
         flex-basis: 45%;
-          margin-bottom: 20px;
+        margin-bottom: 20px;
     }
 
     .latest-offer-card h1 {

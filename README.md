@@ -11,6 +11,13 @@ This is a web application for a Music Instruments Shop that specializes in selli
 
 ##
 
+Demo Authentication :
+  > account: peter@abv.bg 
+
+  > password: 1234
+
+##  
+
 ![APP](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/HomeGit.PNG)
 
 ## Installation and usage
@@ -62,6 +69,9 @@ https://github.com/PeterMonev/Music-Instruments-App-React.git
 - [Cookie Parser](https://github.com/expressjs/cookie-parser)
 - [Cors](https://github.com/expressjs/cors)
 - [Nodemon](https://github.com/remy/nodemon)
+
+## Deployment
+**[RENDER](https://render.com/)**
 
  | **Permissions for shop**    | User | Guest | 
 | :--------------------------    | :---: | :---: |
