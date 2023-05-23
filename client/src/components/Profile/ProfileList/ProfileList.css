@@ -1,11 +1,12 @@
 
 .profileListOffers{
-    font-size: 5rem; 
-    font-weight: 300;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     border-radius: 2px solid gold;
+    padding: 20px 0 30px 0;
 }
+
 
 .profile-myoffers h1 {
     margin-top: 20px;
@@ -21,4 +22,10 @@
     font-weight: 20;
     padding-top: 80px;
     text-decoration: none;
+}
+
+/* RESPOSIVE */
+
+.profileListOffers {
+    
 }
