@@ -236,4 +236,18 @@ The password should be equal to the repeat password.
 
 ![Home](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/ResponsiveHome1.PNG) ![Home](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/ResponsiveHome2.PNG)![Home](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/ResponsiveHome3.PNG)
 
-##
+## Login
+
+![Login](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/ResponsiveLogin.PNG)
+
+## Register
+
+![Register](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/ResponsiveRegister1.PNG) ![Register](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/ResponsiveRegister2.PNG)
+
+## Catalog
+
+![Catalog](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/ResponsiveCatalog1.PNG) ![Catalog](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/ResponsiveCatalog2.PNG)
+
+## Details
+
+![Details](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/ResponsiveDetails.PNG) ![Details](https://github.com/PeterMonev/Music-Instruments-App-React/blob/master/ScreenShotGit/ResponsiveDetails2.PNG)
