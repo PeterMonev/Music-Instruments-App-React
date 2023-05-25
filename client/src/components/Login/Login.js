@@ -48,10 +48,10 @@ export const Login = () => {
         {loading ?
         <CircleLoader color="#DAA520" size={100} />
         :
-        <input className='submit-login' type="submit" value="Login" />
+        <input className='submit-login' data-testid='loginBtn' type="submit" value="Login" />
         }
         <p className='login-container-p'>
-          If you don't have account? Click <a href="/register">here!</a>
+          If you don't have account? Click <a data-testid='link' href="/register">here!</a>
         </p>
       </form>
       </div>
