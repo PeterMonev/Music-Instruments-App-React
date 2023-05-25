@@ -33,11 +33,10 @@ describe("Login", () => {
   test("Should not show password error", () => {
     const emailInput = screen.getByTestId("email");
     const passwordInput = screen.getByTestId("password");
-
+    
+    userEvent.click(emailInput);
     userEvent.click(passwordInput);
-    userEvent.type(emailInput);
-    userEvent.click(passwordInput);
-    userEvent.type(emailInput, "1234");
+    userEvent.type(passwordInput, "1234");
 
     const error = screen.queryByText("Email or Password are incorrect!");
     expect(error).not.toBeInTheDocument();
